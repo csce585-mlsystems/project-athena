@@ -101,7 +101,7 @@ In this task, students aim to generate adversarial examples based on the vanilla
 **Note:** You are encouraged to explore new approaches not listed.
 
 ## Option 2 [50% + 15%/20%] (<= 3 groups)
-**Learn a strategy model**
+**Learning-based strategy**
 
 Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
