@@ -25,6 +25,15 @@ Code. Submit the code onto the GitHub repo.
 4. Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
 5. Ying will use a note on piazza to collect the claims for task 2.
 
+# What are given
+1. Source code of Athena framework.
+2. 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla Athena, built on the 72 CNN weak defenses, is the Athena we attack and enhance in this project. The 73 SVM models are only for the "Hybrid Athena" task (an option of Task 2).
+3. Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject.
+4. Configurations of all weak defenses.
+5. Configurations of all baseline adversarial examples.
+6. Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.
+7. (Maybe) A simple example of reports.
+
 # Task 1 [30% + 5%]
 **Generate adversarial examples in the context of the zero-knowledge threat model.**
 
@@ -43,7 +52,7 @@ In this task, students will generate adversarial examples in the context of the 
 5.2 Experimental settings for each attack.
 5.3 Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
-## The attacks implemented by Athena:
+## The attacks implemented by Athena [30%]:
 1. FGSM
 2. BIM (l2- and linf- norms)
 3. CW (l2- and linf- norms)
@@ -55,7 +64,7 @@ In this task, students will generate adversarial examples in the context of the 
 9. Hop-Skip-Jump
 10. ZOO
 
-## Other possible attacks:
+## Other possible attacks [5%]:
 1. Obfuscated Gradient
 2. etc.
 
@@ -67,12 +76,12 @@ There are multiple options for task 2 with various bonuses. Each team should pic
 ## Option 1 [50% + 10%] (<= 3 groups)
 **White-box attack the vanilla Athena**
 
-In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using 1 - 2 attacks. For each attack, generate around five variants by varying tunable parameters.
+In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around five variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla Athena. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
 
 ### Report:
 1. Introduce the approaches that are used in the task.
 2. Experimental settings --- the values of the tunable parameters for each variant.
-3. Evaluation and necessary analysis.
+3. Evaluation results and necessary analysis.
 4. Contribution of individual team members.
 5. Citations to all related works.
 
@@ -85,7 +94,7 @@ In this task, students aim to generate adversarial examples based on the vanilla
 ## Option 2 [50% + 15%/20%] (<= 3 groups)
 **Learn a strategy model**
 
-Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. 
+Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
 ### Report:
 1. Introduce the approaches that are used in the task.
@@ -104,12 +113,44 @@ Students aim to build a model in this task, which takes the predictions from wea
 ### Option 3 [50% + 15%] (<= 3 groups)
 **Probabilistic Athena**
 
-Students aim to build an ensemble from a library of probabilistic models (such as Bayesian Neural Networks) in this task. Each group should aim to build a library of 10 to 20 weak defenses and then build the ensembles from the library.
+Students aim to build an ensemble from a library of probabilistic models (such as Bayesian Neural Networks) in this task. Each group should aim to build a library of 10 to 20 weak defenses and then build the ensembles from the library. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
+
+### Report:
+1. Introduce the approaches that are used in the task.
+2. Experimental settings --- the values of the tunable parameters for each variant. 
+3. Evaluation of defenses' effectiveness and necessary analysis.
+4. Contribution of individual team members.
+5. Citations to all related works.
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-### Option 4 [50% + 10%] (<= 3 groups)
+### Option 4 [50% + 10%/20%] (<= 3 groups)
 **Hybrid Athena**
-Students aim to build a hybrid ensemble from a library of diverse types of weak defenses in this task. 
+Students aim to build a hybrid ensemble from a library of diverse types of weak defenses in this task. Students should aim to build a couple of ensemble variants with various sizes.
+
+Two major approaches:
+1. [10%] Randomly select n weak defenses from the library for the ensemble.
+2. [20%] Select n weak defenses via some search-based approaches. For example,
+Greedy search for n weak defenses that gives the maximal/minimal value according to a specific metric (e.g., entropy, ensemble diversity, etc.)
+### Report:
+1. Introduce the approaches that are used in the task.
+2. Experimental settings --- the values of the tunable parameters for each variant.
+3. Evaluation of defenses' effectiveness and necessary analysis.
+4. Contribution of individual team members.
+5. Citations to all related works.
 
 **Note:** You are encouraged to explore new approaches not listed.
+
+# Task 3 [20%]
+**Competition task**
+
+Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
+
+Cross evaluation of task 1 and task 2 between all groups will be run by us (or we will provide scripts for students to perform the cross-evaluation). Evaluation results will be provided to the whole class. After the cross-evaluation, each team should aim to perform necessary analysis on the evaluation results and investigate why your approaches are effective (or ineffective) against some approach.
+
+### Report:
+1. Introduce the analysis methods that are used in the task.
+2. Analysis results and insights. Possible enhancements, future works. etc.
+3. Architecture of your machine learning system (for the whole project).
+4. Contribution of individual team members.
+5. Citations to all related works.
