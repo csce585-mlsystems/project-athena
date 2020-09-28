@@ -25,7 +25,9 @@ Name your team.
 Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
 Ying will use a note on piazza to collect the claims for task 2.
 
-# Task 1 Generate adversarial examples in the context of the zero-knowledge threat model [30% + 5%].
+# Task 1 [30% + 5%]
+**Generate adversarial examples in the context of the zero-knowledge threat model.**
+
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the Athena framework and necessary background regarding the adversarial machine learning tasks.
 
 In this task, students will generate adversarial examples in the context of the zero-knowledge threat model (Section III.D, Athena paper) using 2 to 3 different attack methods. You can generate the adversarial examples using the attacks provided by Athena or new attacks by extending Athena. For the groups who implement a new attack, we consider 5% of additional points as a bonus. Each group should aim for at most one new attack. 
@@ -64,7 +66,8 @@ Evaluation results in term of the successful rate of the crafted adversarial exa
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due.
 
 ## Option 1 [50% + 10%] (<= 3 groups)
-White-box attack the vanilla Athena
+**White-box attack the vanilla Athena**
+
 In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using 1 - 2 attacks. For each attack, generate around five variants by varying tunable parameters.
 
 ### Report:
@@ -80,31 +83,34 @@ In this task, students aim to generate adversarial examples based on the vanilla
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-Option 2 [50% + 15%/20%] (<= 3 groups)
-Learn a strategy model
+## Option 2 [50% + 15%/20%] (<= 3 groups)
+**Learn a strategy model**
+
 Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. 
 
-Report:
-Introduce the approaches that are used in the task.
-Experimental settings --- the values of the tunable parameters for each variant.
-Evaluation and necessary analysis.
-Contribution of individual team members.
-Citations to all related works.
+### Report:
+1. Introduce the approaches that are used in the task.
+2. Experimental settings --- the values of the tunable parameters for each variant.
+3. Evaluation and necessary analysis.
+4. Contribution of individual team members.
+5. Citations to all related works.
 
-Possible solutions:
-[+15%] A machine learning model f(predictions) = y' that is trained on the training set D = {(predictions, y)}.
-[+20%] Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising. Forest Agostinelli, Michael R. Anderson, and Honglak Lee. NIPS 2018.
-[+20%] Knowledge distillation? (TBD. Ying will check if this is feasible.) Distilling the Knowledge in a Neural Network. Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. ICLR 2015.
-Note: You are encouraged to explore new approaches not listed.
+### Possible solutions:
+1. [+15%] A machine learning model f(predictions) = y' that is trained on the training set D = {(predictions, y)}.
+2. [+20%] Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising. Forest Agostinelli, Michael R. Anderson, and Honglak Lee. NIPS 2018.
+3. [+20%] Knowledge distillation? (TBD. Ying will check if this is feasible.) Distilling the Knowledge in a Neural Network. Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. ICLR 2015.
 
-Option 3 [50% + 15%] (<= 3 groups)
-Probabilistic Athena
+**Note:** You are encouraged to explore new approaches not listed.
+
+### Option 3 [50% + 15%] (<= 3 groups)
+**Probabilistic Athena**
+
 Students aim to build an ensemble from a library of probabilistic models (such as Bayesian Neural Networks) in this task. Each group should aim to build a library of 10 to 20 weak defenses and then build the ensembles from the library.
 
-Note: You are encouraged to explore new approaches not listed.
+**Note:** You are encouraged to explore new approaches not listed.
 
-Option 4 [50% + 10%] (<= 3 groups)
-Hybrid Athena
+### Option 4 [50% + 10%] (<= 3 groups)
+**Hybrid Athena**
 Students aim to build a hybrid ensemble from a library of diverse types of weak defenses in this task. 
 
-Note: You are encouraged to explore new approaches not listed.
+**Note:** You are encouraged to explore new approaches not listed.
