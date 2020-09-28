@@ -9,21 +9,21 @@ Each team will finish three tasks independently --- two adversarial machine lear
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 Code. Submit the code onto the GitHub repo.
-The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
-A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
-Contribution of each individual member.
-Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.
-Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
-Write the report in your own words instead of copying and pasting from an article or others' work. 
-Cite all related works.
-Only one submission is necessary for each team.
+1. The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
+2. A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
+2.1 Contribution of each individual member.
+2.2 Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.
+2.3 Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
+2.4 Write the report in your own words instead of copying and pasting from an article or others' work. 
+2.5 Cite all related works.
+3. Only one submission is necessary for each team.
 
 # All about teams
-The class (32 students) will be divided into ten groups; each consists of 3 or 4 students. 
-One can recruit his/her team members or join a team on piazza.
-Name your team.
-Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
-Ying will use a note on piazza to collect the claims for task 2.
+1. The class (32 students) will be divided into ten groups; each consists of 3 or 4 students. 
+2. One can recruit his/her team members or join a team on piazza.
+3. Name your team.
+4. Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
+5. Ying will use a note on piazza to collect the claims for task 2.
 
 # Task 1 [30% + 5%]
 **Generate adversarial examples in the context of the zero-knowledge threat model.**
@@ -32,17 +32,16 @@ This task is an essential warm-up task for all groups, aiming to help students g
 
 In this task, students will generate adversarial examples in the context of the zero-knowledge threat model (Section III.D, Athena paper) using 2 to 3 different attack methods. You can generate the adversarial examples using the attacks provided by Athena or new attacks by extending Athena. For the groups who implement a new attack, we consider 5% of additional points as a bonus. Each group should aim for at most one new attack. 
 
-Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
-Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
-
-Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and PGD-ADT (all these models will be provided). 
-(Must) Evaluate the adversarial examples in terms of the successful rate.
-(Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
-Perform necessary analysis if there are any.
-Report your solution(s), experimental results, and analysis.
-Brief the attacks used to generate adversarial examples.
-Experimental settings for each attack.
-Evaluation results in term of the successful rate of the crafted adversarial examples. 
+1. Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
+2. Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
+3. Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and PGD-ADT (all these models will be provided). 
+3.1 (Must) Evaluate the adversarial examples in terms of the successful rate.
+3.2 (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
+4. Perform necessary analysis if there are any.
+5. Report your solution(s), experimental results, and analysis.
+5.1 Brief the attacks used to generate adversarial examples.
+5.2 Experimental settings for each attack.
+5.3 Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
 ## The attacks implemented by Athena:
 1. FGSM
