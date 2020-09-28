@@ -11,33 +11,37 @@ Each team should submit all materials that enable an independent group to replic
 Code. Submit the code onto the GitHub repo.
 
 <ol>
-<li>1. The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.</li>
-<li>2. A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.</li>
+<li> The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.</li>
+<li> A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.</li>
   <ol>
-  <li>2.1 Contribution of each individual member.</li>
-  <li>2.2 Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.</li>
-  <li>2.3 Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.</li>
-  <li>2.4 Write the report in your own words instead of copying and pasting from an article or others' work. </li>
-  <li>2.5 Cite all related works.</li>
+  <li> Contribution of each individual member.</li>
+  <li> Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.</li>
+  <li> Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.</li>
+  <li> Write the report in your own words instead of copying and pasting from an article or others' work. </li>
+  <li> Cite all related works.</li>
   </ol>
-<li>3. Only one submission is necessary for each team.</li>
+<li> Only one submission is necessary for each team.</li>
 </ol>
 
 # All about teams
-1. The class (32 students) will be divided into ten groups; each consists of 3 or 4 students. 
-2. One can recruit his/her team members or join a team on piazza.
-3. Name your team.
-4. Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
-5. Ying will use a note on piazza to collect the claims for task 2.
+<ol>
+<li> The class (32 students) will be divided into ten groups; each consists of 3 or 4 students. </li>
+<li> One can recruit his/her team members or join a team on piazza.</li>
+<li> Name your team.</li>
+<li> Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).</li>
+<li> Ying will use a note on piazza to collect the claims for task 2.</li>
+</ol>
 
 # What are given
-1. Source code of Athena framework.
-2. 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla Athena, built on the 72 CNN weak defenses, is the Athena we attack and enhance in this project. The 73 SVM models are only for the "Hybrid Athena" task (an option of Task 2).
-3. Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject.
-4. Configurations of all weak defenses.
-5. Configurations of all baseline adversarial examples.
-6. Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.
-7. (Maybe) A simple example of reports.
+<ol>
+<li> Source code of Athena framework.</li> 
+<li> 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla Athena, built on the 72 CNN weak defenses, is the Athena we attack and enhance in this project. The 73 SVM models are only for the "Hybrid Athena" task (an option of Task 2).</li> 
+<li> Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject.</li> 
+<li> Configurations of all weak defenses.</li> 
+<li> Configurations of all baseline adversarial examples.</li> 
+<li> Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.</li> 
+<li> (Maybe) A simple example of reports.</li> 
+</ol>
 
 # Task 1 [30% + 5%]
 **Generate adversarial examples in the context of the zero-knowledge threat model.**
