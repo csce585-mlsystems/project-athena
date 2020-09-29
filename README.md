@@ -44,16 +44,16 @@ This task is an essential warm-up task for all groups, aiming to help students g
 
 In this task, students will generate adversarial examples in the context of the zero-knowledge threat model (Section III.D, Athena paper) using 2 to 3 different attack methods. You can generate the adversarial examples using the attacks provided by Athena or new attacks by extending Athena. For the groups who implement a new attack, we consider 5% of additional points as a bonus. Each group should aim for at most one new attack. 
 
-1. Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
-2. Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
-3. Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and [PGD-ADT](https://arxiv.org/pdf/1706.06083.pdf) (all these models will be provided). 
- 1. (Must) Evaluate the adversarial examples in terms of the successful rate.
- 2. (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
-4. Perform necessary analysis if there are any.
-5. Report your solution(s), experimental results, and analysis.
- 1. Brief the attacks used to generate adversarial examples.
- 2. Experimental settings for each attack.
- 3. Evaluation results in term of the successful rate of the crafted adversarial examples. 
+* Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
+* Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
+* Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and [PGD-ADT](https://arxiv.org/pdf/1706.06083.pdf) (all these models will be provided). 
+  * (Must) Evaluate the adversarial examples in terms of the successful rate.
+  * (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
+* Perform necessary analysis if there are any.
+* Report your solution(s), experimental results, and analysis.
+  * Brief the attacks used to generate adversarial examples.
+  * Experimental settings for each attack.
+  * Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
 ## The attacks implemented by Athena [30%]:
 1. [FGSM](https://arxiv.org/abs/1412.6572)
