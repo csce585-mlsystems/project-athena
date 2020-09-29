@@ -26,7 +26,7 @@ Each team should submit all materials that enable an independent group to replic
 <li> One can recruit his/her team members or join a team on piazza.</li>
 <li> Name your team.</li>
 <li> Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).</li>
-<li> Ying will use a note on piazza to collect the claims for task 2.</li>
+<li> We will use [this note](https://piazza.com/class/ke221xlfhpq783?cid=25) on piazza to collect the claims for task 2.</li>
 </ol>
 
 # What are given
