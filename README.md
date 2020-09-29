@@ -47,8 +47,8 @@ In this task, students will generate adversarial examples in the context of the 
 * Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
 * Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
 * Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and [PGD-ADT](https://arxiv.org/pdf/1706.06083.pdf) (all these models will be provided). 
-  * (Must) Evaluate the adversarial examples in terms of the successful rate.
-  * (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
+  * (Must-Have) Evaluate the adversarial examples in terms of the successful rate.
+  * (Optional) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
 * Perform necessary analysis if there are any.
 * Report your solution(s), experimental results, and analysis.
   * Brief the attacks used to generate adversarial examples.
