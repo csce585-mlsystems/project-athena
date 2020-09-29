@@ -62,20 +62,24 @@ In this task, students will generate adversarial examples in the context of the 
 5.3 Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
 ## The attacks implemented by Athena [30%]:
-1. FGSM
-2. BIM (l2- and linf- norms)
-3. CW (l2- and linf- norms)
-4. JSMA
-5. PGD
-6. MIM
-7. One-Pixel (extremely slow, not recommended)
-8. Spatial Transform
-9. Hop-Skip-Jump
-10. ZOO
+1. [FGSM](https://arxiv.org/abs/1412.6572)
+2. [BIM (l2- and linf- norms)](https://arxiv.org/abs/1607.02533)
+3. [CW (l2- and linf- norms)](https://ieeexplore.ieee.org/abstract/document/7958570)
+4. [JSMA](https://ieeexplore.ieee.org/abstract/document/7467366)
+5. [PGD](https://arxiv.org/pdf/1706.06083.pdf)
+6. [MIM](https://openaccess.thecvf.com/content_cvpr_2018/papers/Dong_Boosting_Adversarial_Attacks_CVPR_2018_paper.pdf)
+7. [DeepFool](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.pdf)
+8. [One-Pixel](https://arxiv.org/pdf/1710.08864.pdf) (extremely slow, not recommended)
+9. [Spatially Transformed Attack](https://arxiv.org/abs/1801.02612)
+10. [Hop-Skip-Jump](https://arxiv.org/abs/1904.02144)
+11. [ZOO](https://arxiv.org/abs/1708.03999)
 
 ## Other possible attacks [5%]:
-1. Obfuscated Gradient
-2. etc.
+1. [Obfuscated Gradient](https://arxiv.org/pdf/1802.00420.pdf)
+2. [DDA (Distributionally Adversarial Attack)](https://www.aaai.org/ojs/index.php/AAAI/article/view/4061)
+3. [ENA (Elastic-net Attack)](https://arxiv.org/abs/1709.04114)
+4. [GAN-based Attacks](https://arxiv.org/abs/1801.02610)
+3. etc.
 
 **Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NIPS adversarial competitions, and surveys in adversarial machine learning.
 
