@@ -21,24 +21,21 @@ Each team should submit all materials that enable an independent group to replic
 * Only one submission is necessary for each team.
 
 # All about teams
-<ol>
-<li> The class (32 students) will be divided into ten groups; each consists of 3 or 4 students. </li>
-<li> One can recruit his/her team members or join a team on piazza.</li>
-<li> Name your team.</li>
-<li> Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).</li>
-<li> We will use [this note](https://piazza.com/class/ke221xlfhpq783?cid=25) on piazza to collect the claims for task 2.</li>
-</ol>
+* The class (32 students) will be divided into ten groups; each consists of 3 or 4 students.
+* One can recruit his/her team members or join a team on piazza.
+* Name your team.
+* Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
+* We will use [this note](https://piazza.com/class/ke221xlfhpq783?cid=25) on piazza to collect the claims for task 2.
 
 # What are given
-<ol>
-<li> Source code of Athena framework.</li> 
-<li> 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla version of Athena, built on the 72 CNN weak defenses, is the Athena we attack and enhance in this project. The 73 SVM models are only for the "Hybrid Athena" task (an option of Task 2).</li> 
-<li> Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject.</li> 
-<li> Configurations of all weak defenses.</li> 
-<li> Configurations of all baseline adversarial examples.</li> 
-<li> Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.</li> 
-<li> (Maybe) A simple example of reports.</li> 
-</ol>
+* Source code of Athena framework. 
+* 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla version of Athena, built on the 72 CNN weak defenses, is the Athena we attack and enhance in this project. The 73 SVM models are only for the "Hybrid Athena" task (an option of Task 2).
+* Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject. 
+* Configurations of all weak defenses. 
+* Configurations of all baseline adversarial examples. 
+* Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.
+* (Maybe) A simple example of reports. 
+
 
 # Task 1 [30% + 5%]
 **Generate adversarial examples in the context of the zero-knowledge threat model.**
@@ -50,13 +47,13 @@ In this task, students will generate adversarial examples in the context of the 
 1. Generate adversarial examples based on the undefended model. That is, the attack's targeted model is the undefended model. 
 2. Generate adversarial examples using 2 to 3 different attack methods. For each type of attack, generate a couple of variants. By variants, we mean to tune the attack's parameters that are documented as a part of the code. For example, for FGSM attack, generate adversarial examples with various epsilons (e.g., 0.1, 0.15, 0.2, etc.).
 3. Evaluate the generated adversarial examples on the undefended model, the vanilla Athena, and [PGD-ADT](https://arxiv.org/pdf/1706.06083.pdf) (all these models will be provided). 
-3.1 (Must) Evaluate the adversarial examples in terms of the successful rate.
-3.2 (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
+ 1. (Must) Evaluate the adversarial examples in terms of the successful rate.
+ 2. (Option) Evaluate the adversarial examples using any proper measure. In this case, introduce the additional measures.
 4. Perform necessary analysis if there are any.
 5. Report your solution(s), experimental results, and analysis.
-5.1 Brief the attacks used to generate adversarial examples.
-5.2 Experimental settings for each attack.
-5.3 Evaluation results in term of the successful rate of the crafted adversarial examples. 
+ 1. Brief the attacks used to generate adversarial examples.
+ 2. Experimental settings for each attack.
+ 3. Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
 ## The attacks implemented by Athena [30%]:
 1. [FGSM](https://arxiv.org/abs/1412.6572)
