@@ -1,5 +1,5 @@
 # project
-This is the course project for CSCE585. Students will build their machine learning systems based on the provided infrastructure --- Athena.
+This is the course project for [CSCE585](https://pooyanjamshidi.github.io/mls/). Students will build their machine learning systems based on the provided infrastructure --- Athena.
 
 # Overview
 This project assignment is a group assignment. Each group of students will design and build an adversarial machine learning system on top of the provided framework ([Athena](https://softsys4ai.github.io/athena/)) then evaluate their work accordingly.  The project will be evaluated on a benchmark dataset [MNIST](http://yann.lecun.com/exdb/mnist/). This project will focus on supervised machine learning tasks, in which all the training data are labeled. Moreover, we consider only evasion attacks in this project, which happens at the test phase (i.e., the targeted model has been trained and deployed).
@@ -10,7 +10,7 @@ Each team will finish three tasks independently --- two adversarial machine lear
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 
 <ol>
-  <li> Code. Submit the code in your project GitHub repo which you need to create in the course ([GitHub organization](https://github.com/csce585-mlsystems)). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.</li>
+<li> Code. Submit the code in your project GitHub repo which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.</li>
 <li> The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.</li>
 <li> A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.</li>
   <ol>
