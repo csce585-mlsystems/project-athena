@@ -9,19 +9,16 @@ Each team will finish three tasks independently --- two adversarial machine lear
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 
-<ol>
-<li> Code. Submit the code in your project GitHub repo which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.</li>
-<li> The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.</li>
-<li> A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.</li>
-  <ol>
-  <li> Contribution of each individual member.</li>
-  <li> Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.</li>
-  <li> Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.</li>
-  <li> Write the report in your own words instead of copying and pasting from an article or others' work. </li>
-  <li> Cite all related works.</li>
-  </ol>
-<li> Only one submission is necessary for each team.</li>
-</ol>
+
+* Code. Submit the code in your project GitHub repo which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.
+* The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
+* A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
+  * Contribution of each individual member.
+  * Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.
+  * Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
+  * Write the report in your own words instead of copying and pasting from an article or others' work.
+  * Cite all related works.
+* Only one submission is necessary for each team.
 
 # All about teams
 <ol>
