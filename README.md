@@ -2,7 +2,7 @@
 This is the course project for CSCE585. Students will build their machine learning systems based on the provided infrastructure --- Athena.
 
 # Overview
-This project assignment is a group assignment. Each group of students will design and build an adversarial machine learning system on top of the provided framework (Athena []) then evaluate their work accordingly.  The project will be evaluated on a benchmark dataset MNIST []. This project will focus on supervised machine learning tasks, in which all the training data are labeled. Moreover, we consider only evasion attacks in this project, which happens at the test phase (i.e., the targeted model has been trained and deployed).
+This project assignment is a group assignment. Each group of students will design and build an adversarial machine learning system on top of the provided framework ([Athena](https://arxiv.org/abs/2001.00308)) then evaluate their work accordingly.  The project will be evaluated on a benchmark dataset [MNIST](http://yann.lecun.com/exdb/mnist/). This project will focus on supervised machine learning tasks, in which all the training data are labeled. Moreover, we consider only evasion attacks in this project, which happens at the test phase (i.e., the targeted model has been trained and deployed).
 
 Each team will finish three tasks independently --- two adversarial machine learning tasks and a competition task.
 
