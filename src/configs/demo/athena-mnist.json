@@ -1,0 +1,161 @@
+{
+    "num_transformations": 19,
+    "configs0": {
+        "type": "clean",
+        "subtype": "",
+        "id": 0,
+        "description": "clean"
+    },
+    "configs1": {
+        "type": "rotate",
+        "subtype": "",
+        "id": 1,
+        "description": "rotate270",
+        "angle": 270
+    },
+    "configs2": {
+        "type": "shift",
+        "subtype": "",
+        "id": 2,
+        "description": "shift_left",
+    	"x_offset": -0.15,
+    	"y_offset": 0
+    },
+    "configs3": {
+        "type": "shift",
+        "subtype": "",
+        "id": 3,
+        "description": "shift_bottom_right",
+    	"x_offset": 0.15,
+    	"y_offset": 0.15
+    },
+    "configs4": {
+        "type": "flip",
+        "subtype": "",
+        "id": 4,
+        "description": "flip_horizontal",
+        "direction": 1
+    },
+    "configs5": {
+        "type": "affine",
+        "subtype": "",
+        "id": 5,
+        "description": "affine_both_stretch",
+    	"origin_point1": [0.25,0.25],
+        "origin_point2": [0.25,0.5],
+        "origin_point3": [0.5,0.25],
+        "new_point1": [0.22,0.22],
+        "new_point2": [0.22,0.55],
+        "new_point3": [0.55,0.22]
+    },
+    "configs6": {
+        "type": "morph",
+        "subtype": "gradient",
+        "id": 6,
+        "description": "morph_gradient",
+        "kernel_w": 2,
+        "kernel_h": 2
+    },
+    "configs7": {
+        "type": "augment",
+        "subtype": "samplewise_std_norm",
+        "id": 7,
+        "description": "augment_samplewise_std_norm"
+    },
+    "configs8": {
+        "type": "cartoon",
+        "subtype": "mean_type1",
+        "id": 8,
+        "description": "cartoon_mean_type1",
+        "thresh_adaptive_method": "mean",
+        "nb_downsampling": 0,
+        "nb_bilateral": 3,
+        "blur_ksize": 3,
+        "thresh_bsize": 9,
+        "thresh_C": 9,
+        "filter_d": 9,
+        "filter_sigma_color": 300,
+        "filter_sigma_space": 30
+    },
+    "configs9": {
+        "type": "quant",
+        "subtype": "8_clusters",
+        "id": 9,
+        "description": "quant_8_clusters",
+        "nb_clusters": 8
+    },
+    "configs10": {
+        "type": "distort",
+        "subtype": "x",
+        "id": 10,
+        "description": "distort_x",
+        "r1": 5.0,
+        "r2": 2.0,
+        "c": 28.0
+    },
+    "configs11": {
+        "type": "noise",
+        "subtype": "gaussian",
+        "id": 11,
+        "description": "noise_gaussian",
+        "noise": "gaussian"
+    },
+    "configs12": {
+        "type": "noise",
+        "subtype": "s&p",
+        "id": 12,
+        "description": "noise_sNp",
+        "noise": "s&p"
+    },
+    "configs13": {
+        "type": "filter",
+        "subtype": "gaussian",
+        "id": 13,
+        "description": "filter_gaussian",
+        "sigma": 1
+    },
+    "configs14": {
+        "type": "filter",
+        "subtype": "rank",
+        "id": 14,
+        "description": "filter_rank",
+        "size": 3,
+        "rank": 15
+    },
+    "configs15": {
+        "type": "compress",
+        "subtype": "jpeg",
+        "id": 15,
+        "description": "compress_jpeg_quality_80",
+        "format": ".jpeg",
+        "compress_rate": 80
+    },
+    "configs16": {
+        "type": "denoise",
+        "subtype": "tv_chambolle",
+        "id": 16,
+        "description": "denoise_tv_chambolle",
+        "weight": 0.4,
+        "epsilon": 2e-4,
+        "max_iter": 200
+    },
+    "configs17": {
+        "type": "geometric",
+        "subtype": "iradon",
+        "id": 17,
+        "description": "geo_iradon",
+        "ls_start": -100.0,
+        "ls_stop": 128.0,
+        "ls_num": 28,
+        "filter": "ramp",
+        "interpolation": "linear"
+    },
+    "configs18": {
+        "type": "segment",
+        "subtype": "gradient",
+        "id": 18,
+        "description": "seg_gradient",
+        "median_radius": 2,
+        "gradient_radius": 1
+    }
+}
