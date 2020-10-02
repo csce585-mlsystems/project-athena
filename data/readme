@@ -1,0 +1,1 @@
+Here are the baseline adversarial examples that were generated in the context of zero-knowledge threat model. The targeted model is the undefended model in the Vanilla Athena (models/cnn/model-mnist-cnn-clean.h5).
