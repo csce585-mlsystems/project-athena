@@ -19,64 +19,64 @@ import utils.transformation_configs as trans_configs
 
 
 # Entrance
-def transform(X, attack_args):
+def transform(X, trans_args):
     assert len(X.shape) in [3, 4]
 
     X = X.astype(np.float32)
-    if isinstance(attack_args, (list, np.ndarray)):
+    if isinstance(trans_args, (list, np.ndarray)):
         raise NotImplementedError('Transformation combination is not implemented.')
     else:
-        return _transform_images(X, attack_args)
+        return _transform_images(X, trans_args)
 
 
-def _transform_images(X, attack_args):
-    # print('TRANSFORMATION [{}].'.format(attack_args.get('description')))
+def _transform_images(X, trans_args):
+    # print('TRANSFORMATION [{}].'.format(trans_args.get('description')))
 
-    if attack_args is None or attack_args.get('type') == trans_configs.TRANSFORMATION.CLEAN.value:
+    if trans_args is None or trans_args.get('type') == trans_configs.TRANSFORMATION.CLEAN.value:
         return X
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.ROTATE.value:
-        return _rotate(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.SHIFT.value:
-        return _shift(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.FLIP.value:
-        return _flip(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.AFFINE_TRANS.value:
-        return _affine_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.MORPH_TRANS.value:
-        return _morph_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.AUGMENT.value:
-        return _augment_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.CARTOON.value:
-        return _cartoon_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.QUANTIZATION.value:
-        return _quant_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.DISTORTION.value:
-        return _distort_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.NOISE.value:
-        return _noise_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.FILTER.value:
-        return _filter_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.COMPRESSION.value:
-        return _compression_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.DENOISE.value:
-        return _denoise_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.GEOMETRIC.value:
-        return _geometric_trans(X, attack_args)
-    elif attack_args.get('type') == trans_configs.TRANSFORMATION.SEGMENTATION.value:
-        return _segment_trans(X, attack_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.ROTATE.value:
+        return _rotate(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.SHIFT.value:
+        return _shift(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.FLIP.value:
+        return _flip(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.AFFINE_TRANS.value:
+        return _affine_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.MORPH_TRANS.value:
+        return _morph_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.AUGMENT.value:
+        return _augment_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.CARTOON.value:
+        return _cartoon_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.QUANTIZATION.value:
+        return _quant_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.DISTORTION.value:
+        return _distort_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.NOISE.value:
+        return _noise_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.FILTER.value:
+        return _filter_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.COMPRESSION.value:
+        return _compression_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.DENOISE.value:
+        return _denoise_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.GEOMETRIC.value:
+        return _geometric_trans(X, trans_args)
+    elif trans_args.get('type') == trans_configs.TRANSFORMATION.SEGMENTATION.value:
+        return _segment_trans(X, trans_args)
     else:
-        raise ValueError('{} is not supported.'.format(attack_args.get('type')))
+        raise ValueError('{} is not supported.'.format(trans_args.get('type')))
 
 
-def _rotate(original_images, attack_args):
+def _rotate(original_images, trans_args):
     """
     Rotate images.
     :param: original_images - the images to rotate.
     :param: process - an instance of Rotation class
     :return: the rotated images
     """
-    angle = attack_args.get('angle', 90)
-    scale = attack_args.get('scale', 1.0)
+    angle = trans_args.get('angle', 90)
+    scale = trans_args.get('scale', 1.0)
     transformed_images = []
 
     if len(original_images.shape) == 4:
@@ -98,7 +98,7 @@ def _rotate(original_images, attack_args):
     return transformed_images
 
 
-def _shift(original_images, attack_args):
+def _shift(original_images, trans_args):
     """
     Shift/Translate images.
     :param: original_images - the images to shift.
@@ -115,8 +115,8 @@ def _shift(original_images, attack_args):
     #
     # -----------------------------------------
 
-    x_offset = attack_args.get('x_offset', 0.15)
-    y_offset = attack_args.get('y_offset', 0.15)
+    x_offset = trans_args.get('x_offset', 0.15)
+    y_offset = trans_args.get('y_offset', 0.15)
 
     if len(original_images.shape) == 4:
         nb_images, img_rows, img_cols, nb_channels = original_images.shape
@@ -140,14 +140,14 @@ def _shift(original_images, attack_args):
     return transformed_images
 
 
-def _flip(original_images, attack_args):
+def _flip(original_images, trans_args):
     """
     Flip images.
     :param: original_images - the images to applied transformations on.
     :param: process - the standard transformation to apply.
     :return: the flipped images.
     """
-    direction = attack_args.get('direction', 0)
+    direction = trans_args.get('direction', 0)
 
     if direction not in [-1, 0, 1]:
         raise ValueError('Invalid flipping direction. Available direction values are -1, 0, and 1.')
@@ -171,7 +171,7 @@ def _flip(original_images, attack_args):
     return transformed_images
 
 
-def _affine_trans(original_images, attack_args):
+def _affine_trans(original_images, trans_args):
     """
     Apply affine transformation on images.
     :param: original_images - the images to applied transformations on.
@@ -185,13 +185,13 @@ def _affine_trans(original_images, attack_args):
     can be generated by getAffineTransform()
     """
 
-    origin_offset1 = attack_args.get('origin_point1', (0.25, 0.25))
-    origin_offset2 = attack_args.get('origin_point2', (0.25, 0.5))
-    origin_offset3 = attack_args.get('origin_point3', (0.5, 0.25))
+    origin_offset1 = trans_args.get('origin_point1', (0.25, 0.25))
+    origin_offset2 = trans_args.get('origin_point2', (0.25, 0.5))
+    origin_offset3 = trans_args.get('origin_point3', (0.5, 0.25))
 
-    new_offset1 = attack_args.get('new_point1', (0.25, 0.32))
-    new_offset2 = attack_args.get('new_point2', (0.25, 0.48))
-    new_offset3 = attack_args.get('new_point3', (0.5, 0.32))
+    new_offset1 = trans_args.get('new_point1', (0.25, 0.32))
+    new_offset2 = trans_args.get('new_point2', (0.25, 0.48))
+    new_offset3 = trans_args.get('new_point3', (0.5, 0.32))
 
     if len(original_images.shape) == 4:
         nb_images, img_rows, img_cols, nb_channels = original_images.shape
@@ -227,7 +227,7 @@ def _affine_trans(original_images, attack_args):
     return transformed_images
 
 
-def _morph_trans(original_images, attack_args):
+def _morph_trans(original_images, trans_args):
     """
     Apply morphological transformations on images.
     :param: original_images - the images to applied transformations on.
@@ -240,16 +240,16 @@ def _morph_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    morph_trans = attack_args.get('subtype', trans_configs.MORPH_TRANSFORMATIONS.OPENING.value)
+    morph_trans = trans_args.get('subtype', trans_configs.MORPH_TRANSFORMATIONS.OPENING.value)
     op = trans_configs.get_morph_op(morph_trans)
-    kernel = attack_args.get('kernel', [2, 2])
+    kernel = trans_args.get('kernel', [2, 2])
     kernel = np.ones(tuple(kernel), np.uint8)
 
     transformed_images = []
     if morph_trans in [trans_configs.MORPH_TRANSFORMATIONS.EROSION.value,
                        trans_configs.MORPH_TRANSFORMATIONS.DILATION.value]:
         for img in original_images:
-            iterations = attack_args.get('iterations', 1)
+            iterations = trans_args.get('iterations', 1)
             transformed_images.append(cv2.morphologyEx(src=img, op=op, kernel=kernel, iterations=iterations))
     else:
         for img in original_images:
@@ -262,7 +262,7 @@ def _morph_trans(original_images, attack_args):
     return transformed_images
 
 
-def _augment_trans(original_images, attack_args):
+def _augment_trans(original_images, trans_args):
     """
     Image augmentation.
     :param: original_images - the images to applied transformations on.
@@ -275,7 +275,7 @@ def _augment_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    augment_trans = attack_args.get('subtype')
+    augment_trans = trans_args.get('subtype')
 
     data_generator = None
     if augment_trans == trans_configs.AUGMENT_TRANSFORMATIONS.SAMPLEWISE_AUGMENTATION.value:
@@ -315,7 +315,7 @@ def _augment_trans(original_images, attack_args):
     return transformed_images
 
 
-def _cartoon_trans(original_images, attack_args):
+def _cartoon_trans(original_images, trans_args):
     """
     Configure for each type of cartoon effect.
     :param original_images:
@@ -328,19 +328,19 @@ def _cartoon_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    blur_ksize = attack_args.get('blur_ksize', 3)
-    adaptive_method_name = attack_args.get('thresh_adaptive_method', trans_configs.CARTOON_ADAPTIVE_METHODS.MEAN.value)
+    blur_ksize = trans_args.get('blur_ksize', 3)
+    adaptive_method_name = trans_args.get('thresh_adaptive_method', trans_configs.CARTOON_ADAPTIVE_METHODS.MEAN.value)
     adaptive_method = trans_configs.get_cartoon_adpative_method(adaptive_method_name)
-    thresh_method_name = attack_args.get('thresh_method', trans_configs.CARTOON_THRESH_METHODS.BINARY.value)
+    thresh_method_name = trans_args.get('thresh_method', trans_configs.CARTOON_THRESH_METHODS.BINARY.value)
     thresh_method = trans_configs.get_cartoon_thresh_method(thresh_method_name)
-    thresh_bsize = attack_args.get('thresh_bsize', 9)
-    thresh_C = attack_args.get('thresh_C', 9)
+    thresh_bsize = trans_args.get('thresh_bsize', 9)
+    thresh_C = trans_args.get('thresh_C', 9)
 
-    filter_d = attack_args.get('filter_d', 6)
-    filter_sigma_color = attack_args.get('filter_sigma_color', 50)
-    filter_sigma_space = attack_args.get('filter_sigma_space', 300)
-    nb_downsampling = attack_args.get('nb_downsampling', 2)
-    nb_bilateral = attack_args.get('nb_bilateral', 3)
+    filter_d = trans_args.get('filter_d', 6)
+    filter_sigma_color = trans_args.get('filter_sigma_color', 50)
+    filter_sigma_space = trans_args.get('filter_sigma_space', 300)
+    nb_downsampling = trans_args.get('nb_downsampling', 2)
+    nb_bilateral = trans_args.get('nb_bilateral', 3)
 
     transformed_images = []
     original_images *= 255.
@@ -396,7 +396,7 @@ def _cartoon_trans(original_images, attack_args):
     return transformed_images
 
 
-def _quant_trans(original_images, attack_args):
+def _quant_trans(original_images, trans_args):
     """
     Adapted from tutorial
     https://www.pyimagesearch.com/2014/07/07/color-quantization-opencv-using-k-means-clustering/
@@ -410,7 +410,7 @@ def _quant_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    nb_clusters = attack_args.get('nb_clusters', 4)
+    nb_clusters = trans_args.get('nb_clusters', 4)
 
     transformed_images = []
     for img in original_images:
@@ -466,25 +466,25 @@ def _quant_trans(original_images, attack_args):
     return transformed_images
 
 
-def _distort_trans(original_images, attack_args):
+def _distort_trans(original_images, trans_args):
     if len(original_images.shape) == 4:
         nb_images, img_rows, img_cols, nb_channels = original_images.shape
     else:
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    distort_trans = attack_args.get('subtype')
+    distort_trans = trans_args.get('subtype')
     transformed_images = []
     if distort_trans in [trans_configs.DISTORT_TRANSFORMATIONS.X.value,
                          trans_configs.DISTORT_TRANSFORMATIONS.Y.value,]:
-        r1 = attack_args.get('r1', 5.)
-        r2 = attack_args.get('r2', 2.)
-        c = attack_args.get('c', 28.)
+        r1 = trans_args.get('r1', 5.)
+        r2 = trans_args.get('r2', 2.)
+        c = trans_args.get('c', 28.)
 
         a = c / r1
         w = r2 / c
         shift_func = lambda x: a * np.sin(np.pi * x * w)
-        shift_func = attack_args.get('shift_func', shift_func)
+        shift_func = trans_args.get('shift_func', shift_func)
 
         if distort_trans == trans_configs.DISTORT_TRANSFORMATIONS.X.value:
             for img in original_images:
@@ -498,8 +498,8 @@ def _distort_trans(original_images, attack_args):
                 transformed_images.append(img)
 
     elif distort_trans == trans_configs.DISTORT_TRANSFORMATIONS.PIXELATE.value:
-        new_size = attack_args.get('new_size', (16, 16))
-        resample = attack_args.get('resample')
+        new_size = trans_args.get('new_size', (16, 16))
+        resample = trans_args.get('resample')
         resample_method = trans_configs.get_distort_resample(resample)
 
         for img in original_images:
@@ -510,9 +510,9 @@ def _distort_trans(original_images, attack_args):
             img = np.array(img)
             transformed_images.append(img)
     elif distort_trans == trans_configs.DISTORT_TRANSFORMATIONS.CONTRAST.value:
-        c = attack_args.get('c', 0.1)
-        min_pixel_val = attack_args.get('min_pixel_val', 0.)
-        max_pixel_val = attack_args.get('max_pixel_val', 1.)
+        c = trans_args.get('c', 0.1)
+        min_pixel_val = trans_args.get('min_pixel_val', 0.)
+        max_pixel_val = trans_args.get('max_pixel_val', 1.)
         if nb_channels == 1:
             for img in original_images:
                 means = np.mean(img, axis=0, keepdims=True)
@@ -527,9 +527,9 @@ def _distort_trans(original_images, attack_args):
                 img = np.clip((img - means) * c + means, min_pixel_val, max_pixel_val)
                 transformed_images.append(img/255.)
     elif distort_trans == trans_configs.DISTORT_TRANSFORMATIONS.BRIGHTNESS.value:
-        c = attack_args.get('c', 0.99)
-        min_pixel_val = attack_args.get('min_pixel_val', 0.)
-        max_pixel_val = attack_args.get('max_pixel_val', 1.)
+        c = trans_args.get('c', 0.99)
+        min_pixel_val = trans_args.get('min_pixel_val', 0.)
+        max_pixel_val = trans_args.get('max_pixel_val', 1.)
 
         if nb_channels == 1:
             for img in original_images:
@@ -556,7 +556,7 @@ def _distort_trans(original_images, attack_args):
     return transformed_images
 
 
-def _noise_trans(original_images, attack_args):
+def _noise_trans(original_images, trans_args):
     """
     Adding noise to given images.
     :param original_images:
@@ -569,7 +569,7 @@ def _noise_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    noise = attack_args.get('noise')
+    noise = trans_args.get('noise')
     transformed_images = []
     for img in original_images:
         img = util.random_noise(img, mode=noise)
@@ -580,14 +580,14 @@ def _noise_trans(original_images, attack_args):
     return transformed_images
 
 
-def _filter_trans(original_images, attack_args):
+def _filter_trans(original_images, trans_args):
     if len(original_images.shape) == 4:
         nb_images, img_rows, img_cols, nb_channels = original_images.shape
     else:
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    filter_trans = attack_args.get('subtype')
+    filter_trans = trans_args.get('subtype')
     op = trans_configs.get_filter_op(filter_trans)
 
     transformed_images = []
@@ -610,26 +610,26 @@ def _filter_trans(original_images, attack_args):
                           trans_configs.FILTER_TRANSFORMATION.SATO.value,
                           trans_configs.FILTER_TRANSFORMATION.FRANGI.value,
                           trans_configs.FILTER_TRANSFORMATION.HESSIAN.value]:
-        size = attack_args.get('size', 3)
+        size = trans_args.get('size', 3)
 
         for img in original_images:
             img = op(img, size=size)
             transformed_images.append(img)
     elif filter_trans == trans_configs.FILTER_TRANSFORMATION.RANK.value:
-        size = attack_args.get('size', 3)
-        rank = attack_args.get('rank', 15)
+        size = trans_args.get('size', 3)
+        rank = trans_args.get('rank', 15)
 
         for img in original_images:
             img = op(img, rank=rank, size=size)
             transformed_images.append(img)
     elif filter_trans == trans_configs.FILTER_TRANSFORMATION.GAUSSIAN.value:
-        sigma = attack_args.get('sigma', 1)
+        sigma = trans_args.get('sigma', 1)
 
         for img in original_images:
             img = op(img, sigma=sigma)
             transformed_images.append(img)
     elif filter_trans == trans_configs.FILTER_TRANSFORMATION.MEIJERING.value:
-        sigmas = attack_args.get('sigmas', [0.01])
+        sigmas = trans_args.get('sigmas', [0.01])
 
         for img in original_images:
             if nb_channels == 1:
@@ -639,7 +639,7 @@ def _filter_trans(original_images, attack_args):
                 img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
             transformed_images.append(img)
     elif filter_trans == trans_configs.FILTER_TRANSFORMATION.ENTROPY.value:
-        radius = attack_args.get('radius', 2)
+        radius = trans_args.get('radius', 2)
 
         for img in original_images:
             if (nb_channels == 3):
@@ -656,7 +656,7 @@ def _filter_trans(original_images, attack_args):
                 img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
             transformed_images.append(img)
     elif filter_trans == trans_configs.FILTER_TRANSFORMATION.THIN.value:
-        max_iter = attack_args.get('max_iter', 100)
+        max_iter = trans_args.get('max_iter', 100)
 
         for img in original_images:
             if (nb_channels == 3):
@@ -676,7 +676,7 @@ def _filter_trans(original_images, attack_args):
     return transformed_images
 
 
-def _compression_trans(original_images, attack_args):
+def _compression_trans(original_images, trans_args):
     """
     :param original_images:
     :param transformation:
@@ -688,8 +688,8 @@ def _compression_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    format = attack_args.get('format', trans_configs.COMPRESS_FORMAT.PNG)
-    rate = attack_args.get('rate', 80)
+    format = trans_args.get('format', trans_configs.COMPRESS_FORMAT.PNG)
+    rate = trans_args.get('rate', 80)
     encode_param = trans_configs.get_compress_encoder(format, rate)
 
     transformed_images = []
@@ -712,7 +712,7 @@ def _compression_trans(original_images, attack_args):
     return transformed_images
 
 
-def _denoise_trans(original_images, attack_args):
+def _denoise_trans(original_images, trans_args):
     """
     denoising transformation
     :param original_images:
@@ -725,14 +725,14 @@ def _denoise_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    denoise_trans = attack_args.get('subtype')
+    denoise_trans = trans_args.get('subtype')
 
     transformed_images = []
     if denoise_trans == trans_configs.DENOISE_TRANSFORMATIONS.WAVELET.value:
-        method = attack_args.get('method', 'VisuShrink')  # any option in ['VisuShrink', 'BayesShrink']
-        mode = attack_args.get('mode', 'soft')  # any option in ['soft', 'hard']
-        wavelet = attack_args.get('wavelet', 'db1')  # any option in pywt.wavelist
-        sigma = attack_args.get('sigma', None)  # float or list, optional
+        method = trans_args.get('method', 'VisuShrink')  # any option in ['VisuShrink', 'BayesShrink']
+        mode = trans_args.get('mode', 'soft')  # any option in ['soft', 'hard']
+        wavelet = trans_args.get('wavelet', 'db1')  # any option in pywt.wavelist
+        sigma = trans_args.get('sigma', None)  # float or list, optional
 
         for img in original_images:
             if sigma is None:
@@ -746,9 +746,9 @@ def _denoise_trans(original_images, attack_args):
             transformed_images.append(img)
     elif denoise_trans == trans_configs.DENOISE_TRANSFORMATIONS.TV_CHAMBOLLE.value:
         # default 0.4 (grayscale); 0.07 (color image)
-        weight = attack_args.get('weight', 0.4)
-        epsilon = attack_args.get('epsilon', 2.e-4)
-        max_iter = attack_args.get('max_iter', 200)
+        weight = trans_args.get('weight', 0.4)
+        epsilon = trans_args.get('epsilon', 2.e-4)
+        max_iter = trans_args.get('max_iter', 200)
 
         for img in original_images:
             img = denoise_tv_chambolle(img, weight=weight, eps=epsilon,
@@ -756,16 +756,16 @@ def _denoise_trans(original_images, attack_args):
             transformed_images.append(img)
     elif denoise_trans == trans_configs.DENOISE_TRANSFORMATIONS.TV_BREGMAN.value:
         # default 2 (grayscale); 15 (color image)
-        weight = attack_args.get('weight', 2)
-        epsilon = attack_args.get('epsilon', 1e-6)
-        max_iter = attack_args.get('max_iter', 50)
+        weight = trans_args.get('weight', 2)
+        epsilon = trans_args.get('epsilon', 1e-6)
+        max_iter = trans_args.get('max_iter', 50)
 
         for img in original_images:
             img_trans = denoise_tv_bregman(img, eps=epsilon, max_iter=max_iter, weight=weight)
             transformed_images.append(img_trans)
     elif denoise_trans == trans_configs.DENOISE_TRANSFORMATIONS.BILATERAL.value:
-        sigma_color = np.double(attack_args.get('sigma_color', 0.05))
-        sigma_spatial = np.double(attack_args.get('sigma_spatial', 15.0))
+        sigma_color = np.double(trans_args.get('sigma_color', 0.05))
+        sigma_spatial = np.double(trans_args.get('sigma_spatial', 15.0))
 
         for img in original_images:
             img_trans = denoise_bilateral(img, sigma_color=sigma_color,
@@ -773,13 +773,13 @@ def _denoise_trans(original_images, attack_args):
             transformed_images.append(img_trans)
     elif denoise_trans in [trans_configs.DENOISE_TRANSFORMATIONS.NL_MEANS.value,
                            trans_configs.DENOISE_TRANSFORMATIONS.NL_MEANS_FAST.value]:
-        patch_kw = dict(patch_size=attack_args.get('patch_size', 5),  # 5x5 patch
-                        patch_distance=attack_args.get('patch_distance', 6),  # 13x13 search area
+        patch_kw = dict(patch_size=trans_args.get('patch_size', 5),  # 5x5 patch
+                        patch_distance=trans_args.get('patch_distance', 6),  # 13x13 search area
                         multichannel=True)
-        sigma = attack_args.get('sigma', None)
-        hr = attack_args.get('hr', 0.8)
+        sigma = trans_args.get('sigma', None)
+        hr = trans_args.get('hr', 0.8)
         # Athena default: 1 (mnist); 2.5 (cifar100)
-        sr = attack_args.get('sr', 1)
+        sr = trans_args.get('sr', 1)
         fast_mode = False if denoise_trans == trans_configs.DENOISE_TRANSFORMATIONS.NL_MEANS.value else True
 
         for img in original_images:
@@ -801,7 +801,7 @@ def _denoise_trans(original_images, attack_args):
     return transformed_images
 
 
-def _geometric_trans(original_images, attack_args):
+def _geometric_trans(original_images, trans_args):
     """
     geometric transformations
     :param original_images:
@@ -814,18 +814,18 @@ def _geometric_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    geo_trans = attack_args.get('subtype')
+    geo_trans = trans_args.get('subtype')
     op = trans_configs.get_geometric_op(geo_trans)
     transformed_images = []
     if geo_trans == trans_configs.GEOMETRIC_TRANSFORMATIONS.SWIRL.value:
         # athena default: 3 (mnist); 1.5 (cifar100)
-        strength = attack_args.get('strength', 3)
+        strength = trans_args.get('strength', 3)
         # athena default: 65 (mnist); 45 (cifar100)
-        radius = attack_args.get('radius', 65)
-        center = attack_args.get('center', None)
-        rotation = attack_args.get('rotation', 0)
-        order = attack_args.get('order', 1)
-        mode = attack_args.get('mode', 'reflect')
+        radius = trans_args.get('radius', 65)
+        center = trans_args.get('center', None)
+        rotation = trans_args.get('rotation', 0)
+        order = trans_args.get('order', 1)
+        mode = trans_args.get('mode', 'reflect')
 
         for img in original_images:
             img = op(img, center=center, strength=strength,
@@ -834,13 +834,13 @@ def _geometric_trans(original_images, attack_args):
             transformed_images.append(img)
     elif geo_trans in [trans_configs.GEOMETRIC_TRANSFORMATIONS.IRADON.value,
                        trans_configs.GEOMETRIC_TRANSFORMATIONS.IRADON_SART.value]:
-        default_theta = np.linspace(start=attack_args.get('ls_start', -100),
-                                    stop=attack_args.get('ls_stop', 150),
-                                    num=attack_args.get('ls_num', 28),  # e.g., max(image.shape)
+        default_theta = np.linspace(start=trans_args.get('ls_start', -100),
+                                    stop=trans_args.get('ls_stop', 150),
+                                    num=trans_args.get('ls_num', 28),  # e.g., max(image.shape)
                                     endpoint=False)
-        theta = attack_args.get('theta', default_theta)  # array_like, dtype=float, optional
-        filter = attack_args.get('filter', 'ramp')  # ramp, shepp-logan, cosine, hamming, hann, or None
-        interpolation = attack_args.get('interpolation', 'linear')  # 'linear', 'nearest', or 'cubic' (slow)
+        theta = trans_args.get('theta', default_theta)  # array_like, dtype=float, optional
+        filter = trans_args.get('filter', 'ramp')  # ramp, shepp-logan, cosine, hamming, hann, or None
+        interpolation = trans_args.get('interpolation', 'linear')  # 'linear', 'nearest', or 'cubic' (slow)
         circle = True
 
         for img in original_images:
@@ -859,12 +859,12 @@ def _geometric_trans(original_images, attack_args):
             img = (img / 2.) + 0.5
             transformed_images.append(img)
     elif geo_trans == trans_configs.GEOMETRIC_TRANSFORMATIONS.RADON.value:
-        default_theta = np.linspace(start=attack_args.get('ls_start', -100),
-                                    stop=attack_args.get('ls_stop', 150),
-                                    num=attack_args.get('ls_num', 28),  # e.g., max(image.shape)
+        default_theta = np.linspace(start=trans_args.get('ls_start', -100),
+                                    stop=trans_args.get('ls_stop', 150),
+                                    num=trans_args.get('ls_num', 28),  # e.g., max(image.shape)
                                     endpoint=False)
 
-        theta = attack_args.get('theta', default_theta)  # array_like, dtype=float, optional
+        theta = trans_args.get('theta', default_theta)  # array_like, dtype=float, optional
         circle = True
 
         for img in original_images:
@@ -887,7 +887,7 @@ def _geometric_trans(original_images, attack_args):
     return np.array(transformed_images)
 
 
-def _segment_trans(original_images, attack_args):
+def _segment_trans(original_images, trans_args):
     """
     Segmentation of objects
     :param original_images:
@@ -900,11 +900,11 @@ def _segment_trans(original_images, attack_args):
         nb_images, img_rows, img_cols = original_images.shape
         nb_channels = 1
 
-    segment_trans = attack_args.get('subtype').lower()
+    segment_trans = trans_args.get('subtype').lower()
     transformed_images = []
     if segment_trans == trans_configs.SEGMENT_TRANSFORMATIONS.GRADIENT.value:
-        median_radius = attack_args.get('median_radius', 2)
-        gradient_radius = attack_args.get('gradient_radius', 1)
+        median_radius = trans_args.get('median_radius', 2)
+        gradient_radius = trans_args.get('gradient_radius', 1)
         for img in original_images:
             # denoise image
             if (nb_channels == 3):
@@ -916,10 +916,10 @@ def _segment_trans(original_images, attack_args):
                 img_trans = cv2.cvtColor(img_trans, cv2.COLOR_GRAY2RGB)
             transformed_images.append(img_trans)
     elif segment_trans == trans_configs.SEGMENT_TRANSFORMATIONS.WATERSHED.value:
-        median_radius = attack_args.get('median_radius', 2)
-        mark_radius = attack_args.get('mark_radius', 5)
-        gradient_upper_bound = attack_args.get('gradient_upper_bound', 10)
-        gradient_radius = attack_args.get('gradient_radius', 2)
+        median_radius = trans_args.get('median_radius', 2)
+        mark_radius = trans_args.get('mark_radius', 5)
+        gradient_upper_bound = trans_args.get('gradient_upper_bound', 10)
+        gradient_radius = trans_args.get('gradient_radius', 2)
 
         for img in original_images:
             if (nb_channels == 3):
