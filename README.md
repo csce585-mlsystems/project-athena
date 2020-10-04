@@ -1,10 +1,10 @@
-# project
-This is the course project for [CSCE585](https://pooyanjamshidi.github.io/mls/). Students will build their machine learning systems based on the provided infrastructure --- Athena.
+# Project Athena
+This is the course project for [CSCE585](https://pooyanjamshidi.github.io/mls/). Students will build their machine learning systems based on the provided infrastructure --- [Athena](https://softsys4ai.github.io/athena/).
 
 # Overview
 This project assignment is a group assignment. Each group of students will design and build an adversarial machine learning system on top of the provided framework ([Athena](https://softsys4ai.github.io/athena/)) then evaluate their work accordingly.  The project will be evaluated on a benchmark dataset [MNIST](http://yann.lecun.com/exdb/mnist/). This project will focus on supervised machine learning tasks, in which all the training data are labeled. Moreover, we consider only evasion attacks in this project, which happens at the test phase (i.e., the targeted model has been trained and deployed).
 
-Each team will finish three tasks independently --- two adversarial machine learning tasks and a competition task.
+Each team should finish three tasks independently --- two core adversarial machine learning tasks and a competition task.
 
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
@@ -22,10 +22,11 @@ Each team should submit all materials that enable an independent group to replic
 
 # All about teams
 * The class (32 students) will be divided into ten groups; each consists of 3 or 4 students.
-* One can recruit his/her team members or join a team on piazza.
-* Name your team.
+* One can recruit her/his team members via GitHub issues or via Piazza.
+* Name your team in the associated GitHub issue designated for teams.
 * Claim for task 2. We have multiple options for task 2 with bonus varying from 10% to 20%. Each option allows limited groups, so each team must claim their task 2 (first come, first served).
 * We will use [this note](https://piazza.com/class/ke221xlfhpq783?cid=25) on piazza to collect the claims for task 2.
+* We also allow for **external teams** or **external individuals** who are not students in the CSCE 585 class.
 
 # What are given
 * Source code of Athena framework. 
