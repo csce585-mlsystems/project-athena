@@ -1,6 +1,6 @@
 1. Here are the baseline adversarial examples that were generated in the context of zero\-knowledge threat model. The targeted model is the undefended model in the Vanilla Athena (models/cnn/model\-mnist\-cnn\-clean.h5).
 
-2. Baseline adversarial examples were generated using various attacks. For each attack, 5 variants were crafted by injecting various magnitudes of perturbations into an input.
+2. Baseline adversarial examples were generated using various attacks. For each attack, 5 variants were crafted by injecting perturbations with various magnitudes into an input.
 
 3. Each ".npy" file consists of 10K adversarial exmaples from the MNSIT test data, with corresponding benign samples in "test\_BS\-mnist\-clean.npy" and oracle labels in "test\_Label\-mnist\-clean.npy".
 
