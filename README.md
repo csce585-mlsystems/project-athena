@@ -64,9 +64,9 @@ In this task, students will generate adversarial examples in the context of the 
 5. [PGD](https://arxiv.org/pdf/1706.06083.pdf)
 6. [MIM](https://openaccess.thecvf.com/content_cvpr_2018/papers/Dong_Boosting_Adversarial_Attacks_CVPR_2018_paper.pdf)
 7. [DeepFool](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.pdf)
-8. [One-Pixel](https://arxiv.org/pdf/1710.08864.pdf) (extremely slow, not recommended)
+8. [One-Pixel](https://arxiv.org/pdf/1710.08864.pdf) (black-box attack, not suitable for this task)
 9. [Spatially Transformed Attack](https://arxiv.org/abs/1801.02612)
-10. [Hop-Skip-Jump](https://arxiv.org/abs/1904.02144)
+10. [Hop-Skip-Jump](https://arxiv.org/abs/1904.02144) (black-box attack, not suitable for this task)
 11. [ZOO](https://arxiv.org/abs/1708.03999)
 
 ## Other possible attacks [5%]:
@@ -81,7 +81,7 @@ In this task, students will generate adversarial examples in the context of the 
 # Task 2 [50% + 10 - 20%]
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due. Claim your task 2 [here](https://piazza.com/class/ke221xlfhpq783?cid=24).
 
-## Option 1 [50% + 10%] (<= 3 groups)
+## Option 1 [50% + 10%] (not limit)
 **White-box attack the vanilla Athena**
 
 In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around five variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla Athena. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
@@ -93,7 +93,7 @@ In this task, students aim to generate adversarial examples based on the vanilla
 4. Contribution of individual team members.
 5. Citations to all related works.
 
-### Possible solutions:
+### Possible solutions (already implemented in Athena):
 1. Optimization-based approach: accumulated loss. Reference: Towards Robust Neural Networks via Random Self-ensemble. Xuanqing Liu, Minhao Cheng, Huan Zhang, Cho-Jui Hsieh. ECCV 2018.
 2. Synthesizing adversarial examples. Reference: Synthesizing Robust Adversarial Examples, A. Athalye et al., ICML 2018
 
