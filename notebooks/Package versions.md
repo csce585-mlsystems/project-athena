@@ -34,7 +34,7 @@
 |theano|0.7.0|pypi_0|pypi|
 |theconf|0.1.3|pypi_0|pypi|
 |torch|1.4.0|pypi_0|pypi|
-|torchvision|0.4.0|py37_cpu[cpuonly]| pytorch|
+|torchvision|0.4.0|py37_cpu| [cpuonly] pytorch|
 |torchvision-cpu|0.3.0|py37_cuNone_1|pytorch|
 |tornado|6.0.2|py37h7b6447c_0 ||
 |tqdm|4.42.0|py_0|| 
