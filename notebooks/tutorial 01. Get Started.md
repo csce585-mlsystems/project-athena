@@ -29,6 +29,12 @@ e.g., install a cpu-only pytorch
 
 ``conda install pytorch torchvision cpuonly -c pytorch``
 
+## Install tensorflow (required, if you use keras to build models)
+Install [tensorflow](https://www.tensorflow.org/install/pip) for task 1, since the weak defenses in Vanilla Athena were built using Keras.
+
+``conda install tensorflow==<version>``
+
+FYI. I am using tensorflow 1.13.
 
 ## Install libraries for Athena
 You can install required libraries from the [requirements.txt](https://github.com/csce585-mlsystems/project-athena/blob/master/requirements.txt).
