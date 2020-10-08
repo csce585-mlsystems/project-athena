@@ -6,69 +6,13 @@ Anaconda is a free and open-source distribution of the Python and R programming 
 
 Install Anaconda on your computer: https://docs.anaconda.com/anaconda/install/.
 
-## Create an environment
-Create an environment for Athena project with a python version of 3.6+ (I use Python 3.7). Activate your environment after it is created.
+## Create and setup the environment from yml file
+[Create an environment from yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) 
 
-Create an environment
-https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#id1
+The yml file for Athena project (you may want to update the **prefix** before you start): ``athena-environment.yml``.
 
-Activate an environment
-https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment
-
-e.g.,
-
-``conda create --name athena python=3.7``
-
-``conda activate athena``
-
-**The following steps must be done in your athena environment (the one you created)**
-## Install PyTorch
-Install PyTorch. You can find corresponding command line from [here](https://pytorch.org/get-started/locally/#mac-anaconda). 
-
-e.g., install a cpu-only pytorch
-
-``conda install pytorch torchvision cpuonly -c pytorch``
-
-## Install tensorflow (required, if you use keras to build models)
-Install [tensorflow](https://www.tensorflow.org/install/pip) for task 1, since the weak defenses in Vanilla Athena were built using Keras.
-
-``conda install tensorflow==<version>``
-
-FYI. I am using tensorflow 1.13.
-
-## Install libraries for Athena
-You can install required libraries from the [requirements.txt](https://github.com/csce585-mlsystems/project-athena/blob/master/requirements.txt).
-
-### Use pip
-Please note that ``pip`` is not installed by default. However, pip is usually installed on a user level, once it is installed, you can use it in all anaconda environment.
-
-Install pip by
-
-``conda install pip``
-
-Install via requirements.txt
-
-``pip install -r requirements.txt``
-
-**If you failed to directly install packages/libraries from requirements.txt, a workaround solution is to install the listed packages one by one manually.** Here are the installations to individual packages/libraries:
-1. install [theconf](https://github.com/wbaek/theconf)
-2. install [pytorch-gradual-warmup](https://github.com/ildoonet/pytorch-gradual-warmup-lr)
-3. install [pystopwatch](https://github.com/ildoonet/pystopwatch2)
-4. install [hyperopt](https://github.com/hyperopt/hyperopt)
-5. install pretrainedmodels [pip](https://pypi.org/project/pretrainedmodels/), [conda](https://anaconda.org/conda-forge/pretrainedmodels)
-6. install tqdm [pip](https://pypi.org/project/tqdm/), [conda](https://anaconda.org/conda-forge/tqdm)
-7. install tensorboardX [pip](https://pypi.org/project/tensorboardX/), [conda](https://anaconda.org/conda-forge/tensorboardx)
-8. install sklearn [office](https://scikit-learn.org/stable/install.html), [pip](https://pypi.org/project/scikit-learn/), [conda](https://anaconda.org/anaconda/scikit-learn)
-9. install [ray](https://pypi.org/project/ray/)
-10. install matplotlib [office](https://matplotlib.org/users/installing.html), [pip](https://pypi.org/project/matplotlib/), [conda](https://anaconda.org/conda-forge/matplotlib)
-11. install psutil [pip](https://pypi.org/project/psutil/), [conda](https://anaconda.org/anaconda/psutil)
-12. install Requests [office](https://requests.readthedocs.io/en/master/user/install/), [pip](https://pypi.org/project/requests/)
-13. install [adversarial-robustness-toolbox (ART)](https://github.com/Trusted-AI/adversarial-robustness-toolbox/wiki/Get-Started#setup) 
-14. install keras-resnet [pip](https://pypi.org/project/keras-resnet/), [conda](https://anaconda.org/conda-forge/keras-resnet)
-
-### Use conda
-**Do NOT use conda to install requirements for Athena project. You will fail as many required libraries such as IBM ART do not support conda installation yet.**
-
+Or, you can follow the following this guide to set up the environment manually.
+----------
 # Create Athena project
 ## via Command line
 Clone a local copy from remote repository via command: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository.
