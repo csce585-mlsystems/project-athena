@@ -9,7 +9,7 @@ Install Anaconda on your computer: https://docs.anaconda.com/anaconda/install/.
 ## Create and setup the environment from yml file
 [Create an environment from yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) 
 
-The yml file for Athena project (you may want to update the **prefix** before you start): ``athena-environment.yml``.
+The yml file for Athena project (you may want to update the **prefix** before you start): ``environment.yml``.
 
 ----------
 # Create Athena project
