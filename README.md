@@ -162,3 +162,6 @@ Cross evaluation of task 1 and task 2 between all groups will be run by us (or w
 3. Architecture of your machine learning system (for the whole project).
 4. Contribution of individual team members.
 5. Citations to all related works.
+
+# Optional Research
+If a team wants to go beyond the mandatory tasks and do some extra tasks (totally optional, but highly encouraged), we have some exciting possibilities. For example, there is one idea to deploy the defense on a physical device such as AWS DeepLense or NVIDIA Platforms (TX1, TX2, Xavier). We have these platforms in the lab and we can facilitate access to these devices for doing some exciting experiments. As you know, with Athena, there is a tradeoff space (adding/removing WDs and changing ensemble strategy) and you can test it with physical environments. This requires some creativity and motivation to come up with some nice experiments and demo. This optional task is highly encouraged for highly motivated students who want to learn more about adversarial ML and do some research in this direction.
