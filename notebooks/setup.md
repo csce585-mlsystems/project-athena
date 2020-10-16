@@ -17,8 +17,8 @@
 ### Install the opencv libs:
 	conda install opencv==3.4.2
 
-### Install the req.txt file that I customized with the adversarial-robustness-toolbox==1.2.0
-	pip install -r req.txt
+### Install the new requirements.txt file from Athena main directory
+	pip install -r requirments.txt
 
 ### Downgrade the following packages:
 	pip install Pillow==7.0.0
