@@ -10,5 +10,6 @@ ray
 matplotlib
 psutil
 requests
-adversarial-robustness-toolbox
+adversarial-robustness-toolbox==1.2.0
 keras-resnet
+scikit-image==0.17.2
