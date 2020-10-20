@@ -8,9 +8,9 @@ import numpy as np
 import os
 import json
 
-from keras.models import load_model, Model
-from keras.utils import CustomObjectScope
-from keras.initializers import glorot_uniform
+from tensorflow.keras.models import load_model, Model
+from tensorflow.keras.utils import CustomObjectScope
+from tensorflow.keras.initializers import glorot_uniform
 import tensorflow as tf
 
 from models.keras import WeakDefense
