@@ -105,6 +105,10 @@ def subsampling(data, labels, num_classes, ratio=0.1, filepath=None, filename=No
     if num_samples <= 0:
         raise ValueError("The value of ``ratio`` is too small, 0 sample to poll.")
 
+    # convert to labels
+    if len(labels.shape) > 1:
+        labels = [np.argmax(p) for p in labels]
+
     # sample equal number of samples from each class
     sample_ids = []
     for c_id in range(num_classes):
