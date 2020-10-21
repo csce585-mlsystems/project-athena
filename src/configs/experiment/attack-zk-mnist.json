@@ -84,26 +84,26 @@
     "configs13": {
     "attack": "pgd",
     "description": "PGD_eps0.2",
-    "eps": 0.2
+    "eps": 0.025
   },
     "configs14": {
     "attack": "pgd",
     "description": "PGD_eps0.4",
-    "eps": 0.4
+    "eps": 0.05
   },
     "configs15": {
     "attack": "pgd",
     "description": "PGD_eps0.6",
-    "eps": 0.6
+    "eps": 0.075
   },
     "configs16": {
     "attack": "pgd",
     "description": "PGD_eps0.8",
-    "eps": 0.8
+    "eps": 0.1
   },
     "configs17": {
     "attack": "pgd",
     "description": "PGD_eps1.0",
-    "eps": 1.0
+    "eps": 0.15
   }
 }

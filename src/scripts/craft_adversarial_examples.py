@@ -50,18 +50,19 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         error_rate = metrics.error_rate(predictions, labels)
         print(str(attack_configs.get("description")) + ' Error Rate: ' + str(error_rate))
 
-        # plotting some examples
-        num_plotting = min(data.shape[0], 3)
-        for i in range(num_plotting):
-            img = data_adv[i].reshape((img_rows, img_cols))
-            plt.imshow(img, cmap='gray')
-            title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
-                                        labels[i],
-                                        predictions[i]
-                                        )
-            plt.title(title)
-            plt.show()
-            plt.close()
+
+        # # plotting some examples
+        # num_plotting = min(data.shape[0], 3)
+        # for i in range(num_plotting):
+        #     img = data_adv[i].reshape((img_rows, img_cols))
+        #     plt.imshow(img, cmap='gray')
+        #     title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
+        #                                 labels[i],
+        #                                 predictions[i]
+        #                                 )
+        #     plt.title(title)
+        #     plt.show()
+        #     plt.close()
 
         # save the adversarial example
         if save:
