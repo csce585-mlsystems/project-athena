@@ -5,6 +5,7 @@
 
 import os
 import random
+import time
 
 import keras
 import numpy as np
@@ -15,7 +16,7 @@ from torchvision import datasets, transforms
 import torch
 from torch.utils.data import DataLoader, TensorDataset
 
-random.seed(1000)
+#random.seed(1000)
 
 
 def channels_last(data):
@@ -75,3 +76,38 @@ def get_dataloader(data, labels, batch_size=128, shuffle=False, **kwargs):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, **kwargs)
 
     return dataloader
+
+
+def subsampling(data, labels, ratio=0.1, output=None):
+    """
+    Subsampling dataset.
+    :param data: numpy array. the population dataset to sample from.
+    :param labels: numpy array. the corresponding true labels of the population dataset.
+    :param ratio: float. the ratio to sample.
+    :param output: string or path. the path to save subsampled data and labels.
+    :return:
+    """
+    if data is None or labels is None:
+        raise ValueError("`data` and `labels` cannot be None.")
+
+    if ratio <= 0 or ratio > 1:
+        raise ValueError("Expect a ratio greater than `0` and no more `1`, but found {}.".format(ratio))
+
+    total = data.shape[0]
+    subsize = int(total * ratio)
+
+    # subsampling
+    subsample_idx = random.sample(population=[i for i in range(total)],
+                                  k=subsize)
+    subsamples = np.asarray([data[i] for i in subsample_idx])
+    sublabels = np.asarray([labels[i] for i in subsample_idx])
+
+    if output is not None:
+        # save the subsamples
+        rand_idx = time.monotonic()
+        file = os.path.join(output, 'subsamples-ratio_{}-{}.npy'.format(ratio, rand_idx))
+        np.save(file=file, arr=subsamples)
+        file = os.path.join(output, 'sublabels-ratio_{}-{}.npy'.format(ratio, rand_idx))
+        np.save(file=file, arr=sublabels)
+
+    return subsamples, sublabels

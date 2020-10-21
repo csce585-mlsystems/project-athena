@@ -2,7 +2,7 @@
   "num_attacks": 1,
   "configs0": {
     "attack": "fgsm",
-    "description": "FGSM_eps0.3",
-    "eps": 0.3
+    "description": "FGSM_eps0.25",
+    "eps": 0.25
   }
 }
