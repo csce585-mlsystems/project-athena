@@ -78,11 +78,12 @@ def get_dataloader(data, labels, batch_size=128, shuffle=False, **kwargs):
     return dataloader
 
 
-def subsampling(data, labels, ratio=0.1, output=None):
+def subsampling(data, labels, num_classes, ratio=0.1, filepath=None, filename=None):
     """
     Subsampling dataset.
     :param data: numpy array. the population dataset to sample from.
     :param labels: numpy array. the corresponding true labels of the population dataset.
+    :param num_classes: integer. the number of classes in the dataset.
     :param ratio: float. the ratio to sample.
     :param output: string or path. the path to save subsampled data and labels.
     :return:
@@ -90,24 +91,39 @@ def subsampling(data, labels, ratio=0.1, output=None):
     if data is None or labels is None:
         raise ValueError("`data` and `labels` cannot be None.")
 
+    if num_classes is None or num_classes <= 0:
+        raise ValueError("`num_classes` must be a positive number, but found {}.".format(num_classes))
+
     if ratio <= 0 or ratio > 1:
         raise ValueError("Expect a ratio greater than `0` and no more `1`, but found {}.".format(ratio))
 
-    total = data.shape[0]
-    subsize = int(total * ratio)
+    # prepare sampling
+    pool_size = data.shape[0]
+    num_per_class = int(pool_size / num_classes)
+    num_samples = int(num_per_class * ratio)
 
-    # subsampling
-    subsample_idx = random.sample(population=[i for i in range(total)],
-                                  k=subsize)
-    subsamples = np.asarray([data[i] for i in subsample_idx])
-    sublabels = np.asarray([labels[i] for i in subsample_idx])
+    if num_samples <= 0:
+        raise ValueError("The value of ``ratio`` is too small, 0 sample to poll.")
 
-    if output is not None:
+    # sample equal number of samples from each class
+    sample_ids = []
+    for c_id in range(num_classes):
+        ids = [i for i in range(pool_size) if labels[i]==c_id]
+        selected = random.sample(population=ids, k=num_samples)
+        sample_ids.extend(selected)
+
+    # shuffle the selected ids
+    random.shuffle(sample_ids)
+    # get sampled data and labels
+    subsamples = np.asarray([data[i] for i in sample_ids])
+    sublabels = np.asarray([labels[i] for i in sample_ids])
+
+    if filepath is not None:
         # save the subsamples
         rand_idx = time.monotonic()
-        file = os.path.join(output, 'subsamples-ratio_{}-{}.npy'.format(ratio, rand_idx))
+        file = os.path.join(filepath, 'subsamples-{}-ratio_{}-{}.npy'.format(filename, ratio, rand_idx))
         np.save(file=file, arr=subsamples)
-        file = os.path.join(output, 'sublabels-ratio_{}-{}.npy'.format(ratio, rand_idx))
+        file = os.path.join(filepath, 'sublabels-{}-ratio_{}-{}.npy'.format(filename, ratio, rand_idx))
         np.save(file=file, arr=sublabels)
 
     return subsamples, sublabels
