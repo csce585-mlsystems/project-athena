@@ -32,6 +32,7 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
 
     if len(labels.shape) > 1:
         labels = [np.argmax(p) for p in labels]
+        # might have to convert this to an array
 
     # generate attacks one by one
     for id in range(num_attacks):
@@ -43,7 +44,9 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         # predict the adversarial examples
         predictions = model.predict(data_adv)
         predictions = [np.argmax(p) for p in predictions]
+        # might have to convert predictions to an array
 
+        # can pass the predictions to metrics.py error where y_true = labels
         # plotting some examples
         num_plotting = min(data.shape[0], 3)
         for i in range(num_plotting):

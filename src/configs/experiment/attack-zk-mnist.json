@@ -1,0 +1,109 @@
+{
+  "num_attacks": 18,
+  "configs0": {
+    "attack": "cw",
+    "description": "CW lw:.1, eps: .2",
+    "norm": "linf",
+    "eps": 0.1,
+    "lr": 0.2
+  },
+  "configs1": {
+    "attack": "cw",
+    "description": "CW lw:.1, eps: .4",
+    "norm": "linf",
+    "eps": 0.1,
+    "lr": 0.4
+  },
+  "configs2": {
+    "attack": "cw",
+    "description": "CW lw:.1, eps: .6",
+    "norm": "linf",
+    "eps": 0.1,
+    "lr": 0.6
+  },
+  "configs3": {
+    "attack": "cw",
+    "description": "CW lw:.1, eps: .8",
+    "norm": "linf",
+    "eps": 0.1,
+    "lr": 0.8
+  },
+  "configs4": {
+    "attack": "cw",
+    "description": "CW lw:.2, eps: .1",
+    "norm": "linf",
+    "eps": 0.2,
+    "lr": 0.1
+  },
+  "configs5": {
+    "attack": "cw",
+    "description": "CW lw:.4, eps: .1",
+    "norm": "linf",
+    "eps": 0.4,
+    "lr": 0.1
+  },
+  "configs6": {
+    "attack": "cw",
+    "description": "CW lw:.6, eps: .1",
+    "norm": "linf",
+    "eps": 0.6,
+    "lr": 0.1
+  },
+  "configs7": {
+    "attack": "cw",
+    "description": "CW lw:.8, eps: .1",
+    "norm": "linf",
+    "eps": 0.8,
+    "lr": 0.1
+  },
+    "configs8": {
+    "attack": "bim",
+    "description": "BIM_eps0.01",
+    "eps": 0.01
+  },
+    "configs9": {
+    "attack": "bim",
+    "description": "BIM_eps0.05",
+    "eps": 0.05
+  },
+    "configs10": {
+    "attack": "bim",
+    "description": "BIM_eps0.10",
+    "eps": 0.10
+  },
+    "configs11": {
+    "attack": "bim",
+    "description": "BIM_eps0.15",
+    "eps": 0.15
+  },
+    "configs12": {
+    "attack": "bim",
+    "description": "BIM_eps0.20",
+    "eps": 0.20
+  },
+    "configs13": {
+    "attack": "pgd",
+    "description": "PGD_eps0.2",
+    "eps": 0.2
+  },
+    "configs14": {
+    "attack": "pgd",
+    "description": "PGD_eps0.4",
+    "eps": 0.4
+  },
+    "configs15": {
+    "attack": "pgd",
+    "description": "PGD_eps0.6",
+    "eps": 0.6
+  },
+    "configs16": {
+    "attack": "pgd",
+    "description": "PGD_eps0.8",
+    "eps": 0.8
+  },
+    "configs17": {
+    "attack": "pgd",
+    "description": "PGD_eps1.0",
+    "eps": 1.0
+  }
+}
