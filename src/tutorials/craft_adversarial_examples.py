@@ -11,6 +11,7 @@ from matplotlib import pyplot as plt
 
 from utils.model import load_lenet
 from utils.file import load_from_json
+from utils.metrics import error_rate
 from attacks.attack import generate
 
 
@@ -31,8 +32,7 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
     data_loader = (data, labels)
 
     if len(labels.shape) > 1:
-        labels = [np.argmax(p) for p in labels]
-        # might have to convert this to an array
+        labels = np.asarray([np.argmax(p) for p in labels])
 
     # generate attacks one by one
     for id in range(num_attacks):
@@ -43,12 +43,13 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
                             )
         # predict the adversarial examples
         predictions = model.predict(data_adv)
-        predictions = [np.argmax(p) for p in predictions]
-        # might have to convert predictions to an array
+        predictions = np.asarray([np.argmax(p) for p in predictions])
 
-        # can pass the predictions to metrics.py error where y_true = labels
+        err = error_rate(y_pred=predictions, y_true=labels)
+        print(">>> error rate:", err)
+
         # plotting some examples
-        num_plotting = min(data.shape[0], 3)
+        num_plotting = min(data.shape[0], 0)
         for i in range(num_plotting):
             img = data_adv[i].reshape((img_rows, img_cols))
             plt.imshow(img, cmap='gray')

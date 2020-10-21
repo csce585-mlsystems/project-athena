@@ -111,13 +111,13 @@ if __name__ == '__main__':
     """
 
     parser.add_argument('-t', '--trans-configs', required=False,
-                        default='../configs/demo/athena-mnist.json',
+                        default='../configs/experiment/athena-mnist.json',
                         help='Configuration file for transformations.')
     parser.add_argument('-m', '--model-configs', required=False,
-                        default='../configs/demo/model-mnist.json',
+                        default='../configs/experiment/model-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/demo/data-mnist.json',
+                        default='../configs/experiment/data-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
                         default='results',

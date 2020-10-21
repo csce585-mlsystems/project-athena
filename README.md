@@ -38,7 +38,7 @@ Each team should submit all materials that enable an independent group to replic
 * (Maybe) A simple example of reports. 
 
 
-# Task 1 [30% + 5%]
+# Task 1 [30% + 5%] (due: Oct. 25)
 **Generate adversarial examples in the context of the zero-knowledge threat model.**
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the Athena framework and necessary background regarding the adversarial machine learning tasks.
@@ -78,7 +78,7 @@ In this task, students will generate adversarial examples in the context of the 
 
 **Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NIPS adversarial competitions, and surveys in adversarial machine learning.
 
-# Task 2 [50% + 10 - 20%]
+# Task 2 [50% + 10 - 20%] (due Nov. 15)
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due. Claim your task 2 [here](https://piazza.com/class/ke221xlfhpq783?cid=24).
 
 ## Option 1 [50% + 10%] (not limit)
@@ -149,7 +149,7 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3 [20%]
+# Task 3 [20%] (due Nov. 30)
 **Competition task**
 
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
