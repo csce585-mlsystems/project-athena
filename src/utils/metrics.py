@@ -32,3 +32,21 @@ def error_rate(y_pred, y_true, incorrect_ids=None):
     # print('*** score:', amount, correct, score)
     return score
 
+def get_corrections(y_pred, y_true):
+    """
+    Collect the indices of the images that are miscalssified.
+    :param y_pred: predictions.
+    :param y_true: ground truth
+    :return:
+    """
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+
+    if len(y_pred.shape) > 1:
+        y_pred = np.asarray([np.argmax(p) for p in y_pred])
+    if len(y_true.shape) > 1:
+        y_true = np.asarray([np.argmax(p) for p in y_true])
+
+    corrections = [i for i in range(y_true.shape[0]) if y_pred[i]==y_true[i]]
+
+    return corrections

@@ -2,5 +2,6 @@
     "dir": "../../models/cnn/",
     "um_file": "model-mnist-cnn-clean.h5",
     "wd_prefix": "model-mnist-cnn-",
-    "wd_postfix": ".h5"
+    "wd_postfix": ".h5",
+    "pgd_trained": "../../models/baseline/advTrained-mnist-adtC.h5"
 }
