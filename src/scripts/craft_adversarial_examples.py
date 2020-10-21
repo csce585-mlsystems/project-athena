@@ -47,7 +47,7 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         predictions = model.predict(data_adv)
         predictions = np.array([np.argmax(p) for p in predictions])
 
-        error_rate = metrics.error_rate(predictions, labels)
+        error_rate = metrics.error_rate_single(predictions, labels)
         print(str(attack_configs.get("description")) + ' Error Rate: ' + str(error_rate))
 
 

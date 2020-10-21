@@ -111,7 +111,7 @@ if __name__ == '__main__':
     """
 
     parser.add_argument('-t', '--trans-configs', required=False,
-                        default='../configs/demo/athena-mnist.json',
+                        default='../configs/experiment/athena-mnist.json',
                         help='Configuration file for transformations.')
     parser.add_argument('-m', '--model-configs', required=False,
                         default='../configs/demo/model-mnist.json',
