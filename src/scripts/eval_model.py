@@ -17,7 +17,7 @@ from models.image_processor import transform
 
 
 def evaluate(trans_configs, model_configs,
-             data_configs, save=False, output_dir=None):
+             data_configs, save=True, output_dir=None):
     """
     Apply transformation(s) on images.
     :param trans_configs: dictionary. The collection of the parameterized transformations to test.
@@ -63,44 +63,54 @@ def evaluate(trans_configs, model_configs,
     x_bs = np.load(bs_file)
     img_rows, img_cols = x_bs.shape[1], x_bs.shape[2]
 
-    # load the corresponding true labels
+    # load the corresponding true labels, take just the first 1000
     label_file = os.path.join(data_configs.get('dir'), data_configs.get('label_file'))
     labels = np.load(label_file)
+    labels = labels[:1000]
 
     # get indices of benign samples that are correctly classified by the targeted model
     print(">>> Evaluating UM on [{}], it may take a while...".format(bs_file))
     pred_bs = undefended.predict(x_bs)
     corrections = get_corrections(y_pred=pred_bs, y_true=labels)
 
+    if save:
+        if output_dir is None:
+            raise ValueError("Cannot save to a none path.")
+        # save with a random name
+        f = os.path.join(output_dir, "minerva_AE-results.txt")
+        out_file = open(f, 'w')
+
     # Evaluate AEs.
-    results = {}
     ae_list = data_configs.get('ae_files')
-    ae_file = os.path.join(data_configs.get('dir'), ae_list[4])
-    x_adv = np.load(ae_file)
+    for _ in range(len(ae_list)):
+        results = {}
+        ae_file = os.path.join(data_configs.get('dir'), ae_list[_])
+        print(ae_list[_])
+        print(ae_file)
+        x_adv = np.load(ae_file)
 
-    # evaluate the undefended model on the AE
-    print(">>> Evaluating UM on [{}], it may take a while...".format(ae_file))
-    pred_adv_um = undefended.predict(x_adv)
-    err_um = error_rate(y_pred=pred_adv_um, y_true=labels, correct_on_bs=corrections)
-    # track the result
-    results['UM'] = err_um
+        # evaluate the undefended model on the AE
+        print(">>> Evaluating UM on [{}], it may take a while...".format(ae_file))
+        pred_adv_um = undefended.predict(x_adv)
+        err_um = error_rate(y_pred=pred_adv_um, y_true=labels, correct_on_bs=corrections)
+        # track the result
+        results['UM'] = err_um
 
-    # evaluate the ensemble on the AE
-    print(">>> Evaluating ensemble on [{}], it may take a while...".format(ae_file))
-    pred_adv_ens = ensemble.predict(x_adv)
-    err_ens = error_rate(y_pred=pred_adv_ens, y_true=labels, correct_on_bs=corrections)
-    # track the result
-    results['Ensemble'] = err_ens
+        # evaluate the ensemble on the AE
+        print(">>> Evaluating ensemble on [{}], it may take a while...".format(ae_file))
+        pred_adv_ens = ensemble.predict(x_adv)
+        err_ens = error_rate(y_pred=pred_adv_ens, y_true=labels, correct_on_bs=corrections)
+        # track the result
+        results['Ensemble'] = err_ens
 
-    # evaluate the baseline on the AE
-    print(">>> Evaluating baseline model on [{}], it may take a while...".format(ae_file))
-    pred_adv_bl = baseline.predict(x_adv)
-    err_bl = error_rate(y_pred=pred_adv_bl, y_true=labels, correct_on_bs=corrections)
-    # track the result
-    results['PGD-ADT'] = err_bl
+        # evaluate the baseline on the AE
+        print(">>> Evaluating baseline model on [{}], it may take a while...".format(ae_file))
+        pred_adv_bl = baseline.predict(x_adv)
+        err_bl = error_rate(y_pred=pred_adv_bl, y_true=labels, correct_on_bs=corrections)
+        # track the result
+        results['PGD-ADT'] = err_bl
 
-    # TODO: collect and dump the evaluation results to file(s) such that you can analyze them later.
-    print(">>> Evaluations on [{}]:\n{}".format(ae_file, results))
+        out_file.write(">>> Evaluations on [{}]:\n{}\n".format(ae_file, results))
 
 
 if __name__ == '__main__':
@@ -120,9 +130,10 @@ if __name__ == '__main__':
                         default='../configs/experiment/data-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
-                        default='results',
+                        default='../../results',
                         help='Folder for outputs.')
     parser.add_argument('--debug', required=False, default=True)
+    parser.add_argument('-s', '--save-results', required=False, default=True, help='Save output or not')
 
     args = parser.parse_args()
 
@@ -132,6 +143,7 @@ if __name__ == '__main__':
     print('DATA CONFIGS:', args.data_configs)
     print('OUTPUT ROOT:', args.output_root)
     print('DEBUGGING MODE:', args.debug)
+    print('SAVING OUTPUT:', args.save_results)
     print('----------------------------\n')
 
     # parse configurations (into a dictionary) from json file
@@ -143,5 +155,5 @@ if __name__ == '__main__':
     evaluate(trans_configs=trans_configs,
              model_configs=model_configs,
              data_configs=data_configs,
-             save=False,
+             save=args.save_results,
              output_dir=args.output_root)
