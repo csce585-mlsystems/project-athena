@@ -52,7 +52,7 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         print(config.get('description') + ' Error Rate: ' + str(error_rate))
 
 
-        # plotting some examples
+        # # plotting some examples
         num_plotting = min(data.shape[0], 3)
         for i in range(num_plotting):
             img = data_adv[i].reshape((img_rows, img_cols))
@@ -120,6 +120,6 @@ if __name__ == '__main__':
     labels = np.load(label_file)
 
     # generate adversarial examples for a small subset
-    data_bs = data_bs[:10]
-    labels = labels[:10]
+    data_bs = data_bs[:1000]
+    labels = labels[:1000]
     generate_ae(model=target, data=data_bs, labels=labels, attack_configs=attack_configs)
