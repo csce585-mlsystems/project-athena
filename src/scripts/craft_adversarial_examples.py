@@ -38,6 +38,7 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
     # generate attacks one by one
     for id in range(num_attacks):
         key = "configs{}".format(id)
+        config = attack_configs.get(key)
         data_adv = generate(model=model,
                             data_loader=data_loader,
                             attack_args=attack_configs.get(key)
@@ -48,28 +49,28 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         predictions = np.array([np.argmax(p) for p in predictions])
 
         error_rate = metrics.error_rate_single(predictions, labels)
-        print(str(attack_configs.get("description")) + ' Error Rate: ' + str(error_rate))
+        print(config.get('description') + ' Error Rate: ' + str(error_rate))
 
 
         # # plotting some examples
-        # num_plotting = min(data.shape[0], 3)
-        # for i in range(num_plotting):
-        #     img = data_adv[i].reshape((img_rows, img_cols))
-        #     plt.imshow(img, cmap='gray')
-        #     title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
-        #                                 labels[i],
-        #                                 predictions[i]
-        #                                 )
-        #     plt.title(title)
-        #     plt.show()
-        #     plt.close()
+        num_plotting = min(data.shape[0], 3)
+        for i in range(num_plotting):
+            img = data_adv[i].reshape((img_rows, img_cols))
+            plt.imshow(img, cmap='gray')
+            title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
+                                        labels[i],
+                                        predictions[i]
+                                        )
+            plt.title(title)
+            plt.show()
+            plt.close()
 
         # save the adversarial example
         if save:
             if output_dir is None:
                 raise ValueError("Cannot save images to a none path.")
             # save with a random name
-            file = os.path.join(output_dir, "{}.npy".format(time.monotonic()))
+            file = os.path.join(output_dir, "minerva_AE-{}.npy".format(config.get('description')))
             print("Save the adversarial examples to file [{}].".format(file))
             np.save(file, data_adv)
 
