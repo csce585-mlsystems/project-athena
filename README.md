@@ -112,7 +112,7 @@ Students aim to build a model in this task, which takes the predictions from wea
 5. Citations to all related works.
 
 ### Possible solutions:
-1. [+15%] A machine learning model f(predictions) = y' that is trained on the training set D = {(predictions, y)}.
+1. [+15%] A machine learning model `f(predictions) = y'` that is trained on the training set `D = {(predictions, y)}`.
 2. [+20%] Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising. Forest Agostinelli, Michael R. Anderson, and Honglak Lee. NIPS 2018.
 3. [+20%] Knowledge distillation? (TBD. Ying will check if this is feasible.) Distilling the Knowledge in a Neural Network. Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. ICLR 2015.
 
