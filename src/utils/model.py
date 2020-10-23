@@ -18,19 +18,23 @@ from models.keras import WeakDefense
 tf.compat.v1.disable_eager_execution()
 
 
-def load_pool(trans_configs, model_configs, use_logits=False, wrap=False):
+def load_pool(trans_configs, model_configs, active_list=False, use_logits=False, wrap=False):
     pool = {}
     trans_list = {}
 
-    num_trans = trans_configs.get("num_transformations")
-    for i in range(num_trans):
+    if active_list:
+        wd_ids = trans_configs.get("active_wds")
+    else:
+        num_trans = trans_configs.get("num_transformations")
+        wd_ids = [i for i in range(num_trans)]
+    for i in wd_ids:
         key = "configs{}".format(i)
         trans = trans_configs.get(key).get("description")
 
         model_file = model_configs.get("wd_prefix") + trans + model_configs.get("wd_postfix")
         model_file = os.path.join(model_configs.get("dir"), model_file)
 
-        wd = load_lenet(model_file, trans_configs=trans, use_logits=use_logits, wrap=wrap)
+        wd = load_lenet(model_file, trans_configs=trans_configs.get(key), use_logits=use_logits, wrap=wrap)
         pool[trans_configs.get(key).get("id")] = wd
         trans_list[trans_configs.get(key).get("id")] = trans_configs.get(key).get("description")
 

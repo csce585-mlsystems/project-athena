@@ -20,6 +20,14 @@ from attacks.utils import WHITEBOX_ATTACK as ATTACK
 
 
 def generate(model, data_loader, attack_args, device=None):
+    """
+    Generate adversarial examples.
+    :param model: an instances of art.classifiers.classifier. The targeted model.
+    :param data_loader: a tuple of benign samples and corresponding true labels.
+    :param attack_args: dictionary. adversarial configurations.
+    :param device: string. cuda (for gpu) or cpu.
+    :return:
+    """
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -53,6 +61,17 @@ def generate(model, data_loader, attack_args, device=None):
 
 
 def _fgsm(model, data, labels, attack_args):
+    """
+    Fast Gradient Sign Method
+    Explaining and Harnessing Adversarial Examples
+    by Ian J. Goodfellow, Jonathon Shlens, Christian Szegedy
+    ``https://arxiv.org/abs/1412.6572``
+    :param model:
+    :param data:
+    :param labels:
+    :param attack_args:
+    :return:
+    """
     print('>>> Generating FGSM examples.')
     eps = attack_args.get('eps', 0.3)
 
@@ -66,6 +85,17 @@ def _fgsm(model, data, labels, attack_args):
 
 
 def _cw(model, data, labels, attack_args):
+    """
+    Carlini & Wanger
+    Towards Evaluating the Robustness of Neural Networks
+    by Nicholas Carlini, David Wagner
+    ``https://arxiv.org/abs/1608.04644``
+    :param model:
+    :param data:
+    :param labels:
+    :param attack_args:
+    :return:
+    """
     norm = attack_args.get('norm').lower()
 
     lr = attack_args.get('lr')
@@ -99,11 +129,21 @@ def _cw(model, data, labels, attack_args):
 
 
 def _pgd(model, data, labels, attack_args):
+    """
+    Projected Gradient Descent
+    Towards deep learning models resistant to adversarial attacks
+    by Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu.
+    ``https://arxiv.org/abs/1706.06083``
+    :param model:
+    :param data:
+    :param labels:
+    :param attack_args:
+    :return:
+    """
     eps = attack_args.get('eps', 0.3)
     eps_step = attack_args.get('eps_step', eps/10.)
     max_iter = attack_args.get('max_iter', 10)
 
-    # default
     norm = _get_norm_value(attack_args.get('norm', 'linf'))
     targeted = attack_args.get('targeted', False)
     num_random_init = attack_args.get('num_random_init', 0)
@@ -116,6 +156,17 @@ def _pgd(model, data, labels, attack_args):
 
 
 def _bim(model, data, labels, attack_args):
+    """
+    Basic Iteractive Method
+    ADVERSARIAL EXAMPLES IN THE PHYSICAL WORLD
+    Alexey Kurakin, Ian J. Goodfellow, Samy Bengio
+    ``https://arxiv.org/pdf/1607.02533.pdf``
+    :param model:
+    :param data:
+    :param labels:
+    :param attack_args:
+    :return:
+    """
     eps = attack_args.get('eps', 0.3)
     eps_step = attack_args.get('eps_step', eps/10.)
     max_iter = attack_args.get('max_iter', 100)
@@ -130,7 +181,9 @@ def _jsma(model, data, labels, attack_args):
     theta = attack_args.get('theta', 0.15)
     gamma = attack_args.get('gamma', 0.5)
 
-    attacker = SaliencyMapMethod(classifier=model, theta=theta, gamma=gamma)
+    batch_size = attack_args.get('batch_size', 1)
+
+    attacker = SaliencyMapMethod(classifier=model, theta=theta, gamma=gamma, batch_size=batch_size)
     return attacker.generate(data, labels)
 
 
@@ -201,6 +254,11 @@ def _zoo(model, data, labels, attack_args):
 
 
 def _get_norm_value(norm):
+    """
+    Convert a string norm to a numeric value.
+    :param norm:
+    :return:
+    """
     norm = norm.lower()
     if norm == 'linf':
         value = np.inf

@@ -26,7 +26,9 @@ def transform(X, trans_args):
     if isinstance(trans_args, (list, np.ndarray)):
         raise NotImplementedError('Transformation combination is not implemented.')
     else:
-        return _transform_images(X, trans_args)
+        X_trans = _transform_images(X, trans_args).astype(np.float32)
+        return np.clip(X_trans, 0., 1.)
+
 
 
 def _transform_images(X, trans_args):
