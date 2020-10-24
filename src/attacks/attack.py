@@ -141,7 +141,7 @@ def _pgd(model, data, labels, attack_args):
     :return:
     """
     eps = attack_args.get('eps', 0.3)
-    eps_step = attack_args.get('eps_step', eps/10.)
+    eps_step = attack_args.get('eps_step', eps/10.0)
     max_iter = attack_args.get('max_iter', 10)
 
     norm = _get_norm_value(attack_args.get('norm', 'linf'))

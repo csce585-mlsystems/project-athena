@@ -15,7 +15,7 @@ from utils.metrics import error_rate
 from attacks.attack import generate
 
 
-def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None):
+def generate_ae(model, data, labels, attack_configs, save=True, output_dir="../../data"):
     """
     Generate adversarial examples
     :param model: WeakDefense. The targeted model.
@@ -49,8 +49,8 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         print(">>> error rate:", err)
 
         # plotting some examples
-        num_plotting = min(data.shape[0], 0)
-        for i in range(num_plotting):
+        #num_plotting = min(data.shape[0], 0)
+        for i in range(5):
             img = data_adv[i].reshape((img_rows, img_cols))
             plt.imshow(img, cmap='gray')
             title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
@@ -115,6 +115,6 @@ if __name__ == '__main__':
     labels = np.load(label_file)
 
     # generate adversarial examples for a small subset
-    data_bs = data_bs[:10]
-    labels = labels[:10]
+    data_bs = data_bs
+    labels = labels
     generate_ae(model=target, data=data_bs, labels=labels, attack_configs=attack_configs)

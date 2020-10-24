@@ -1,13 +1,28 @@
 {
-  "num_attacks": 2,
+  "num_attacks": 5,
   "configs0": {
-    "attack": "fgsm",
-    "description": "FGSM_eps0.25",
-    "eps": 0.25
+    "attack": "pgd",
+    "description": "PGD_eps0.03",
+    "eps": 0.03
   },
   "configs1": {
     "attack": "pgd",
-    "description": "PGD_eps0.25",
-    "eps": 0.25
+    "description": "PGD_eps0.07",
+    "eps": 0.07
+  },
+  "configs2": {
+    "attack": "pgd",
+    "description": "PGD_eps0.09",
+    "eps": 0.09
+  },
+  "configs3": {
+    "attack": "pgd",
+    "description": "PGD_eps0.12",
+    "eps": 0.12
+  },
+  "configs4": {
+    "attack": "pgd",
+    "description": "PGD_eps0.18",
+    "eps": 0.18
   }
 }
