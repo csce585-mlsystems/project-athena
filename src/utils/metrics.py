@@ -21,8 +21,9 @@ def error_rate(y_pred, y_true, correct_on_bs=None):
     if len(y_true.shape) > 1:
         y_true = np.asarray([np.argmax(p) for p in y_true])
 
-    num_incorrect = y_pred.shape[0] if correct_on_bs is None else len(correct_on_bs)
-    amount = (y_pred.shape[0] - num_incorrect)
+    amount = y_pred.shape[0] if correct_on_bs is None else len(correct_on_bs)
+    #num_incorrect = y_pred.shape[0] if correct_on_bs is None else len(correct_on_bs)
+    #amount = (y_pred.shape[0] - num_incorrect)
 
     # Count the number of inputs which successfully fool the model.
     # that is f(x') != f(x).
