@@ -3,22 +3,20 @@
     "bs_file": "subsamples-mnist-ratio_0.1-112490.080191753.npy",
     "label_file": "sublabels-mnist-ratio_0.1-112490.080191753.npy",
     "ae_files": [
-        "1.npy",
-        "2.npy",
-        "3.npy",
-        "4.npy",
-        "5.npy",
-        "1312.935279709.npy",
-        "2754.857975294.npy",
-        "8202.62212447.npy",
-        "11890.710129945.npy",
-        "12582.871594962.npy",
-        "127.510811443.npy",
-        "209.433580473.npy",
-        "271.885937972.npy",
-        "326.83541567.npy",
-        "380.521707224.npy"
-
-
+        "ae_bim_eps001_iter100.npy",
+        "ae_bim_eps04_iter75.npy",
+        "ae_bim_eps06_iter25.npy",
+        "ae_bim_eps09_iter40.npy",
+        "ae_bim_eps09_iter100.npy",
+        "ae_fgsm_eps01.npy",
+        "ae_fgsm_eps05.npy",
+        "ae_fgsm_eps07.npy",
+        "ae_fgsm_eps08.npy",
+        "ae_fgsm_eps09.npy",
+        "ae_pgd_eps003.npy",
+        "ae_pgd_eps007.npy",
+        "ae_pgd_eps009.npy",
+        "ae_pgd_eps012.npy",
+        "ae_pgd_eps018.npy"
     ]
 }

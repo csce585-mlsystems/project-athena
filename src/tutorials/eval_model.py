@@ -17,7 +17,7 @@ from models.image_processor import transform
 
 
 def evaluate(trans_configs, model_configs,
-             data_configs, save=False, output_dir=None):
+             data_configs, save=True, output_dir= "/eval_results" ):
     """
     Apply transformation(s) on images.
     :param trans_configs: dictionary. The collection of the parameterized transformations to test.
@@ -75,7 +75,7 @@ def evaluate(trans_configs, model_configs,
     # Evaluate AEs.
     results = {}
     ae_list = data_configs.get('ae_files')
-    ae_file = os.path.join(data_configs.get('dir'), ae_list[2]) #4
+    ae_file = os.path.join(data_configs.get('dir'), ae_list[14]) #4
     x_adv = np.load(ae_file)
 
     # evaluate the undefended model on the AE
@@ -143,5 +143,5 @@ if __name__ == '__main__':
     evaluate(trans_configs=trans_configs,
              model_configs=model_configs,
              data_configs=data_configs,
-             save=False,
+             save=True,
              output_dir=args.output_root)
