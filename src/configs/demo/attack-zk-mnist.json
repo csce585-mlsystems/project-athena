@@ -1,28 +1,33 @@
 {
   "num_attacks": 5,
   "configs0": {
-    "attack": "pgd",
-    "description": "PGD_eps0.03",
-    "eps": 0.03
+    "attack": "bim",
+    "description": "bim_eps0.9iter100",
+    "eps": 0.9,
+    "max_iter": 100
   },
   "configs1": {
-    "attack": "pgd",
-    "description": "PGD_eps0.07",
-    "eps": 0.07
+    "attack": "bim",
+    "description": "bim_eps0.4iter75",
+    "eps": 0.4,
+    "max_iter": 75
   },
   "configs2": {
-    "attack": "pgd",
-    "description": "PGD_eps0.09",
-    "eps": 0.09
+    "attack": "bim",
+    "description": "bim_eps0.01ter1000",
+    "eps": 0.01,
+    "max_iter": 100
   },
   "configs3": {
-    "attack": "pgd",
-    "description": "PGD_eps0.12",
-    "eps": 0.12
+    "attack": "bim",
+    "description": "bim_eps0.9iter40",
+    "eps": 0.9,
+    "max_iter": 40
   },
   "configs4": {
-    "attack": "pgd",
-    "description": "PGD_eps0.18",
-    "eps": 0.18
+    "attack": "bim",
+    "description": "bim_eps0.6iter25",
+    "eps": 0.6,
+    "max_iter": 25
   }
 }
