@@ -56,9 +56,10 @@ Each team should submit all materials that enable an independent group to replic
 * (Maybe) A simple example of reports. 
 
 
-# Task 1 [30% + 5%] Generate adversarial examples
+# Task 1. Generate adversarial examples
 * Objective: Generate adversarial examples in the context of the zero-knowledge threat model.
 * Due: 11:59:59, Oct. 25
+* Credits: 30% + bonus (5%)
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the Athena framework and necessary background regarding the adversarial machine learning tasks.
 
@@ -97,14 +98,16 @@ In this task, students will generate adversarial examples in the context of the 
 
 **Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NIPS adversarial competitions, and surveys in adversarial machine learning.
 
-# Task 2 [50% + 10 - 20%] Extension of ATHENA
+# Task 2. Extension of ATHENA
 * Due: Nov. 15
+* Credits: 50% + bonus (10% -- 20%)
 
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due. Claim your task 2 [here](https://piazza.com/class/ke221xlfhpq783?cid=24).
 
-## Option 1 [50% + 10%] Optimazation-based white-box attack
+## Option 1. Optimazation-based white-box attack
 * Task: Generate adversarial examples for the Vanilla ATHENA, using optimaztion-based white-box attack.
 * Number of groups: not limited
+* Bonus: 10%
 
 In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around 5 variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla Athena. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
 
@@ -123,9 +126,10 @@ In this task, students aim to generate adversarial examples based on the vanilla
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-## Option 2 [50% + 15%/20%] Learning-based strategy
+## Option 2. Learning-based strategy
 * Task: Build a learning-based strategy.
-* Number of groups: no more than 3 groups
+* Number of groups: no more than 3 groups.
+* Bonus: 20%
 
 Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
@@ -144,9 +148,10 @@ Students aim to build a model in this task, which takes the predictions from wea
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-### Option 3 [50% + 15%] Probabilistic ATHENA
+### Option 3. Probabilistic ATHENA
 * Task: Build a probabilistic ATHENA
 * Number of groups: no more than 3 groups
+* Bonus: 15%
 
 Students aim to build an ensemble from a library of probabilistic models (such as `Bayesian Neural Networks`) in this task. Each group should aim to build a library of 5 to 20 weak defenses and then build the ensembles from the library. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
@@ -159,9 +164,10 @@ Students aim to build an ensemble from a library of probabilistic models (such a
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-### Option 4 [50% + 10%/20%] Hybrid ATHENA
+### Option 4. Hybrid ATHENA
 * Task: Build a hybrid ATHENA
 * Number of groups: no more than 3 groups
+* Bonus: 10% -- 20%
 
 Students aim to build a hybrid ensemble from a library of diverse types of weak defenses in this task. Students should aim to build a couple of ensemble variants with various sizes.
 
@@ -179,9 +185,10 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3 [20%] Competition task
+# Task 3. Competition task
 * Task: Competition
 * Due: Nov. 30
+* Bonus: 20%
 
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
 
