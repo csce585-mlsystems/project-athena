@@ -9,8 +9,12 @@ Each team should finish three tasks independently --- two core adversarial machi
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 
+* Code. Submit the code in your project GitHub repo.
+ 1. Team leader create a project GitHub repo by forking the class project GitHub repo.
+ 2. Add all your team members to your team repo.
+ 3. 
 
-* Code. Submit the code in your project GitHub repo which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.
+which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.
 * The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
 * A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
   * Contribution of each individual member.
