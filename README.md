@@ -58,7 +58,7 @@ Each team should submit all materials that enable an independent group to replic
 
 # Task 1. Generate adversarial examples
 * Objective: Generate adversarial examples in the context of the zero-knowledge threat model.
-* Due: 11:59:59, Oct. 25
+* Due: 11:59:59 PM, Oct. 25
 * Credits: 30% + bonus (5%)
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the Athena framework and necessary background regarding the adversarial machine learning tasks.
