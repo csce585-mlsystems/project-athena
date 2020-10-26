@@ -9,12 +9,7 @@ Each team should finish three tasks independently --- two core adversarial machi
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 
-* Code. Submit the code in your project GitHub repo.
- 1. Team leader create a project GitHub repo by forking the class project GitHub repo.
- 2. Add all your team members to your team repo.
- 3. 
-
-which you need to create in the course [GitHub organization](https://github.com/csce585-mlsystems). The team leader need to send TA a list of team member GitHub accounts to be added to the organization.
+* Code. Submit the code in your project GitHub repo. In order to do that, the team leader should first create a project GitHub repo for your team by forking the class project GitHub repo then add all your team members to the team repo. All scripts should be maintained in the `src` folder properly. 
 * The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
 * A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
   * Contribution of each individual member.
@@ -23,6 +18,25 @@ which you need to create in the course [GitHub organization](https://github.com/
   * Write the report in your own words instead of copying and pasting from an article or others' work.
   * Cite all related works.
 * Only one submission is necessary for each team.
+* **Organize the submissions** The submissions for tasks (except scripts, which should be in `src`) should be organized as fowllows:
+  * In your project root, create folders `Task1`, `Task1`, and `Task3` for your task1, task2, task3 respectively.
+  * In each of the task folder, create (i) a `data` folder for all the adversarial examples generated for the task assignment; (ii) a `models` folder for all the new models you created and trained for the task assignment; (iii) a `results` folder for experiment outputs (if there are any).
+  * The report document for the task should locate at the root of the task folder.
+  * Here is an example:
+  ```
+  Task1
+    |-- data
+    |     |-- AE-FGSM_eps0.3.npy
+    |     |-- AE-PGD_eps0.45.npy
+    |     |-- BS.npy
+    |     |-- Labels.npy
+    |-- models
+    |     |-- BayesianNN-MNIST-clean.npy
+    |     |-- BayesianNN-MNIST-rotate_90.npy
+    |-- results
+    |     |-- evaluation-error_rate-AE-FGSM_eps0.3.csv
+    |-- report_task1.ipynb
+  ```
 
 # All about teams
 * The class (32 students) will be divided into ten groups; each consists of 3 or 4 students.
@@ -42,8 +56,9 @@ which you need to create in the course [GitHub organization](https://github.com/
 * (Maybe) A simple example of reports. 
 
 
-# Task 1 [30% + 5%] (due: Oct. 25)
-**Generate adversarial examples in the context of the zero-knowledge threat model.**
+# Task 1 [30% + 5%] Generate adversarial examples
+* Objective: Generate adversarial examples in the context of the zero-knowledge threat model.
+* Due: 11:59:59, Oct. 25
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the Athena framework and necessary background regarding the adversarial machine learning tasks.
 
@@ -82,13 +97,16 @@ In this task, students will generate adversarial examples in the context of the 
 
 **Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NIPS adversarial competitions, and surveys in adversarial machine learning.
 
-# Task 2 [50% + 10 - 20%] (due Nov. 15)
+# Task 2 [50% + 10 - 20%] Extension of ATHENA
+* Due: Nov. 15
+
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due. Claim your task 2 [here](https://piazza.com/class/ke221xlfhpq783?cid=24).
 
-## Option 1 [50% + 10%] (not limit)
-**White-box attack the vanilla Athena**
+## Option 1 [50% + 10%] Optimazation-based white-box attack
+* Task: Generate adversarial examples for the Vanilla ATHENA, using optimaztion-based white-box attack.
+* Number of groups: not limited
 
-In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around five variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla Athena. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
+In this task, students aim to generate adversarial examples based on the vanilla Athena in the context of the white-box threat model (Section III.F in Athena paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around 5 variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla Athena. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
 
 ### Report:
 1. Introduce the approaches that are used in the task.
@@ -97,14 +115,17 @@ In this task, students aim to generate adversarial examples based on the vanilla
 4. Contribution of individual team members.
 5. Citations to all related works.
 
-### Possible solutions (already implemented in Athena):
-1. Optimization-based approach: accumulated loss. Reference: Towards Robust Neural Networks via Random Self-ensemble. Xuanqing Liu, Minhao Cheng, Huan Zhang, Cho-Jui Hsieh. ECCV 2018.
-2. Synthesizing adversarial examples. Reference: Synthesizing Robust Adversarial Examples, A. Athalye et al., ICML 2018
+### Possible solutions (already implemented in ATHENA):
+```
+1. Xuanqing Liu, Minhao Cheng, Huan Zhang, Cho-Jui Hsieh. Towards Robust Neural Networks via Random Self-ensemble. ECCV 2018.
+2. Anish Athalye, Logan Engstrom, Andrew Ilyas, Kevin Kwok. Synthesizing Robust Adversarial Examples. ICML 2018
+```
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-## Option 2 [50% + 15%/20%] (<= 3 groups)
-**Learning-based strategy**
+## Option 2 [50% + 15%/20%] Learning-based strategy
+* Task: Build a learning-based strategy.
+* Number of groups: no more than 3 groups
 
 Students aim to build a model in this task, which takes the predictions from weak defenses as the input and produces the final label for the input image. That is, rather than using a fixed ensemble strategy (MV, AVEP, etc.), students train a model to utilize the predictions from weak defenses. Each group should aim to implement one approach. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
@@ -116,16 +137,18 @@ Students aim to build a model in this task, which takes the predictions from wea
 5. Citations to all related works.
 
 ### Possible solutions:
-1. [+15%] A machine learning model `f(predictions) = y'` that is trained on the training set `D = {(predictions, y)}`.
-2. [+20%] Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising. Forest Agostinelli, Michael R. Anderson, and Honglak Lee. NIPS 2018.
-3. [+20%] Knowledge distillation? (TBD. Ying will check if this is feasible.) Distilling the Knowledge in a Neural Network. Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. ICLR 2015.
+```
+1. [+20%] Forest Agostinelli, Michael R. Anderson, and Honglak Lee. Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising. NIPS 2018.
+2. [+20%] Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. Distilling the Knowledge in a Neural Network. ICLR 2015.
+```
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-### Option 3 [50% + 15%] (<= 3 groups)
-**Probabilistic Athena**
+### Option 3 [50% + 15%] Probabilistic ATHENA
+* Task: Build a probabilistic ATHENA
+* Number of groups: no more than 3 groups
 
-Students aim to build an ensemble from a library of probabilistic models (such as Bayesian Neural Networks) in this task. Each group should aim to build a library of 10 to 20 weak defenses and then build the ensembles from the library. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
+Students aim to build an ensemble from a library of probabilistic models (such as `Bayesian Neural Networks`) in this task. Each group should aim to build a library of 5 to 20 weak defenses and then build the ensembles from the library. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
 ### Report:
 1. Introduce the approaches that are used in the task.
@@ -136,14 +159,17 @@ Students aim to build an ensemble from a library of probabilistic models (such a
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-### Option 4 [50% + 10%/20%] (<= 3 groups)
-**Hybrid Athena**
+### Option 4 [50% + 10%/20%] Hybrid ATHENA
+* Task: Build a hybrid ATHENA
+* Number of groups: no more than 3 groups
+
 Students aim to build a hybrid ensemble from a library of diverse types of weak defenses in this task. Students should aim to build a couple of ensemble variants with various sizes.
 
 Two major approaches:
 1. [10%] Randomly select n weak defenses from the library for the ensemble.
 2. [20%] Select n weak defenses via some search-based approaches. For example,
 Greedy search for n weak defenses that gives the maximal/minimal value according to a specific metric (e.g., entropy, ensemble diversity, etc.)
+
 ### Report:
 1. Introduce the approaches that are used in the task.
 2. Experimental settings --- the values of the tunable parameters for each variant.
@@ -153,21 +179,20 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3 [20%] (due Nov. 30)
-**Competition task**
+# Task 3 [20%] Competition task
+* Task: Competition
+* Due: Nov. 30
 
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
 
 Cross evaluation of task 1 and task 2 between all groups will be run by us (or we will provide scripts for students to perform the cross-evaluation). Evaluation results will be provided to the whole class. After the cross-evaluation, each team should aim to perform necessary analysis on the evaluation results and investigate why your approaches are effective (or ineffective) against some approach.
 
 ### Report:
-```
 1. Introduce the analysis methods that are used in the task.
 2. Analysis results and insights. Possible enhancements, future works. etc.
 3. Architecture of your machine learning system (for the whole project).
 4. Contribution of individual team members.
 5. Citations to all related works.
-```
 
 # Optional Research
 If a team wants to go beyond the mandatory tasks and do some extra tasks (totally optional, but highly encouraged), we have some exciting possibilities. For example, there is one idea to deploy the defense on a physical device such as AWS DeepLense or NVIDIA Platforms (TX1, TX2, Xavier). We have these platforms in the lab and we can facilitate access to these devices for doing some exciting experiments. As you know, with Athena, there is a tradeoff space (adding/removing WDs and changing ensemble strategy) and you can test it with physical environments. This requires some creativity and motivation to come up with some nice experiments and demo. This optional task is highly encouraged for highly motivated students who want to learn more about adversarial ML and do some research in this direction.
