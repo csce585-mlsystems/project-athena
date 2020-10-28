@@ -96,7 +96,7 @@ In this task, students will generate adversarial examples in the context of the 
 4. [GAN-based Attacks](https://arxiv.org/abs/1801.02610)
 3. etc.
 
-**Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NIPS adversarial competitions, and surveys in adversarial machine learning.
+**Note:** You are encouraged to explore for new attacks not listed. Some good resources are related studies in recent years, NeurIPS adversarial competitions, and surveys in adversarial machine learning.
 
 # Task 2. Extension of ATHENA
 * **Due**: 11:59:59 PM, Nov. 15
