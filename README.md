@@ -37,7 +37,7 @@ Each team should submit all materials that enable an independent group to replic
     |     |-- evaluation-error_rate-AE-FGSM_eps0.3.csv
     |-- report_task1.ipynb
   ```
-* **IMPORTANT**: Please make sure you tag the commit that delivers each task, e.g.: `git tag -a task1 -m "Team XYZ Task 1"`. Once you tag your commit, please make sure you let us know where your repository leaves via the associated turn in issue in the [project-athena](https://github.com/csce585-mlsystems/project-athena/). E.g., [Task1](./issues/23).
+* **IMPORTANT**: Please make sure you tag the commit that delivers each task, e.g.: `git tag -a task1 -m "Team XYZ Task 1"`. Once you tag your commit, please make sure you let us know where your repository leaves via the associated turn in issue in the [project-athena](https://github.com/csce585-mlsystems/project-athena/). E.g., [Task1](/issues/23).
 
 # All about teams
 * The class (32 students) will be divided into ten groups; each consists of 3 or 4 students.
