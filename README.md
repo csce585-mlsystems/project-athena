@@ -9,15 +9,15 @@ Each team should finish three tasks independently --- two core adversarial machi
 # Submission
 Each team should submit all materials that enable an independent group to replicate the results, which includes but not least:
 
-* Code. Submit the code in your project GitHub repo. In order to do that, the team leader should first create a project GitHub repo for your team by forking the class project GitHub repo then add all your team members to the team repo. All scripts should be maintained in the `src` folder properly. 
-* The experimental results. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
-* A simple report. Submit reports in the form of Jupyter notebooks on the GitHub repo.
-  * Contribution of each individual member.
-  * Approaches implemented. Briefly introduce the approaches you choose and implement to solve the task.
-  * Experimental settings. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
-  * Write the report in your own words instead of copying and pasting from an article or others' work.
-  * Cite all related works.
-* Only one submission is necessary for each team.
+* **Code**. Submit the code in your project GitHub repo. In order to do that, the team leader should first create a project GitHub repo for your team by forking the class project GitHub repo then add all your team members to the team repo. All scripts should be maintained in the `src` folder properly. 
+* The **experimental results**. For example, for attack tasks, submit the crafted AEs, the logs for experiments, and any necessary results. For defense tasks, submit the built defenses, the logs for experiments, and any necessary results.
+* **Jupyter notebooks**. Submit reports in the form of Jupyter notebooks on the GitHub repo.
+  * *Contribution* of each individual member.
+  * *Approaches* implemented. Briefly introduce the approaches you choose and implement to solve the task.
+  * *Experimental settings*. Basically, this includes everything that is needed for an independent group to replicate the results. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
+  * Write the report in *your own words* instead of copying and pasting from an article or others' work. Make sure you emphesize on important findings and intuitions behind any design choice you made.
+  * *Cite* all related works.
+* **Only one submission** is necessary for each team. 
 * **Organize the submissions** The submissions for tasks (except scripts, which should be in `src`) should be organized as fowllows:
   * In your project root, create folders `Task1`, `Task1`, and `Task3` for your task1, task2, task3 respectively.
   * In each of the task folder, create (i) a `data` folder for all the adversarial examples generated for the task assignment; (ii) a `models` folder for all the new models you created and trained for the task assignment; (iii) a `results` folder for experiment outputs (if there are any).
@@ -37,6 +37,7 @@ Each team should submit all materials that enable an independent group to replic
     |     |-- evaluation-error_rate-AE-FGSM_eps0.3.csv
     |-- report_task1.ipynb
   ```
+* **IMPORTANT**: Please make sure you tag the commit that delivers each task, e.g.: `git tag -a task1 -m "Team XYZ Task 1"`. Once you tag your commit, please make sure you let us know where your repository leaves via the associated turn in issue in the [project-athena](https://github.com/csce585-mlsystems/project-athena/). E.g., [Task 1](#23).
 
 # All about teams
 * The class (32 students) will be divided into ten groups; each consists of 3 or 4 students.
