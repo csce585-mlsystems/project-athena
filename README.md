@@ -185,7 +185,7 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3. Competition task
+# Task 3. Competition
 * **Goal**: Competition between adversarial attacks and ATHENA-based defenses.
 * **Due**: 11:59:59 PM, Nov. 30
 * **Bonus**: 20%
