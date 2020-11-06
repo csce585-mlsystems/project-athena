@@ -20,9 +20,14 @@ import utils.transformation_configs as trans_configs
 
 # Entrance
 def transform(X, trans_args):
-    assert len(X.shape) in [3, 4]
+    if len(X.shape) not in [3, 4]:
+        raise ValueError("Expect an input with 3-4 dimensions, but received {}.".format(len(X.shape)))
+
+    if len(X.shape) == 3:
+        X = np.expand_dims(X, axis=0)
 
     X = X.astype(np.float32)
+    X = np.clip(X, 0., 1.,)
     if isinstance(trans_args, (list, np.ndarray)):
         raise NotImplementedError('Transformation combination is not implemented.')
     else:
