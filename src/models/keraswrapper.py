@@ -524,21 +524,6 @@ class WeakDefense(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
         ):
             loss_ = loss_function(label_ph, self._output)
 
-        # Average the loss for synthesizer
-        # if synthesis:
-        #     print('>>> SYNTHESIZING ADVERSARIAL EXAMPLES...')
-        #     raw_loss_ = loss_.detach().clone()
-        #     num_samples = int(raw_loss_.shape[0] / num_synthesis)
-        #     loss_ = []
-        #     for i in range(num_samples):
-        #         l_ = 0.
-        #         for j in range(num_synthesis):
-        #             id = i * num_synthesis + j
-        #             l_ += raw_loss_[id]
-        #         loss_.append(l_)
-        #     loss_ = np.asarray(loss_)
-        # loss_ = k.sum(loss_)
-        # Define loss gradients
         loss_gradients = k.gradients(loss_, self._input)
 
         if k.backend() == "tensorflow":
