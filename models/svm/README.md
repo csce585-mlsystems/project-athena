@@ -6,4 +6,4 @@
 
 * **Some models are compressed (``.zip`` packages) because their size exceed the limit of GitHub.** You need to unzip the packages to get the model.
 
-* The list of transformations is the same as that for the ``cnn`` models (but **5** items shorter).
+* The list of transformations is the same as that for the ``cnn`` models (but **1** items shorter: ``model-mnist-svm-cartoon_gaussian_type3.pkl``).

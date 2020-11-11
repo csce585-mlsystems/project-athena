@@ -3,19 +3,16 @@ Define and implement models for MNIST
 @author: Ying Meng (y(dot)meng201011(at)gmail(dot)com)
 """
 
-from __future__ import absolute_import, division, print_function
-
+import argparse
 import os
-import random
 
 import keras
-# from keras import layers, models
 
 import utils.file as file
-from utils.transformation_configs import *
+from utils.data import load_mnist
+from utils.file import load_from_json
 from models.image_processor import transform
 
-random.seed(1000)
 
 # -------------------------------------
 # Network Architecture
@@ -46,7 +43,37 @@ def cnn(input_shape=(28, 28, 1), nb_classes=10):
 # -------------------------------------
 # Train a weak defense
 # -------------------------------------
-def train(trainset, testset, processor=None, **kwargs):
+def train(trainset, testset, trans_configs=None, training_configs=None, model_configs=None):
+	if trainset is None or testset is None:
+		raise ValueError("Dataset cannot be None.")
+
+	if trans_configs is None:
+		# by default, training model on clean data
+		trans_configs = {
+			"type": "clean",
+			"subtype": "",
+			"id": 0,
+			"description": "clean"
+		}
+
+	if training_configs is None:
+		# default training configuration
+		training_configs = {
+			"learning_rate": 0.001,
+			"validation_rate": 0.2,
+			"optimizer": keras.optimizers.Adam(lr=0.001),
+			"loss": keras.losses.categorical_crossentropy,
+			"metrics": "default",
+
+		}
+
+	if model_configs is None:
+		# default model configurations
+		model_configs = {
+			"model_dir": "model",
+			"model_name": "model-cnn-{}.h5".format(trans_configs.get("description")),
+		}
+
 	# get network
 	model = cnn()
 
@@ -54,16 +81,16 @@ def train(trainset, testset, processor=None, **kwargs):
 	X_test, Y_test = testset
 
 	# apply transformation
-	X_train = transform(X_train, processor)
+	X_train = transform(X_train, trans_configs)
 
-	learning_rate = 0.001
-	validation_rate = 0.2
+	learning_rate = training_configs.get("learning_rate", 0.001)
+	validation_rate = training_configs.get("validation_rate", 0.2)
 
-	optimizer = kwargs.get('optimizer', keras.optimizers.Adam(lr=learning_rate))
-	loss_func = kwargs.get('loss', keras.losses.categorical_crossentropy)
-	metrics = kwargs.get('metrics', 'default')
+	optimizer = training_configs.get('optimizer', keras.optimizers.Adam(lr=learning_rate))
+	loss_func = training_configs.get('loss', keras.losses.categorical_crossentropy)
+	metrics = training_configs.get('metrics', 'default')
 
-	print('Training weak defense [{}]...'.format(processor.description))
+	print('Training weak defense [{}]...'.format(trans_configs.get("description")))
 	print('>>> optimizer: {}'.format(optimizer))
 	print('>>> loss function: {}'.format(loss_func))
 	print('>>> metrics: {}'.format(metrics))
@@ -87,31 +114,64 @@ def train(trainset, testset, processor=None, **kwargs):
 	# train the model
 	history = model.fit(train_examples, train_labels,
 						batch_size=64, epochs=20,
-						verbose=2, validation_data=(val_examples, val_labels))
+						verbose=1, validation_data=(val_examples, val_labels))
 
-	model_dir = kwargs.get('model_dir', 'models')
-	save_file = kwargs.get('model_name', 'demo')
-	postfix = kwargs.get('model_format', '.h5')
-	model.save(os.path.join(model_dir, save_file + postfix))
-	print('Saved the model to file [{}]'.format(os.path.join(model_dir, save_file + postfix)))
+	model_dir = model_configs.get('model_dir', 'models')
+	# name in pattern: model-<architecture>-<transformation>.h5
+	model_name = model_configs.get("model_name", "model-cnn-{}.h5".format(trans_configs.get("description")))
+	savefile = os.path.join(model_dir, model_name)
+	print('Save the trained model to [{}]'.format(savefile))
+	model.save(savefile)
 
 	# evaluate the model
 	scores_train = model.evaluate(train_examples, train_labels, batch_size=128, verbose=0)
 	scores_val = model.evaluate(val_examples, val_labels, batch_size=128, verbose=0)
 
-	X_test = transform(X_test, processor)
+	X_test = transform(X_test, trans_configs)
 	scores_test = model.evaluate(X_test, Y_test, batch_size=128, verbose=0)
 
 	"""
 	report
 	"""
 	print('\t\t\t loss, \t acc (BS/AE)')
-	print('training set: {}'.format(scores_train))
-	print('validation set: {}'.format(scores_val))
-	print('test set: {}'.format(scores_test))
-	print('')
+	print("training set: {}".format(scores_train))
+	print("validation set: {}".format(scores_val))
+	print("test set: {}".format(scores_test))
+	print("")
 
-	log_dir = kwargs.get('checkpoint_folder', 'checkpoints')
-	save_file = save_file.replace(postfix, '')
-	file.dict2csv(history.history, '{}/checkpoint-{}.csv'.format(log_dir, save_file))
+	log_dir = training_configs.get("checkpoint_folder", "checkpoints")
+	savefile = savefile.replace(".h5", "")
+	file.dict2csv(history.history, '{}/checkpoint-{}.csv'.format(log_dir, savefile))
 
+
+if __name__=="__main__":
+	parser = argparse.ArgumentParser(description="Training a CNN model on MNIST.")
+	parser.add_argument("--trans-configs", required=False,
+						default="../configs/experiment/athena-mnist.json")
+	parser.add_argument("--train-configs", required=False,
+						default=None)
+	parser.add_argument("--model-configs", required=False,
+						default=None)
+	args = parser.parse_args()
+
+	# load configurations
+	trans_configs = load_from_json(args.trans_configs)
+	if args.train_configs is not None:
+		training_configs = load_from_json(args.train_configs)
+	else:
+		training_configs = None
+
+	if args.model_configs is not None:
+		model_configs = load_from_json(args.model_configs)
+	else:
+		model_configs = None
+
+	(X_train, Y_train), (X_test, Y_test) = load_mnist()
+
+	# train weak defenses using default configurations
+	training_wd_ids = trans_configs.get("active_wds")
+	for id in training_wd_ids:
+		key = "configs{}".format(id)
+		train(trainset=(X_train, Y_train),
+			  testset=(X_test, Y_test),
+			  trans_configs=trans_configs.get(key))
