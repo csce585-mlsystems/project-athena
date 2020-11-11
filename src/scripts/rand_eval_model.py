@@ -6,6 +6,7 @@ A sample to evaluate model on dataset
 import argparse
 import numpy as np
 import os
+import random
 import time
 from matplotlib import pyplot as plt, image
 
@@ -17,7 +18,7 @@ from models.image_processor import transform
 
 
 def evaluate(trans_configs, model_configs,
-             data_configs, save=True, output_dir=None):
+             data_configs, save=True, output_dir='../../results2'):
     """
     Apply transformation(s) on images.
     :param trans_configs: dictionary. The collection of the parameterized transformations to test.
@@ -77,8 +78,13 @@ def evaluate(trans_configs, model_configs,
         if output_dir is None:
             raise ValueError("Cannot save to a none path.")
         # save with a random name
-        f = os.path.join(output_dir, "minerva_AE-results.txt")
-        out_file = open(f, 'w')
+        f = os.path.join(output_dir, "minerva_AE-results2.txt")
+        out_file = open(f, 'a')
+        out_file.write('\n\n')
+        out_file.write('--------------------------------------NEW RANDOM TEST--------------------------------------')
+        out_file.write('|                                                                                         |')
+        out_file.write('|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD\'S                                          |')
+        out_file.write(trans_configs.get('active_wds'))
 
     # Evaluate AEs.
     ae_list = data_configs.get('ae_files')
@@ -151,9 +157,22 @@ if __name__ == '__main__':
     model_configs = load_from_json(args.model_configs)
     data_configs = load_from_json(args.data_configs)
 
-    # -------- test transformations -------------
-    evaluate(trans_configs=trans_configs,
-             model_configs=model_configs,
-             data_configs=data_configs,
-             save=args.save_results,
-             output_dir=args.output_root)
+    # do 10 times
+    for _ in range(10):
+        # pick random number of wd's
+        num = random.randint(1, 72)
+        wd_ids = []
+        for _ in range(num):
+            temp = random.randint(1, 72)
+            while temp in wd_ids:
+                temp = random.randint(1, 72)
+
+            wd_ids.append(temp)
+        trans_configs['active_wds'] = wd_ids
+
+        # -------- test transformations -------------
+        evaluate(trans_configs=trans_configs,
+                 model_configs=model_configs,
+                 data_configs=data_configs,
+                 save=args.save_results,
+                 output_dir=args.output_root)
