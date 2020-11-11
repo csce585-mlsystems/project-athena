@@ -3,6 +3,9 @@ Code pieces for collecting raw values from WDs on the input(s).
 @author: Ying Meng (y(dot)meng201011(at)gmail(dot)com)
 """
 
+import sys
+sys.path.append("../")
+
 import argparse
 import numpy as np
 import os
