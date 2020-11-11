@@ -6,9 +6,9 @@ Implement white-box attacks on top of IBM ART.
 import numpy as np
 import torch
 
-from art.attacks.evasion.fast_gradient import FastGradientMethod
+# from art.attacks.evasion.fast_gradient import FastGradientMethod
+# from art.attacks.evasion.projected_gradient_descent import ProjectedGradientDescent
 from art.attacks.evasion.carlini import CarliniL2Method, CarliniLInfMethod
-from art.attacks.evasion.projected_gradient_descent import ProjectedGradientDescent
 from art.attacks.evasion.deepfool import DeepFool
 from art.attacks.evasion.saliency_map import SaliencyMapMethod
 from art.attacks.evasion.iterative_method import BasicIterativeMethod
@@ -16,6 +16,8 @@ from art.attacks.evasion.spatial_transformation import SpatialTransformation
 from art.attacks.evasion.hop_skip_jump import HopSkipJump
 from art.attacks.evasion.zoo import ZooAttack
 
+from attacks.fast_gradient import FastGradientMethod
+from attacks.pgd import ProjectedGradientDescent
 from attacks.utils import WHITEBOX_ATTACK as ATTACK
 
 
@@ -28,11 +30,19 @@ def generate(model, data_loader, attack_args, device=None):
     :param device: string. cuda (for gpu) or cpu.
     :return:
     """
+    attack = attack_args.get('attack').lower()
+    eot = attack_args.get('eot')
+
+    if eot and attack not in [ATTACK.FGSM.value, ATTACK.PGD.value]:
+        raise NotImplementedError("`EOT` is not supported for {} attack yet.".format(attack))
+
+    print(">>> Generating {}(EOT:{}) examples.".format(attack_args.get('description'),
+                                                       "ON" if eot else "OFF"))
+
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     images, labels = data_loader
-    attack = attack_args.get('attack').lower()
 
     if attack == ATTACK.FGSM.value:
         return _fgsm(model, images, labels, attack_args)
@@ -70,17 +80,24 @@ def _fgsm(model, data, labels, attack_args):
     :param data:
     :param labels:
     :param attack_args:
+    :param distribution: dictionary. the configurations of distribution (for EOT)
     :return:
     """
-    print('>>> Generating FGSM examples.')
     eps = attack_args.get('eps', 0.3)
 
     targeted = attack_args.get('targeted', False)
     num_random_init = attack_args.get('num_random_init', 0)
     minimal = attack_args.get('minimal', False)
 
+    if attack_args.get("eot"):
+        distribution = attack_args.get('distribution', None)
+    else:
+        distribution = None
+
     attacker = FastGradientMethod(model, eps=eps, eps_step=eps, targeted=targeted,
-                                  num_random_init=num_random_init, minimal=minimal)
+                                  num_random_init=num_random_init, minimal=minimal,
+                                  distribution=distribution)
+
     return attacker.generate(data, labels)
 
 
@@ -149,9 +166,15 @@ def _pgd(model, data, labels, attack_args):
     num_random_init = attack_args.get('num_random_init', 0)
     random_eps = attack_args.get('random_eps', False)
 
+    if attack_args.get("eot"):
+        distribution = attack_args.get('distribution', None)
+    else:
+        distribution = None
+
     attacker = ProjectedGradientDescent(classifier=model, norm=norm, eps=eps, eps_step=eps_step,
                                         max_iter=max_iter, targeted=targeted,
-                                        num_random_init=num_random_init, random_eps=random_eps)
+                                        num_random_init=num_random_init, random_eps=random_eps,
+                                        distribution=distribution)
     return attacker.generate(data, labels)
 
 

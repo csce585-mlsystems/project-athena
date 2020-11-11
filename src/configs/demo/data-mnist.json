@@ -48,5 +48,15 @@
         "test_AE-mnist-cnn-clean-onepixel_pxCount35.npy",
         "test_AE-mnist-cnn-clean-onepixel_pxCount40.npy",
         "test_AE-mnist-cnn-clean-onepixel_pxCount75.npy"
+    ],
+    "task1_ae": [
+        "fgsm_eps.0.3.npy"
     ]
 }
+
+
+
+
+
+
+
