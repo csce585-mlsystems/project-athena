@@ -49,7 +49,7 @@ Each team should submit all materials that enable an independent group to replic
 
 # What are given
 * Source code of the ATHENA framework. 
-* 73 CNN models (1 undefended model + 72 weak defenses) and 73 SVM models (1 undefended model + 72 weak defenses) that were trained on MNIST. The vanilla version of ATHENA, built on the 72 CNN weak defenses, is the ATHENA we attack and enhance in this project. The 73 SVM models are only for the "Hybrid ATHENA" task (an option of Task 2).
+* 73 CNN models (1 undefended model + 72 weak defenses) and 66 SVM models (1 undefended model + 65 weak defenses) that were trained on MNIST. The vanilla version of ATHENA, built on the 72 CNN weak defenses, is the ATHENA we attack and enhance in this project. The 65 SVM models are only for the "Hybrid ATHENA" task (an option of Task 2).
 * Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject. 
 * Configurations of all weak defenses. 
 * Configurations of all baseline adversarial examples. 
