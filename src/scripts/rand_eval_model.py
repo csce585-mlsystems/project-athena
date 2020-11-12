@@ -18,7 +18,7 @@ from models.image_processor import transform
 
 
 def evaluate(trans_configs, model_configs,
-             data_configs, save=True, output_dir='../../results2'):
+             data_configs, save=True, output_dir='../../results'):
     """
     Apply transformation(s) on images.
     :param trans_configs: dictionary. The collection of the parameterized transformations to test.
@@ -73,7 +73,7 @@ def evaluate(trans_configs, model_configs,
     print(">>> Evaluating UM on [{}], it may take a while...".format(bs_file))
     pred_bs = undefended.predict(x_bs)
     corrections = get_corrections(y_pred=pred_bs, y_true=labels)
-
+    print(output_dir)
     if save:
         if output_dir is None:
             raise ValueError("Cannot save to a none path.")
@@ -81,10 +81,10 @@ def evaluate(trans_configs, model_configs,
         f = os.path.join(output_dir, "minerva_AE-results2.txt")
         out_file = open(f, 'a')
         out_file.write('\n\n')
-        out_file.write('--------------------------------------NEW RANDOM TEST--------------------------------------')
-        out_file.write('|                                                                                         |')
-        out_file.write('|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD\'S                                          |')
-        out_file.write(trans_configs.get('active_wds'))
+        out_file.write('--------------------------------------NEW RANDOM TEST--------------------------------------\n')
+        out_file.write('|                                                                                         |\n')
+        out_file.write('|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD\'S                                           |\n')
+        out_file.write(str(list(trans_configs.get('active_wds'))) + '\n')
 
     # Evaluate AEs.
     ae_list = data_configs.get('ae_files')
