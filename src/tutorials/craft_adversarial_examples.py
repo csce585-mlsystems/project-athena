@@ -1,5 +1,5 @@
 """
-A sample to generate adversarial examples.
+A sample to generate adversarial examples in the context of white-box threat model.
 @author: Ying Meng (y(dot)meng201011(at)gmail(dot)com)
 """
 
@@ -9,13 +9,16 @@ import os
 import time
 from matplotlib import pyplot as plt
 
-from utils.model import load_lenet
+from utils.model import load_lenet, load_pool
 from utils.file import load_from_json
 from utils.metrics import error_rate
 from attacks.attack import generate
+from models.athena import Ensemble, ENSEMBLE_STRATEGY
 
 
-def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None):
+def generate_ae(model, data, labels, attack_configs,
+                eot=False,
+                save=False, output_dir=None):
     """
     Generate adversarial examples
     :param model: WeakDefense. The targeted model.
@@ -37,9 +40,12 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
     # generate attacks one by one
     for id in range(num_attacks):
         key = "configs{}".format(id)
+        attack_args = attack_configs.get(key)
+
+        attack_args["eot"] = eot
         data_adv = generate(model=model,
                             data_loader=data_loader,
-                            attack_args=attack_configs.get(key)
+                            attack_args=attack_args
                             )
         # predict the adversarial examples
         predictions = model.predict(data_adv)
@@ -53,10 +59,11 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
         for i in range(num_plotting):
             img = data_adv[i].reshape((img_rows, img_cols))
             plt.imshow(img, cmap='gray')
-            title = '{}: {}->{}'.format(attack_configs.get(key).get("description"),
-                                        labels[i],
-                                        predictions[i]
-                                        )
+            title = '{}(EOT:{}): {}->{}'.format(attack_configs.get(key).get("description"),
+                                                "ON" if eot else "OFF",
+                                                labels[i],
+                                                predictions[i]
+                                                )
             plt.title(title)
             plt.show()
             plt.close()
@@ -74,6 +81,8 @@ def generate_ae(model, data, labels, attack_configs, save=False, output_dir=None
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
 
+    parser.add_argument('-p', '--pool-configs', required=False,
+                        default='../configs/demo/athena-mnist.json')
     parser.add_argument('-m', '--model-configs', required=False,
                         default='../configs/demo/model-mnist.json',
                         help='Folder where models stored in.')
@@ -91,6 +100,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print("------AUGMENT SUMMARY-------")
+    print("POOL CONFIGS:", args.pool_configs)
     print("MODEL CONFIGS:", args.model_configs)
     print("DATA CONFIGS:", args.data_configs)
     print("ATTACK CONFIGS:", args.attack_configs)
@@ -98,15 +108,38 @@ if __name__ == '__main__':
     print("DEBUGGING MODE:", args.debug)
     print('----------------------------\n')
 
+    # ----------------------------
     # parse configurations (into a dictionary) from json file
+    # ----------------------------
+    pool_configs = load_from_json(args.pool_configs)
     model_configs = load_from_json(args.model_configs)
     data_configs = load_from_json(args.data_configs)
     attack_configs = load_from_json(args.attack_configs)
 
-    # load the targeted model
-    model_file = os.path.join(model_configs.get("dir"), model_configs.get("um_file"))
-    target = load_lenet(file=model_file, wrap=True)
 
+    # ---------------------------
+    # load the targeted model
+    # ---------------------------
+    #
+    # In the context of the zero-knowledge threat model,
+    # we use the undefended model as adversary's target model.
+    # model_file = os.path.join(model_configs.get("dir"), model_configs.get("um_file"))
+    # target = load_lenet(file=model_file, wrap=True)
+
+    # In the context of the white-box threat model,
+    # we use the ensemble as adversary's target model.
+    # load weak defenses (in this example, load a tiny pool of 3 weak defenses)
+    pool, _ = load_pool(trans_configs=pool_configs,
+                        model_configs=model_configs,
+                        active_list=True,
+                        wrap=True)
+    # create an AVEP ensemble as the target model
+    wds = list(pool.values())
+    target = Ensemble(classifiers=wds, strategy=ENSEMBLE_STRATEGY.AVEP.value)
+
+    # -----------------------
+    # Prepare benign samples and corresponding true labels for AE generation
+    # -----------------------
     # load the benign samples
     data_file = os.path.join(data_configs.get('dir'), data_configs.get('bs_file'))
     data_bs = np.load(data_file)
@@ -114,7 +147,26 @@ if __name__ == '__main__':
     label_file = os.path.join(data_configs.get('dir'), data_configs.get('label_file'))
     labels = np.load(label_file)
 
-    # generate adversarial examples for a small subset
-    data_bs = data_bs[:10]
-    labels = labels[:10]
-    generate_ae(model=target, data=data_bs, labels=labels, attack_configs=attack_configs)
+    # ------------------------
+    # Generate adversarial examples for a small subset
+    # ------------------------
+    data_bs = data_bs[:5]
+    labels = labels[:5]
+
+    # Normal approach
+    # Compute the loss w.r.t. a single input
+    # For an ensemble target, averaging the losses of WDs'.
+    generate_ae(model=target,
+                data=data_bs, labels=labels,
+                eot=False,
+                attack_configs=attack_configs
+                )
+
+    # Adaptive approach (with EOT)
+    # Compute the loss expectation over specific distribution.
+    # For an ensemble target, averaging the EOT of WDs'.
+    generate_ae(model=target,
+                data=data_bs, labels=labels,
+                eot=True,
+                attack_configs=attack_configs
+                )

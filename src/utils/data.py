@@ -10,13 +10,46 @@ import time
 import keras
 import numpy as np
 from keras.datasets import mnist as MNIST
-from keras.datasets import cifar100 as CIFAR100
-
-from torchvision import datasets, transforms
 import torch
 from torch.utils.data import DataLoader, TensorDataset
 
-#random.seed(1000)
+random.seed(1000)
+
+
+def load_mnist():
+    """
+    Dataset of 60,000 28x28 grayscale images of the 10 digits,
+    along with a test set of 10,000 images.
+    """
+    (X_train, Y_train), (X_test, Y_test) = MNIST.load_data()
+    _, img_rows, img_cols = X_test.shape
+    nb_channels = 1
+    nb_classes = 10
+
+    X_train = X_train.reshape(-1, img_rows, img_cols, nb_channels)
+    X_test = X_test.reshape(-1, img_rows, img_cols, nb_channels)
+
+    """
+    cast pixels to floats, normalize to [0, 1] range
+    """
+    X_train = X_train.astype('float32')
+    X_test = X_test.astype('float32')
+    X_train /= 255.
+    X_test /= 255.
+
+    """
+    one-hot-encode the labels
+    """
+    Y_train = keras.utils.to_categorical(Y_train, nb_classes)
+    Y_test = keras.utils.to_categorical(Y_test, nb_classes)
+
+    """
+    summarize data set
+    """
+    print('Dataset({}) Summary:'.format("MNIST"))
+    print('Train set: {}, {}'.format(X_train.shape, Y_train.shape))
+    print('Test set: {}, {}'.format(X_test.shape, Y_test.shape))
+    return (X_train, Y_train), (X_test, Y_test)
 
 
 def channels_last(data):

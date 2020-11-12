@@ -34,8 +34,8 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
             raise ValueError('No classifiers provided for the whitebox.')
 
         for classifier in classifiers:
-            if not isinstance(classifier, ClassifierNeuralNetwork):
-                raise TypeError('Expected type `Classifier`, found {} instead.'.format(type(classifiers)))
+            # if not isinstance(classifier, ClassifierNeuralNetwork):
+            #     raise TypeError('Expected type `Classifier`, found {} instead.'.format(type(classifier)))
 
             if clip_values != classifier.clip_values:
                 raise ValueError('Incompatible `clip_values` between classifiers in the whitebox. '
@@ -45,21 +45,21 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
                 raise ValueError('Incompatible output shape between classifiers in the whitebox. '
                                  'Found {} and {}'.format(classifier.nb_classes(), classifiers[0].nb_classes()))
 
-            if classifier.input_shape != classifiers[0].input_shape:
-                raise ValueError('Incompatible input shape between classifiers in the whitebox. '
-                                 'Found {} and {}'.format(classifier.input_shape, classifiers[0].input_shape))
+            # if classifier.input_shape != classifiers[0].input_shape:
+            #     raise ValueError('Incompatible input shape between classifiers in the whitebox. '
+            #                      'Found {} and {}'.format(classifier.input_shape, classifiers[0].input_shape))
 
         self._input_shape = classifiers[0].input_shape
         self._nb_classes = classifiers[0].nb_classes()
 
         # check for consistent channel_index in whitebox members
-        for i_cls, cls in enumerate(classifiers):
-            if cls.channel_index != self.channel_index:
-                raise ValueError(
-                    "The channel_index value of classifier {} is {} while this whitebox expects a "
-                    "channel_index value of {}. The channel_index values of all classifiers and the "
-                    "whitebox need ot be identical.".format(i_cls, cls.channel_index, self.channel_index)
-                )
+        # for i_cls, cls in enumerate(classifiers):
+        #     if cls.channel_index != self.channel_index:
+        #         raise ValueError(
+        #             "The channel_index value of classifier {} is {} while this whitebox expects a "
+        #             "channel_index value of {}. The channel_index values of all classifiers and the "
+        #             "whitebox need ot be identical.".format(i_cls, cls.channel_index, self.channel_index)
+        #         )
 
         self._classifiers = classifiers
         self._nb_classifiers = len(classifiers)
@@ -86,18 +86,25 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
             return self.predict_by_predictions(raw_predictions=raw_predictions)
 
     def predict_by_predictions(self, raw_predictions):
+        """
+        Produce the final prediction given the collection of predictions from the WDs.
+        :param raw_predictions: numpy array. the collection of predictions from the WDs.
+        :return:
+        """
         ensemble_preds = None
         if self._strategy == ENSEMBLE_STRATEGY.RD.name or self._strategy == ENSEMBLE_STRATEGY.RD.value:
             id = random.choice(self._nb_classifiers)
             ensemble_preds =  raw_predictions[id]
 
         elif self._strategy == ENSEMBLE_STRATEGY.MV.name or self._strategy == ENSEMBLE_STRATEGY.MV.value:
-            num_samples = raw_predictions.shape[-1]
+            num_samples = raw_predictions.shape[1]
             predicted_labels = []
             for probs in raw_predictions:
                 labels = [np.argmax(p) for p in probs]
                 predicted_labels.append(labels)
             predicted_labels = np.asarray(predicted_labels)
+
+            # count frequency of each class
             votes = []
             ensemble_preds = []
             for s_id in range(num_samples):
@@ -115,8 +122,8 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
 
         elif self._strategy in [ENSEMBLE_STRATEGY.AVEP.name, ENSEMBLE_STRATEGY.AVEL.name, ENSEMBLE_STRATEGY.AVEO.name] or \
             self._strategy in [ENSEMBLE_STRATEGY.AVEP.value, ENSEMBLE_STRATEGY.AVEL.value, ENSEMBLE_STRATEGY.AVEO.value]:
-            # Aggregate predictions
-            ensemble_preds = np.sum(raw_predictions, axis=0)
+            # averaging predictions
+            ensemble_preds = np.average(raw_predictions, axis=0)
 
         # Apply postprocessing
         ensemble_preds = self._apply_postprocessing(preds=ensemble_preds, fit=False)

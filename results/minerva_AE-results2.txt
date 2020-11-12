@@ -1,0 +1,420 @@
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[45, 24, 39, 34, 49, 2, 33, 66, 38, 51, 22, 63, 70, 11, 72, 52, 25, 43, 56, 28, 9, 21, 30, 48, 18, 36, 69, 46, 61, 40, 13, 44, 3, 27, 71, 26, 1, 47, 68, 4, 42, 17, 64, 5, 15, 59]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.01314459049544995, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.03842264914054601, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.0717896865520728, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.010111223458038422, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.025278058645096056, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[16, 2, 1, 34, 44, 60, 10, 63, 51, 70, 66, 43, 52, 25, 40, 50, 6, 11, 62, 56, 5, 4, 48, 54, 35, 53, 7, 64, 14, 49, 9, 15, 17, 27, 69, 32, 26, 12, 36, 47]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.012133468149646108, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.03741152679474216, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.0717896865520728, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.010111223458038422, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.010111223458038422, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.0262891809908999, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[14, 15]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.028311425682507583, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.0859453993933266, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.20626895854398383, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.008088978766430738, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.03640040444893832, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.07077856420626896, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.023255813953488372, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.05156723963599596, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.00910010111223458, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[21, 29, 14, 55, 31, 56, 47, 10, 62, 8, 41, 25, 23, 45, 6, 58, 59, 35, 44, 39, 24, 32, 2, 57, 30, 70, 50, 54, 38, 46, 36, 43, 13, 5, 66, 67, 19, 17, 15, 37, 26, 65, 40, 72, 68]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.8584428715874621, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.016177957532861477, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.04044489383215369, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.08291203235591507, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.012133468149646108, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.017189079878665317, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.012133468149646108, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.027300303336703743, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.2679474216380182, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[47, 60, 43, 49, 10, 3, 38, 28, 48, 5, 58, 36, 37, 57, 31, 2, 61, 15, 41, 65, 55, 29, 23, 34, 44, 25, 18, 33, 63, 71]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.017189079878665317, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.04044489383215369, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.08897876643073811, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.00910010111223458, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.016177957532861477, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.028311425682507583, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[26]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.008088978766430738, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.017189079878665317, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.041456016177957536, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.14560161779575329, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.01314459049544995, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.014155712841253791, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.014155712841253791, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.014155712841253791, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.027300303336703743, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.05156723963599596, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.07482305358948432, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.13549039433771487, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.020222446916076844, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.014155712841253791, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.03538928210313448, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.010111223458038422, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.01820020222446916, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[44, 63, 54, 56, 60, 1, 38, 15, 16]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.041456016177957536, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.09605662285136501, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.011122345803842264, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.025278058645096056, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.047522750252780584, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.012133468149646108, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.03134479271991911, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.00910010111223458, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[56, 62, 46, 15, 12, 9, 63, 28, 34]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.020222446916076844, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.043478260869565216, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.10920121334681497, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.024266936299292215, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.01314459049544995, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.03134479271991911, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.00910010111223458, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[49, 11, 30, 53, 38, 4, 35, 13, 3, 66, 52, 42, 20, 69]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.011122345803842264, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.043478260869565216, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.07684529828109202, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.0010111223458038423, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.005055611729019211, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.016177957532861477, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.017189079878665317, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.011122345803842264, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.032355915065722954, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.003033367037411527, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.022244691607684528}
+
+
+--------------------------------------NEW RANDOM TEST--------------------------------------
+|                                                                                         |
+|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD'S                                           |
+[58, 50, 23, 8, 2, 31, 32, 68, 1]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'UM': 0.010111223458038422, 'Ensemble': 0.0020222446916076846, 'PGD-ADT': 0.008088978766430738}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'UM': 0.22143579373104147, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.015166835187057633}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'UM': 0.9120323559150657, 'Ensemble': 0.032355915065722954, 'PGD-ADT': 0.032355915065722954}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.06471183013144591, 'PGD-ADT': 0.05864509605662285}
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'UM': 0.9888776541961577, 'Ensemble': 0.14155712841253792, 'PGD-ADT': 0.1102123356926188}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'UM': 0.1263902932254803, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'UM': 0.13751263902932254, 'Ensemble': 0.007077856420626896, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.006066734074823054, 'PGD-ADT': 0.01314459049544995}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'UM': 0.4580384226491405, 'Ensemble': 0.00910010111223458, 'PGD-ADT': 0.03538928210313448}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'UM': 0.8574317492416582, 'Ensemble': 0.008088978766430738, 'PGD-ADT': 0.07785642062689585}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'UM': 0.9595551061678463, 'Ensemble': 0.015166835187057633, 'PGD-ADT': 0.1243680485338726}
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'UM': 0.9686552072800809, 'Ensemble': 0.029322548028311426, 'PGD-ADT': 0.16481294236602628}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'UM': 0.6723963599595552, 'Ensemble': 0.022244691607684528, 'PGD-ADT': 0.028311425682507583}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'UM': 0.1486349848331648, 'Ensemble': 0.01314459049544995, 'PGD-ADT': 0.014155712841253791}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'UM': 0.9332659251769464, 'Ensemble': 0.044489383215369056, 'PGD-ADT': 0.04954499494438827}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'UM': 0.033367037411526794, 'Ensemble': 0.004044489383215369, 'PGD-ADT': 0.011122345803842264}
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'UM': 0.3923154701718908, 'Ensemble': 0.017189079878665317, 'PGD-ADT': 0.022244691607684528}
