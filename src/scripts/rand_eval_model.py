@@ -16,8 +16,7 @@ from utils.metrics import error_rate, get_corrections
 from models.athena import Ensemble, ENSEMBLE_STRATEGY
 from models.image_processor import transform
 
-
-def evaluate(trans_configs, model_configs,
+def evaluate(trans_configs, trans_configs2, model_configs,
              data_configs, save=True, output_dir='../../results'):
     """
     Apply transformation(s) on images.
@@ -43,20 +42,33 @@ def evaluate(trans_configs, model_configs,
                                   use_logits=False, wrap=False)
 
     # get the undefended model (UM)
-    file = os.path.join(model_configs.get('dir'), model_configs.get('um_file'))
+    cnn_configs = model_configs.get('cnn')
+    file = os.path.join(cnn_configs.get('dir'), cnn_configs.get('um_file'))
     undefended = load_lenet(file=file,
                             trans_configs=trans_configs.get('configs0'),
                             wrap=True)
     print(">>> um:", type(undefended))
 
     # load weak defenses into a pool
-    pool, _ = load_pool(trans_configs=trans_configs,
-                        model_configs=model_configs,
+    cnn_pool, _ = load_pool(trans_configs=trans_configs,
+                        model_configs=cnn_configs,
                         active_list=True,
                         wrap=True)
     # create an AVEP ensemble from the WD pool
-    wds = list(pool.values())
-    print(">>> wds:", type(wds), type(wds[0]))
+    cnns = list(cnn_pool.values())
+
+    # load SVM weak defenses into a pool
+    # tiny pool: 3 weak defenses
+    svm_configs = model_configs.get('svm')
+    svm_pool, _ = load_pool(trans_configs=trans_configs2,
+                            model_configs=svm_configs,
+                            active_list=True,
+                            wrap=True)
+
+    svms = list(svm_pool.values())
+
+    wds = cnns
+    wds.extend(svms)
     ensemble = Ensemble(classifiers=wds, strategy=ENSEMBLE_STRATEGY.AVEP.value)
 
     # load the benign samples
@@ -73,50 +85,61 @@ def evaluate(trans_configs, model_configs,
     print(">>> Evaluating UM on [{}], it may take a while...".format(bs_file))
     pred_bs = undefended.predict(x_bs)
     corrections = get_corrections(y_pred=pred_bs, y_true=labels)
-    print(output_dir)
+
     if save:
         if output_dir is None:
             raise ValueError("Cannot save to a none path.")
         # save with a random name
-        f = os.path.join(output_dir, "minerva_AE-results2.txt")
+        f = os.path.join(output_dir, "minerva_AE_rand_eval_results.txt")
         out_file = open(f, 'a')
         out_file.write('\n\n')
         out_file.write('--------------------------------------NEW RANDOM TEST--------------------------------------\n')
         out_file.write('|                                                                                         |\n')
-        out_file.write('|  NEW TEST DATA WITH THE FOLLOWING RANDOM WD\'S                                           |\n')
-        out_file.write(str(list(trans_configs.get('active_wds'))) + '\n')
+        out_file.write('|  NEW TEST DATA WITH THE FOLLOWING {c} RANDOM CNN\'S AND {s} RANDOM SVM\'S                   \
+          |\n'.format(c=len(cnns), s=len(svms)))
+        out_file.write('CNNs: {c}\n'.format(c=list(trans_configs.get('active_wds'))))
+        out_file.write('SVMS: {s}\n'.format(s=list(trans_configs2.get('active_wds'))))
 
     # Evaluate AEs.
     ae_list = data_configs.get('ae_files')
+    start = time.time()
     for _ in range(len(ae_list)):
+        ae_start = time.time()
         results = {}
         ae_file = os.path.join(data_configs.get('dir'), ae_list[_])
-        print(ae_list[_])
-        print(ae_file)
         x_adv = np.load(ae_file)
 
         # evaluate the undefended model on the AE
-        print(">>> Evaluating UM on [{}], it may take a while...".format(ae_file))
-        pred_adv_um = undefended.predict(x_adv)
-        err_um = error_rate(y_pred=pred_adv_um, y_true=labels, correct_on_bs=corrections)
-        # track the result
-        results['UM'] = err_um
+        # print(">>> Evaluating UM on [{}], it may take a while...".format(ae_file))
+        # pred_adv_um = undefended.predict(x_adv)
+        # err_um = error_rate(y_pred=pred_adv_um, y_true=labels, correct_on_bs=corrections)
+        # # track the result
+        # results['UM'] = err_um
 
-        # evaluate the ensemble on the AE
+        # evaluate the ensemble on the Hybrid
         print(">>> Evaluating ensemble on [{}], it may take a while...".format(ae_file))
         pred_adv_ens = ensemble.predict(x_adv)
         err_ens = error_rate(y_pred=pred_adv_ens, y_true=labels, correct_on_bs=corrections)
         # track the result
         results['Ensemble'] = err_ens
 
+        ae_end = time.time()
+        ae_final = ae_end - ae_start
+
         # evaluate the baseline on the AE
-        print(">>> Evaluating baseline model on [{}], it may take a while...".format(ae_file))
-        pred_adv_bl = baseline.predict(x_adv)
-        err_bl = error_rate(y_pred=pred_adv_bl, y_true=labels, correct_on_bs=corrections)
-        # track the result
-        results['PGD-ADT'] = err_bl
+        # print(">>> Evaluating baseline model on [{}], it may take a while...".format(ae_file))
+        # pred_adv_bl = baseline.predict(x_adv)
+        # err_bl = error_rate(y_pred=pred_adv_bl, y_true=labels, correct_on_bs=corrections)
+        # # track the result
+        # results['PGD-ADT'] = err_bl
 
         out_file.write(">>> Evaluations on [{}]:\n{}\n".format(ae_file, results))
+        out_file.write('AE test took {t} seconds\n'.format(t=str(ae_final)))
+
+    end = time.time()
+    final = end - start
+    out_file.write('Full test suite took {t} seconds\n'.format(t=str(final)))
+    out_file.close()
 
 
 if __name__ == '__main__':
@@ -129,11 +152,14 @@ if __name__ == '__main__':
     parser.add_argument('-t', '--trans-configs', required=False,
                         default='../configs/experiment/athena-mnist.json',
                         help='Configuration file for transformations.')
+    parser.add_argument('-t2', '--trans-configs2', required=False,
+                        default='../configs/experiment/svm-mnist.json',
+                        help='Configuration file for transformations.')
     parser.add_argument('-m', '--model-configs', required=False,
-                        default='../configs/experiment/model-mnist.json',
+                        default='../configs/experiment/hybrid-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/experiment/data-mnist.json',
+                        default='../configs/experiment/data-minerva-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
                         default='../../results',
@@ -154,24 +180,37 @@ if __name__ == '__main__':
 
     # parse configurations (into a dictionary) from json file
     trans_configs = load_from_json(args.trans_configs)
+    trans_configs2 = load_from_json(args.trans_configs2)
     model_configs = load_from_json(args.model_configs)
     data_configs = load_from_json(args.data_configs)
 
     # do 10 times
     for _ in range(10):
-        # pick random number of wd's
-        num = random.randint(1, 72)
-        wd_ids = []
-        for _ in range(num):
+        # get random number 0-20 and pick that many wd's from cnn
+        cnn_num = random.randint(0, 20)
+        cnn_ids = []
+        for _ in range(cnn_num):
             temp = random.randint(1, 72)
-            while temp in wd_ids:
+            while temp in cnn_ids:
                 temp = random.randint(1, 72)
+            cnn_ids.append(temp)
+        cnn_ids.sort()
+        trans_configs['active_wds'] = cnn_ids
 
-            wd_ids.append(temp)
-        trans_configs['active_wds'] = wd_ids
+        # do for svm's as well
+        svm_num = 20 - cnn_num
+        svm_ids = []
+        for _ in range(svm_num):
+            temp = random.randint(1, 70)
+            while temp in svm_ids:
+                temp = random.randint(1, 70)
+            svm_ids.append(temp)
+        svm_ids.sort()
+        trans_configs2['active_wds'] = svm_ids
 
         # -------- test transformations -------------
         evaluate(trans_configs=trans_configs,
+                 trans_configs2=trans_configs2,
                  model_configs=model_configs,
                  data_configs=data_configs,
                  save=args.save_results,
