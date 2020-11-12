@@ -158,6 +158,14 @@ def evaluate_hybrid(trans_configs, model_configs,
     results['PGD-ADT'] = err_bl
 
     out_file.write(">>> Evaluations on [{}]:\n{}\n".format(ae_file, results))
+    out_file.write("\n>>> Athena: ")
+    s1 = ', '.join(str(e) for e in trans_configs.get("active_wds"))
+    out_file.write(s1)
+    out_file.write("\n>>> SVM: ")
+    s2 = ', '.join(str(e) for e in trans2_configs.get("active_wds"))
+    out_file.write(s2)
+
+
 
 
 
@@ -175,7 +183,7 @@ if __name__ == '__main__':
                         default='../configs/experiment/model-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/experiment/data-mnist.json',
+                        default='../configs/experiment/data-minerva-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
                         default='../../results',
@@ -195,10 +203,10 @@ if __name__ == '__main__':
     print('----------------------------\n')
 
     # load experiment configurations
-    trans_configs = load_from_json("../../src/configs/demo/athena-mnist.json")
-    trans2_configs = load_from_json("../../src/configs/demo/svm-mnist.json")
-    model_configs = load_from_json("../../src/configs/demo/hybrid-mnist.json")
-    data_configs = load_from_json("../../src/configs/demo/data-mnist.json")
+    trans_configs = load_from_json("../../src/configs/experiment/athena-mnist.json")
+    trans2_configs = load_from_json("../../src/configs/experiment/svm-mnist.json")
+    model_configs = load_from_json("../../src/configs/experiment/hybrid-mnist.json")
+    data_configs = load_from_json("../../src/configs/experiment/data-mnist.json")
 
     #output_dir = "../../results"
 
