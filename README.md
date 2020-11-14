@@ -118,13 +118,15 @@ In this task, students aim to generate adversarial examples based on the vanilla
 4. Contribution of individual team members.
 5. Citations to all related works.
 
-### Possible solutions (already implemented in ATHENA, no bonus):
+### Optimization-based approaches (already implemented in ATHENA, no bonus):
 ```
 1. Xuanqing Liu, Minhao Cheng, Huan Zhang, Cho-Jui Hsieh. Towards Robust Neural Networks via Random Self-ensemble. ECCV 2018.
 2. Anish Athalye, Logan Engstrom, Andrew Ilyas, Kevin Kwok. Synthesizing Robust Adversarial Examples. ICML 2018
 ```
 
-**Note:** You are encouraged to explore new approaches not listed. (**10% bonus for new attacks**)
+### Note:
+* You are encouraged to explore new approaches not listed. (**10% bonus for new attacks**)
+* If you use the provided approaches, please use **EOT** approach.
 
 ## Option 2. Learning-based strategy
 * **Goal**: Build a learning-based strategy.
