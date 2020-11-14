@@ -2295,6 +2295,7 @@ Full test suite took 1989.1379969120026 seconds
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
 <<<<<<< HEAD
+<<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 2 RANDOM SVM'S                             |
 CNNs: [1, 4, 5, 8, 11, 19, 24, 30, 34, 41, 45, 53, 55, 62, 64, 65, 66, 70]
 SVMS: [41, 63]
@@ -2354,6 +2355,8 @@ AE test took 62.575748682022095 seconds
 AE test took 64.86638808250427 seconds
 Full test suite took 1124.1584548950195 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 7 RANDOM SVM'S                             |
 CNNs: [2, 4, 11, 15, 16, 19, 29, 43, 45, 53, 54, 59, 70]
 SVMS: [6, 10, 11, 16, 39, 56, 60]
@@ -2846,11 +2849,15 @@ AE test took 2367.8244655132294 seconds
 {'Ensemble': 0.04954499494438827}
 AE test took 2363.8829176425934 seconds
 Full test suite took 42596.19097995758 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
 <<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 16 RANDOM SVM'S                             |
 CNNs: [3, 10, 15, 44]
@@ -2911,6 +2918,8 @@ AE test took 311.6274793148041 seconds
 AE test took 316.8503818511963 seconds
 Full test suite took 5707.099129199982 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 17 RANDOM SVM'S                             |
 CNNs: [12, 64, 69]
 SVMS: [1, 3, 7, 10, 16, 17, 19, 20, 22, 27, 35, 36, 38, 52, 53, 57, 60]
@@ -2969,11 +2978,15 @@ AE test took 245.79451203346252 seconds
 {'Ensemble': 0.043478260869565216}
 AE test took 243.5503706932068 seconds
 Full test suite took 4370.274631977081 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
 <<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 12 RANDOM SVM'S                             |
 CNNs: [1, 12, 13, 29, 39, 46, 50, 58]
@@ -3034,6 +3047,8 @@ AE test took 208.1664571762085 seconds
 AE test took 209.69429230690002 seconds
 Full test suite took 3766.692875146866 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 1 RANDOM SVM'S                             |
 CNNs: [1, 6, 13, 14, 15, 25, 27, 28, 32, 38, 42, 43, 46, 50, 51, 54, 62, 70, 72]
 SVMS: [11]
@@ -3092,11 +3107,15 @@ AE test took 222.19512367248535 seconds
 {'Ensemble': 0.010111223458038422}
 AE test took 222.25084519386292 seconds
 Full test suite took 4025.0492441654205 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
 <<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 18 RANDOM SVM'S                             |
 CNNs: [11, 70]
@@ -3157,6 +3176,8 @@ AE test took 656.8923451900482 seconds
 AE test took 650.1203575134277 seconds
 Full test suite took 11448.174224615097 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 19 RANDOM SVM'S                             |
 CNNs: [47]
 SVMS: [9, 17, 18, 20, 21, 23, 28, 29, 32, 37, 39, 41, 43, 47, 48, 62, 68, 69, 70]
@@ -3215,11 +3236,15 @@ AE test took 468.95893573760986 seconds
 {'Ensemble': 0.055611729019211326}
 AE test took 468.56229424476624 seconds
 Full test suite took 8999.699916362762 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
 <<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 13 RANDOM SVM'S                             |
 CNNs: [11, 22, 23, 32, 33, 45, 61]
@@ -3280,6 +3305,8 @@ AE test took 3859.926829814911 seconds
 AE test took 3844.658447742462 seconds
 Full test suite took 67549.67753243446 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 3 RANDOM SVM'S                             |
 CNNs: [11, 12, 13, 16, 20, 22, 25, 33, 36, 41, 47, 49, 50, 60, 67, 69, 71]
 SVMS: [13, 25, 38]
@@ -3338,11 +3365,15 @@ AE test took 2075.5459191799164 seconds
 {'Ensemble': 0.007077856420626896}
 AE test took 2090.4205436706543 seconds
 Full test suite took 37187.4728705883 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
 <<<<<<< HEAD
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 16 RANDOM SVM'S                             |
 CNNs: [29, 33, 36, 67]
@@ -3372,6 +3403,8 @@ AE test took 6304.782152891159 seconds
 {'Ensemble': 0.033367037411526794}
 AE test took 6488.736773014069 seconds
 =======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 5 RANDOM SVM'S                             |
 CNNs: [11, 12, 14, 16, 24, 25, 28, 31, 37, 44, 46, 51, 64, 65, 66]
 SVMS: [7, 19, 24, 53, 56]
@@ -3430,4 +3463,7 @@ AE test took 100.70778465270996 seconds
 {'Ensemble': 0.011122345803842264}
 AE test took 101.23822379112244 seconds
 Full test suite took 1854.6772696971893 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
 >>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
