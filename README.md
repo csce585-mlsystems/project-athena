@@ -124,7 +124,7 @@ In this task, students aim to generate adversarial examples based on the vanilla
 2. Anish Athalye, Logan Engstrom, Andrew Ilyas, Kevin Kwok. Synthesizing Robust Adversarial Examples. ICML 2018
 ```
 
-**Note:** You are encouraged to explore new approaches not listed.
+**Note:** You are encouraged to explore new approaches not listed. (**Bonus: 10%**)
 
 ## Option 2. Learning-based strategy
 * **Goal**: Build a learning-based strategy.
