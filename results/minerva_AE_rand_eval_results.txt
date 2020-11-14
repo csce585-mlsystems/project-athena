@@ -2294,6 +2294,69 @@ Full test suite took 1989.1379969120026 seconds
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 2 RANDOM SVM'S                             |
+CNNs: [1, 4, 5, 8, 11, 19, 24, 30, 34, 41, 45, 53, 55, 62, 64, 65, 66, 70]
+SVMS: [41, 63]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.0020222446916076846}
+AE test took 77.97194337844849 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.004044489383215369}
+AE test took 59.30527687072754 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.012133468149646108}
+AE test took 59.000340938568115 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.0262891809908999}
+AE test took 61.496538162231445 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.054600606673407485}
+AE test took 58.85623335838318 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.003033367037411527}
+AE test took 60.59674096107483 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.003033367037411527}
+AE test took 61.25465273857117 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.0020222446916076846}
+AE test took 60.79893612861633 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'Ensemble': 0.003033367037411527}
+AE test took 61.06249213218689 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'Ensemble': 0.004044489383215369}
+AE test took 61.11442685127258 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'Ensemble': 0.004044489383215369}
+AE test took 61.385624170303345 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'Ensemble': 0.007077856420626896}
+AE test took 61.21076250076294 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'Ensemble': 0.011122345803842264}
+AE test took 64.14285373687744 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'Ensemble': 0.010111223458038422}
+AE test took 62.225610971450806 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'Ensemble': 0.004044489383215369}
+AE test took 63.20751953125 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'Ensemble': 0.023255813953488372}
+AE test took 63.08582615852356 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'Ensemble': 0.0020222446916076846}
+AE test took 62.575748682022095 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'Ensemble': 0.006066734074823054}
+AE test took 64.86638808250427 seconds
+Full test suite took 1124.1584548950195 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 7 RANDOM SVM'S                             |
 CNNs: [2, 4, 11, 15, 16, 19, 29, 43, 45, 53, 54, 59, 70]
 SVMS: [6, 10, 11, 16, 39, 56, 60]
@@ -2786,10 +2849,77 @@ AE test took 2367.8244655132294 seconds
 {'Ensemble': 0.04954499494438827}
 AE test took 2363.8829176425934 seconds
 Full test suite took 42596.19097995758 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 16 RANDOM SVM'S                             |
+CNNs: [3, 10, 15, 44]
+SVMS: [1, 5, 10, 12, 14, 22, 23, 25, 36, 37, 38, 41, 56, 60, 65, 68]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.03741152679474216}
+AE test took 328.69162917137146 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.044489383215369056}
+AE test took 319.47771286964417 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.056622851365015166}
+AE test took 330.54807591438293 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.10111223458038422}
+AE test took 314.2219796180725 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.1870576339737108}
+AE test took 313.6341335773468 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.03842264914054601}
+AE test took 312.3719186782837 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.03741152679474216}
+AE test took 309.8751001358032 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.03741152679474216}
+AE test took 311.331524848938 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'Ensemble': 0.03842264914054601}
+AE test took 330.09119510650635 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'Ensemble': 0.042467138523761376}
+AE test took 313.08948612213135 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'Ensemble': 0.04853387259858443}
+AE test took 315.8134560585022 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'Ensemble': 0.05358948432760364}
+AE test took 310.878954410553 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'Ensemble': 0.06167846309403438}
+AE test took 312.50671315193176 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'Ensemble': 0.0525783619817998}
+AE test took 324.04090094566345 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'Ensemble': 0.043478260869565216}
+AE test took 318.3127555847168 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'Ensemble': 0.06774519716885744}
+AE test took 313.7351887226105 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'Ensemble': 0.041456016177957536}
+AE test took 311.6274793148041 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'Ensemble': 0.046511627906976744}
+AE test took 316.8503818511963 seconds
+Full test suite took 5707.099129199982 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 17 RANDOM SVM'S                             |
 CNNs: [12, 64, 69]
 SVMS: [1, 3, 7, 10, 16, 17, 19, 20, 22, 27, 35, 36, 38, 52, 53, 57, 60]
@@ -2848,10 +2978,77 @@ AE test took 245.79451203346252 seconds
 {'Ensemble': 0.043478260869565216}
 AE test took 243.5503706932068 seconds
 Full test suite took 4370.274631977081 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 12 RANDOM SVM'S                             |
+CNNs: [1, 12, 13, 29, 39, 46, 50, 58]
+SVMS: [4, 12, 18, 20, 22, 25, 38, 40, 49, 51, 63, 64]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.020222446916076844}
+AE test took 194.1361334323883 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.028311425682507583}
+AE test took 205.27640461921692 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.03943377148634985}
+AE test took 220.50850248336792 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.07583417593528817}
+AE test took 215.7071979045868 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.17997977755308392}
+AE test took 217.8663032054901 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.021233569261880688}
+AE test took 209.39236688613892 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.021233569261880688}
+AE test took 207.64896893501282 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.023255813953488372}
+AE test took 209.6398410797119 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'Ensemble': 0.022244691607684528}
+AE test took 208.43449234962463 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'Ensemble': 0.025278058645096056}
+AE test took 207.46487998962402 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'Ensemble': 0.032355915065722954}
+AE test took 204.38921356201172 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'Ensemble': 0.034378159757330634}
+AE test took 209.1823296546936 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'Ensemble': 0.03943377148634985}
+AE test took 207.80906176567078 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'Ensemble': 0.03538928210313448}
+AE test took 212.9748411178589 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'Ensemble': 0.027300303336703743}
+AE test took 212.04382300376892 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'Ensemble': 0.05055611729019211}
+AE test took 206.35722136497498 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'Ensemble': 0.024266936299292215}
+AE test took 208.1664571762085 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'Ensemble': 0.033367037411526794}
+AE test took 209.69429230690002 seconds
+Full test suite took 3766.692875146866 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 1 RANDOM SVM'S                             |
 CNNs: [1, 6, 13, 14, 15, 25, 27, 28, 32, 38, 42, 43, 46, 50, 51, 54, 62, 70, 72]
 SVMS: [11]
@@ -2910,10 +3107,77 @@ AE test took 222.19512367248535 seconds
 {'Ensemble': 0.010111223458038422}
 AE test took 222.25084519386292 seconds
 Full test suite took 4025.0492441654205 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 18 RANDOM SVM'S                             |
+CNNs: [11, 70]
+SVMS: [1, 3, 10, 13, 17, 27, 28, 32, 41, 45, 49, 52, 59, 60, 62, 66, 67, 69]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.043478260869565216}
+AE test took 635.9033274650574 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.04954499494438827}
+AE test took 626.7658116817474 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.05965621840242669}
+AE test took 612.6143484115601 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.08998988877654196}
+AE test took 613.0750834941864 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.1789686552072801}
+AE test took 612.8180553913116 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.0455005055611729}
+AE test took 610.7198131084442 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.043478260869565216}
+AE test took 608.8788409233093 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.0455005055611729}
+AE test took 634.3687751293182 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'Ensemble': 0.043478260869565216}
+AE test took 635.4551215171814 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'Ensemble': 0.05055611729019211}
+AE test took 643.1843860149384 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'Ensemble': 0.05156723963599596}
+AE test took 647.6168324947357 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'Ensemble': 0.06572295247724974}
+AE test took 649.7280786037445 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'Ensemble': 0.07077856420626896}
+AE test took 655.1126945018768 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'Ensemble': 0.056622851365015166}
+AE test took 653.0682673454285 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'Ensemble': 0.04853387259858443}
+AE test took 650.7714540958405 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'Ensemble': 0.07077856420626896}
+AE test took 651.0801038742065 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'Ensemble': 0.046511627906976744}
+AE test took 656.8923451900482 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'Ensemble': 0.04853387259858443}
+AE test took 650.1203575134277 seconds
+Full test suite took 11448.174224615097 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 19 RANDOM SVM'S                             |
 CNNs: [47]
 SVMS: [9, 17, 18, 20, 21, 23, 28, 29, 32, 37, 39, 41, 43, 47, 48, 62, 68, 69, 70]
@@ -2972,10 +3236,77 @@ AE test took 468.95893573760986 seconds
 {'Ensemble': 0.055611729019211326}
 AE test took 468.56229424476624 seconds
 Full test suite took 8999.699916362762 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 13 RANDOM SVM'S                             |
+CNNs: [11, 22, 23, 32, 33, 45, 61]
+SVMS: [3, 7, 11, 14, 15, 27, 29, 30, 35, 40, 42, 68, 69]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.020222446916076844}
+AE test took 3875.104500055313 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.027300303336703743}
+AE test took 3835.278266429901 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.03538928210313448}
+AE test took 3825.964349746704 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.05965621840242669}
+AE test took 3839.7286717891693 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.0980788675429727}
+AE test took 3693.527879714966 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.021233569261880688}
+AE test took 3649.410822868347 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.022244691607684528}
+AE test took 3670.4195518493652 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.021233569261880688}
+AE test took 3652.603896856308 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.8.npy]:
+{'Ensemble': 0.023255813953488372}
+AE test took 3736.891909122467 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.2-eps0.1.npy]:
+{'Ensemble': 0.032355915065722954}
+AE test took 3690.0415601730347 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.4-eps0.1.npy]:
+{'Ensemble': 0.034378159757330634}
+AE test took 3657.956478834152 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.6-eps0.1.npy]:
+{'Ensemble': 0.03640040444893832}
+AE test took 3744.438306093216 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.8-eps0.1.npy]:
+{'Ensemble': 0.04853387259858443}
+AE test took 3673.3270280361176 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.1.npy]:
+{'Ensemble': 0.03538928210313448}
+AE test took 3740.543783903122 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.05.npy]:
+{'Ensemble': 0.022244691607684528}
+AE test took 3685.0669338703156 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.15.npy]:
+{'Ensemble': 0.04954499494438827}
+AE test took 3874.787823677063 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.025.npy]:
+{'Ensemble': 0.021233569261880688}
+AE test took 3859.926829814911 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-PGD-eps0.075.npy]:
+{'Ensemble': 0.03134479271991911}
+AE test took 3844.658447742462 seconds
+Full test suite took 67549.67753243446 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 3 RANDOM SVM'S                             |
 CNNs: [11, 12, 13, 16, 20, 22, 25, 33, 36, 41, 47, 49, 50, 60, 67, 69, 71]
 SVMS: [13, 25, 38]
@@ -3034,10 +3365,46 @@ AE test took 2075.5459191799164 seconds
 {'Ensemble': 0.007077856420626896}
 AE test took 2090.4205436706543 seconds
 Full test suite took 37187.4728705883 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 
 
 --------------------------------------NEW RANDOM TEST--------------------------------------
 |                                                                                         |
+<<<<<<< HEAD
+<<<<<<< HEAD
+|  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 16 RANDOM SVM'S                             |
+CNNs: [29, 33, 36, 67]
+SVMS: [2, 3, 8, 13, 14, 20, 26, 30, 33, 41, 44, 49, 50, 55, 59, 69]
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.01.npy]:
+{'Ensemble': 0.8604651162790697}
+AE test took 6674.451465606689 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.05.npy]:
+{'Ensemble': 0.03842264914054601}
+AE test took 6572.323875665665 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.1.npy]:
+{'Ensemble': 0.047522750252780584}
+AE test took 6449.418610334396 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.15.npy]:
+{'Ensemble': 0.06774519716885744}
+AE test took 6424.84919667244 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-BIM-eps0.2.npy]:
+{'Ensemble': 0.13144590495449948}
+AE test took 6331.105198383331 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.2.npy]:
+{'Ensemble': 0.029322548028311426}
+AE test took 6298.820650100708 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.4.npy]:
+{'Ensemble': 0.03134479271991911}
+AE test took 6304.782152891159 seconds
+>>> Evaluations on [../../data/minerva/minerva_AE-CW-lw0.1-eps0.6.npy]:
+{'Ensemble': 0.033367037411526794}
+AE test took 6488.736773014069 seconds
+=======
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
 |  NEW TEST DATA WITH THE FOLLOWING 20 RANDOM CNN'S AND 5 RANDOM SVM'S                             |
 CNNs: [11, 12, 14, 16, 24, 25, 28, 31, 37, 44, 46, 51, 64, 65, 66]
 SVMS: [7, 19, 24, 53, 56]
@@ -3096,3 +3463,7 @@ AE test took 100.70778465270996 seconds
 {'Ensemble': 0.011122345803842264}
 AE test took 101.23822379112244 seconds
 Full test suite took 1854.6772696971893 seconds
+<<<<<<< HEAD
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
+=======
+>>>>>>> 2141d759e92c8f62446e7c48ef47192d613e5ff7
