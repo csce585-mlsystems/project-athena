@@ -1,6 +1,0 @@
-{
-    "dir": "../../models/cnn/",
-    "um_file": "model-mnist-cnn-clean.h5",
-    "wd_prefix": "model-mnist-cnn-",
-    "wd_postfix": ".h5"
-}
