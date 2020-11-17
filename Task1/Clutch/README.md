@@ -6,4 +6,5 @@
 * Praful Chunchu
 
 ## Submission
-https://github.com/Dojones98/project-athena/releases/tag/task1
+* archive https://github.com/Dojones98/project-athena/releases/tag/task1
+* folder https://github.com/Dojones98/project-athena/tree/master/task1
