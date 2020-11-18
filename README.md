@@ -107,7 +107,7 @@ There are multiple options for task 2 with various bonuses. Each team should pic
 ## Option 1. Optimazation-based white-box attack
 * **Goal**: Generate adversarial examples for the Vanilla ATHENA, using optimaztion-based white-box attack.
 * **Number of groups**: not limited
-* **Bonus**: 10%
+* **Bonus**: 10% for new attacks
 
 In this task, students aim to generate adversarial examples based on the vanilla ATHENA in the context of the white-box threat model (Section III.F in ATHENA paper) and then evaluate the effectiveness of the crafted adversarial examples. Each group should aim to generate the adversarial examples using at most 2 attacks. For each attack, generate around 5 variants by varying tunable parameters. Evaluate the successful rate of the crafted adversarial examples on the vanilla ATHENA. Compare the adversarial examples generated in Task 2 with those generated in Task 1 and the baseline adversarial examples provided by us.
 
