@@ -31,5 +31,5 @@ Each team should submit **all materials** that enable an independent group to re
 **You can find detailed submission requirement in the ``master`` branch.**
 
 ### Grade
-* Credit for the task: same credit for the team members that contribute (roughly) equally to the task. If any member contributes significantly less than others, he or she will receive 5%-10% fewer than others.
+* Credit for the task: same credit for the team members that (1) contribute (roughly) equally to the task (2) with comparable quality. If any member contributes significantly less than others, he or she will receive 5%-10% fewer scores than others. If the quality of some part is significantly worse than others, the owner will receive 5%-10% fewer scores than others.
 * Credit for bonus: the major contributor(s) will receive the highest score, others will receive ~5% less.  
