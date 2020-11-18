@@ -59,7 +59,7 @@ Each team should submit all materials that enable an independent group to replic
 # Task 1. Generate adversarial examples
 * **Goal**: Generate adversarial examples in the context of the zero-knowledge threat model.
 * **Due**: 11:59:59 PM, Oct. 25
-* **Credits**: 30% + bonus (5%)
+* **Credits**: 40% + bonus (5%)
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the ATHENA framework and necessary background regarding the adversarial machine learning tasks.
 
@@ -76,7 +76,7 @@ In this task, students will generate adversarial examples in the context of the 
   * Experimental settings for each attack.
   * Evaluation results in term of the successful rate of the crafted adversarial examples. 
 
-## The attacks implemented by ATHENA [30%]:
+## The attacks implemented by ATHENA [40%]:
 1. [FGSM](https://arxiv.org/abs/1412.6572)
 2. [BIM (l2- and linf- norms)](https://arxiv.org/abs/1607.02533)
 3. [CW (l2- and linf- norms)](https://ieeexplore.ieee.org/abstract/document/7958570)
@@ -100,7 +100,7 @@ In this task, students will generate adversarial examples in the context of the 
 
 # Task 2. Extension of ATHENA
 * **Due**: 11:59:59 PM, Nov. 15
-* **Credits**: 50% + bonus (10% -- 20%)
+* **Credits**: 60% + bonus (10% -- 20%)
 
 There are multiple options for task 2 with various bonuses. Each team should pick one and only one for the task 2 assignment. Each optional task 2 allows limited groups, so first come, first served. We will post a note on piazza to collect the claims. A random assignment will be assigned by us if any team that does not claim for task 2 assignment before task 1 is due. Claim your task 2 [here](https://piazza.com/class/ke221xlfhpq783?cid=24).
 
@@ -153,7 +153,7 @@ Students aim to build a model in this task, which takes the predictions from wea
 ### Option 3. Probabilistic ATHENA
 * **Goal**: Build a probabilistic ATHENA
 * **Number of groups**: no more than 3 groups
-* **Bonus**: 15%
+* **Bonus**: 20%
 
 Students aim to build an ensemble from a library of probabilistic models (such as `Bayesian Neural Networks`) in this task. Each group should aim to build a library of 5 to 20 weak defenses and then build the ensembles from the library. Evaluate your defenses against the benign samples, the adversarial examples generated in Task 1, and the baseline adversarial examples.
 
@@ -187,14 +187,22 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3. Competition
-* **Goal**: Competition between adversarial attacks and ATHENA-based defenses.
+# Task 3. Bonus Task
+* **Goal**: This is an optional, bonus task for students to refine their ``Task1`` or ``Task2`` assignments.
 * **Due**: 11:59:59 PM, Nov. 30
-* **Bonus**: 20%
+* **Bonus**: 15%
 
+<!--
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
-
+-->
+<!--
 Cross evaluation of task 1 and task 2 between all groups will be run by us (or we will provide scripts for students to perform the cross-evaluation). Evaluation results will be provided to the whole class. After the cross-evaluation, each team should aim to perform necessary analysis on the evaluation results and investigate why your approaches are effective (or ineffective) against some approach.
+-->
+
+* This is an optional task, each team can refine either ``Task1`` or ``Task2`` according to the feedback. 
+* All the previous data can be re-used if neccessary. 
+* This is an optional task, so not all are required to paticipant. Provide only the contributions of the paticipants in your report. All paticipants will receive the same credit for this task.
+* Follow the corresponding requirements.
 
 ### Report:
 1. Introduce the analysis methods that are used in the task.
