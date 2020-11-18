@@ -201,8 +201,8 @@ Cross evaluation of task 1 and task 2 between all groups will be run by us (or w
 
 * This is an optional task, each team can refine either ``Task1`` or ``Task2`` according to the feedback. 
 * All the previous data can be re-used if neccessary. 
-* This is an optional task, so not all are required to paticipant. Provide only the contributions of the paticipants in your report. All paticipants will receive the same credit for this task.
-* Follow the corresponding requirements.
+* Team members will receive the same credit for this task.
+* Follow the requirements for the corresponding task.
 
 ### Report:
 1. Introduce the analysis methods that are used in the task.
