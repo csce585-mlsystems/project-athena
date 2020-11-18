@@ -10,7 +10,7 @@ We only consider white-box attacks in this task.
 4. Perform necessary analysis.
 5. Report your work which should includes (but not least).
     1. Introduce your task concisely.
-    2. Introduce the approaches (in this case, attacks) you used in this assignment. 
+    2. Introduce the approaches (in this case, attacks) you used in this assignment. For example, ``Section II Background and Definitions`` in the ``ATHENA`` paper.
     3. Experimental settings. For example, for an attacker's task, report the attack configurations (the attack method's arguments, etc.), the successful rate of the generated adversarial examples (or the models' error rate against the generated adversarial examples), and the like; for a defender's task, report the defense configurations, the effectiveness of the built defenses against the benign samples and adversarial examples. Check for the individual task for more details.
     4. Empirical results and analysis. Provide necessary descriptions about the results, your observations, and insights.
     5. Contribution of individual team member.
@@ -19,6 +19,7 @@ We only consider white-box attacks in this task.
 ### Notes regarding the report
 * Do not simply post the logs of your experiment.
 * Present your empirical results and analysis properly. Provide necessary texts for others to understand your tables and figures. For simplicity, you can provide the observations and insights as bullets. You are appreciated if you provide descriptions in short paragraphs.
+* You can refer to the ``Fig. 32`` in the ``ATHENA`` paper for adversarial parameter tuning. Experimental setting and discussion regarding attacking in the zero-knowledge model is in ``Section III.D``.
 * Write the report in your own words.
 
 ### Submission
