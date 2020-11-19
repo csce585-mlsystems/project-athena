@@ -8,6 +8,7 @@ Feedback:
     2. Experiment settings are clear.
     3. Results are well-presented. Thanks!
     4. Evaluation on the computational cost. Thanks!
+    5. Discussion of the future possible tests and other considerations. Great job! Thanks!
 2. To improve
     1. The settings for some attacks are too small. For example, ``$\epsilon$``s for ``BIM-eps0.01``, ``BIM-eps0.05``, ``PGD-eps0.05``, and ``PGD-eps0.075`` are too small. Even the ``UM`` is not fooled by such AEs (Figure 1.3). If you plot some AE samples and corresponding benign samples, you may see that the AEs are barely perturbed.
     2. What is the ``Full Ensemble...`` in ``Figure 1.3``?
