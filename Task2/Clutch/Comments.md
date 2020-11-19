@@ -14,3 +14,4 @@ Feedback:
     1. Leave the configurations in corresponding json files and report the locations, which makes your report conciser.
     2. Missing introduction to EOT.
     3. For ``PGD`` and ``FGSM``, an ``$\epsilon$`` of ``0.48`` is too large. If you plot some AE samples, you might see messy images that are barely recognizable by human. As you might have noticed in your EOT experiment results for ``FGSM``.
+    4. Plot some (new) AE samples, which will provide you more insights regarding how the adversarial settings impact the magnitude of perturbations. 
