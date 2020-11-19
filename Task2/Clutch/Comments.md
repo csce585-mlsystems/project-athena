@@ -8,6 +8,8 @@ Feedback:
     2. Comparison attacks in the context of white-box model and the zero-knowledge model.
     3. Experiment settings are clear.
     4. Comprehensive analysis and discussion. Great job! Thanks!
+    5. Results are well-presented.
+    6. The report is well-organized.
 2. To improve
     1. Leave the configurations in corresponding json files and report the locations, which makes your report conciser.
     2. Missing introduction to EOT.
