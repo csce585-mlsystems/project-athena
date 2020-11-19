@@ -2,7 +2,7 @@
 * Create for the task: 40%
 * Bonus: 5% per new attack, at most 10%.
 
-Check ``Section III.D`` in the ``ATHENA`` paper for generating adversarial examples in the context of the zero-knowledge model.
+Check ``Section IV.D`` in the ``ATHENA`` paper for generating adversarial examples in the context of the zero-knowledge model.
 
 We only consider white-box attacks in this task.
 

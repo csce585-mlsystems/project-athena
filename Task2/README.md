@@ -4,7 +4,7 @@
 * Create for the task: 60%.
 * Bonus: 10% per new attack, at most 20%.
 
-Check ``Section III.F`` in the ``ATHENA`` paper for attacking in the context of the white-box model.
+Check ``Section IV.F`` in the ``ATHENA`` paper for attacking in the context of the white-box model.
 
 ### General process
 1. Generate adversarial examples based on an ensemble model (the target ensemble).
