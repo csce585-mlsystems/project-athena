@@ -16,3 +16,5 @@ Feedback:
     5. Leave scripts and experiment logs in corresponding files and list the path such materials in the report.
     6. Provide the list of weak defenses of your hybrid ensemble variants. Leave this in a separate configuration file(s) and list the path to such files in the report.
     7. Missing introduction to the attacks (you can copy those from your ``Task1`` report if you have them in it). 
+    8. The adversarial settings in the ``Experimental settings`` are inconsistent with that in your results. For example, In the ``Experimental settings``, you chose ``$\epsilon$``s of ``0.05, 0.10, 0.15, 0.25`` and ``0.75`` for ``PGD`` attack. However, in the result, the ``epsilon``s are ``0.1, 0.05, 0.15, 0.025, 0.075``.
+    9. The ``LW`` value in ``CW`` attack may be a typo. Do you mean ``lr`` (learning-rate)? Since there are two variants for ``CW`` (``l-2`` and ``l-inf`` norm), you should mention which variant was used. Same issue for ``BIM``.
