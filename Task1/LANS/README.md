@@ -6,4 +6,4 @@
 * Yiqian Sun
 
 ## Submission
-https://github.com/Arleycht/project-athena/blob/master/notebooks/Task1.ipynb
+https://github.com/Arleycht/project-athena/tree/master/Task1
