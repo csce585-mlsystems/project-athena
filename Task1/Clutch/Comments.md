@@ -9,6 +9,6 @@ Feedback:
     3. Comprehensive analysis and discussion. Great job! Thanks!
     4. Results are well-presented.
     5. The report is well-organized.
-2. To improve
+2. Other comments
     1. Leave the configurations in corresponding json files and report the locations, which makes your report conciser.
     2. Missing introduction to the attacks used in your task, then the citations to corresponding studies.
