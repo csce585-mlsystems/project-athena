@@ -1,6 +1,6 @@
-# Task 1 --- Team-LANS
+# Task 1 --- Team-Mars
 
-Thank you Team-LANS for you work!
+Thank you Team-Mars for you work!
 
 Feedback
 1. Good
