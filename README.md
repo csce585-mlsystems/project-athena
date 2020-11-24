@@ -41,7 +41,7 @@ A sample report for your reference: [Clutch](https://github.com/Dojones98/projec
 3. **Experimental Study**. Sample experiment study: [doubleE](https://github.com/andrewwunderlich/project-athena/blob/master/Task%201/Task1Report.pdf) and [Ares](https://github.com/cjshearer/project-athena/blob/master/Task2/Report.ipynb) (the breakdown of the task).
     1. Do NOT post scripts (except very small pieces) directly, leave the scripts and configurations in the original files instead. List all relevant files with necessary brief descriptions.  
     2. Experiment Design. How you will launch the experiment, with high-level steps. Provide information that are needed in order to replicate your experiment. For example, What attacks (methods and number of variants) used to generate the AEs? What models you evaluated on what AEs? What ensemble(s) (number of weak defense and ensemble strategy) is used? And so on. **Note**: you do NOT need to post the configuration of individual weak defenses (and attack) here, provide the path to the corresponding configuration files instead.
-    3. For all tasks, you need to evaluate at least the following models: (1) the undefended model (``UM``), the ``PGD-ADT``, and one ensemble.  
+    3. For all tasks, you need to evaluate at least the following models: (1) the undefended model (``UM``), (2) the ``PGD-ADT``, and (3) (at least) one ensemble.  
 4. **Results and Discussion**. Sample discussion: [doubleE](https://github.com/andrewwunderlich/project-athena/blob/master/Task%201/Task1Report.pdf)
     1. Do NOT post the log.
     2. Visualize your evaluation results with brief description (for people to understand your results: figures and/or tables, etc.).
