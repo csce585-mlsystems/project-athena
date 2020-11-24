@@ -47,7 +47,7 @@ A sample report for your reference: [Clutch](https://github.com/Dojones98/projec
     2. Visualize your evaluation results with brief description (for people to understand your results: figures and/or tables, etc.).
     3. Discuss the results. 
 5. **Citation**. Citations to related works. For example, if you used ``FGSM`` to generate AEs in your assignment, cite [this](https://arxiv.org/abs/1412.6572) work. Sample citation: [JiR](https://github.com/Jacob-L-Vincent/project-athena/blob/master/reports/Report%281%29.ipynb). 
-6. **Contributions**. Contributions of individual members. **Please do NOT use initials or nick names of team members.**
+6. **Contributions**. Contributions of individual members. **Please do NOT use initials or nicknames of team members.**
 
 ## Scripts
 Leave scripts in the original files and places, such that the scripts can be run correctly by others. List the path/files in the report with description of the purpose/objective of each file.
