@@ -20,4 +20,11 @@ Task3
   |      |--- Comments.md (Comments from instructors)
 ```
 
-Grades for each task are given in dropbox.
+**Grades for each task are given in dropbox.**
+
+Criteria
+
+|   |   |   Task1   |   Task2 Opt1  | Task2 Opt2    |   Task2 Opt4  |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|Report|intro to task|  5%  |   5%  |   5%  |   5%  |
+|:--:|:--:|:--:|:--:|:--:|:--:|
