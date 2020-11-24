@@ -27,15 +27,10 @@ Task3
 |   |   Task1   |   Task2 Opt1  | Task2 Opt2    |   Task2 Opt4  |
 |:--:|:--:|:--:|:--:|:--:|
 |Assignment|  5%  |   5%  |   5%  |   5%  |
-|:--:|:--:|:--:|:--:|:--:|
 |Background|  15%   |   15% |   15% |   15% |
-|:--:|:--:|:--:|:--:|:--:|
 |Experimental Settings| 30% |   30% |   20% |   25% |
-|:--:|:--:|:--:|:--:|:--:|
 |Results and Discussions|   30% |   30% |   25% |   30% |
-|:--:|:--:|:--:|:--:|:--:|
 |Citation and Contribution| 10% |   10% |   5%  |   5%  |
-|:--:|:--:|:--:|:--:|:--:|
 |Implementation (scripts)|  10% |   10% |   30% |   20% |
 
 ## Report
