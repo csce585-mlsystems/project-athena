@@ -1,0 +1,25 @@
+{
+    "dir": "../data/",
+    "bs_file": "test_BS-mnist-clean.npy",
+    "label_file": "test_Label-mnist-clean.npy",
+    "ae_files": [
+        "minerva_AE-BIM-eps0.01.npy",
+        "minerva_AE-BIM-eps0.05.npy",
+        "minerva_AE-BIM-eps0.1.npy",
+        "minerva_AE-BIM-eps0.15.npy",
+        "minerva_AE-BIM-eps0.2.npy",
+        "minerva_AE-CW-lw0.1-eps0.2.npy",
+        "minerva_AE-CW-lw0.1-eps0.4.npy",
+        "minerva_AE-CW-lw0.1-eps0.6.npy",
+        "minerva_AE-CW-lw0.1-eps0.8.npy",
+        "minerva_AE-CW-lw0.2-eps0.1.npy",
+        "minerva_AE-CW-lw0.4-eps0.1.npy",
+        "minerva_AE-CW-lw0.6-eps0.1.npy",
+        "minerva_AE-CW-lw0.8-eps0.1.npy",
+        "minerva_AE-PGD-eps0.1.npy",
+        "minerva_AE-PGD-eps0.05.npy",
+        "minerva_AE-PGD-eps0.15.npy",
+        "minerva_AE-PGD-eps0.025.npy",
+        "minerva_AE-PGD-eps0.075.npy"
+    ]
+}
