@@ -79,16 +79,16 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
 
     parser.add_argument('-m', '--model-configs', required=False,
-                        default='../configs/experiment/model-mnist.json',
+                        default='../models/model-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/experiment/data-mnist.json',
+                        default='../configs/data-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-a', '--attack-configs', required=False,
-                        default='../configs/experiment/attack-zk-mnist.json',
+                        default='../configs/attack-zk-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
-                        default='../configs/experiment/results',
+                        default='../data',
                         help='Folder for outputs.')
     parser.add_argument('--debug', required=False, default=True)
 
