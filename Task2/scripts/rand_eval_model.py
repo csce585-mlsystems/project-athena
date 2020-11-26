@@ -17,7 +17,7 @@ from models.athena import Ensemble, ENSEMBLE_STRATEGY
 from models.image_processor import transform
 
 def evaluate(trans_configs, trans_configs2, model_configs,
-             data_configs, save=True, output_dir='../../results'):
+             data_configs, save=True, output_dir='../results'):
     """
     Apply transformation(s) on images.
     :param trans_configs: dictionary. The collection of the parameterized transformations to test.
@@ -92,13 +92,13 @@ def evaluate(trans_configs, trans_configs2, model_configs,
         # save with a random name
         f = os.path.join(output_dir, "minerva_AE_rand_eval_results.txt")
         out_file = open(f, 'a')
-        out_file.write('\n\n')
         out_file.write('--------------------------------------NEW RANDOM TEST--------------------------------------\n')
         out_file.write('|                                                                                         |\n')
         out_file.write('|  NEW TEST DATA WITH THE FOLLOWING {c} RANDOM CNN\'S AND {s} RANDOM SVM\'S                   \
           |\n'.format(c=len(cnns), s=len(svms)))
         out_file.write('CNNs: {c}\n'.format(c=list(trans_configs.get('active_wds'))))
         out_file.write('SVMS: {s}\n'.format(s=list(trans_configs2.get('active_wds'))))
+        out_file.write('\n\n')
 
     # Evaluate AEs.
     ae_list = data_configs.get('ae_files')
@@ -150,19 +150,19 @@ if __name__ == '__main__':
     """
 
     parser.add_argument('-t', '--trans-configs', required=False,
-                        default='../configs/experiment/athena-mnist.json',
+                        default='../configs/athena-mnist.json',
                         help='Configuration file for transformations.')
     parser.add_argument('-t2', '--trans-configs2', required=False,
-                        default='../configs/experiment/svm-mnist.json',
+                        default='../configs/svm-mnist.json',
                         help='Configuration file for transformations.')
     parser.add_argument('-m', '--model-configs', required=False,
-                        default='../configs/experiment/hybrid-mnist.json',
+                        default='../configs/hybrid-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/experiment/data-minerva-mnist.json',
+                        default='../configs/data-minerva-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-o', '--output-root', required=False,
-                        default='../../results',
+                        default='../results',
                         help='Folder for outputs.')
     parser.add_argument('--debug', required=False, default=True)
     parser.add_argument('-s', '--save-results', required=False, default=True, help='Save output or not')
