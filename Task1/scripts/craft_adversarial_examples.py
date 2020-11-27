@@ -82,7 +82,7 @@ if __name__ == '__main__':
                         default='../models/model-mnist.json',
                         help='Folder where models stored in.')
     parser.add_argument('-d', '--data-configs', required=False,
-                        default='../configs/data-mnist.json',
+                        default='../configs/data-minerva-mnist.json',
                         help='Folder where test data stored in.')
     parser.add_argument('-a', '--attack-configs', required=False,
                         default='../configs/attack-zk-mnist.json',
