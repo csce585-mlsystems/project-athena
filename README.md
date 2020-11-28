@@ -59,7 +59,7 @@ Each team should submit all materials that enable an independent group to replic
 # Task 1. Generate adversarial examples
 * **Goal**: Generate adversarial examples in the context of the zero-knowledge threat model.
 * **Due**: 11:59:59 PM, Oct. 25
-* **Credits**: 40% + bonus (5%)
+* **Credits**: 30% + bonus (5%)
 
 This task is an essential warm-up task for all groups, aiming to help students get familiar with the ATHENA framework and necessary background regarding the adversarial machine learning tasks.
 
@@ -187,10 +187,20 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 
 **Note:** You are encouraged to explore new approaches not listed.
 
-# Task 3. Bonus Task
-* **Goal**: This is an optional, bonus task for students to refine their ``Task1`` or ``Task2`` assignments.
-* **Due**: 11:59:59 PM, Nov. 30
-* **Bonus**: 15%
+# Task 3. Project Presentation (video recording)
+* **Goal**: We will use video recording as the way for groups to present and share their project.
+* **Due**: 11:59:59 PM, Dec. 8
+* **Bonus**: 10% + bonus (15%)
+
+Each group is required to submit a 5-minute presentation video for their final project. Students can be as creative as they like for their video presentations. The easiest option is to create a slide deck together as a team and record yourselves presenting the slide deck as a group using zoom. Each student member should speak during the presentation. Also, we prefer if students use webcam, so we can see you in the video recordings.
+
+The following is a suggested structure for the video presentation. You don't necessarily have to organize your presentation using these sections in this order, but that would likely be a good starting point for most projects.
+
+* **Problem Statement**: Briefly describe the problem your group is tackling. Describe the overall motivation, as well as the input / output of the problem.
+* **Technical Challenges**: Briefly describe why the problem is technically challenging.
+* **Related Works**: Briefly in what ways previous works have tackled the technical challenges.
+* **Your Approach and Results**: Describe your detailed technical approach and innovations. Describe evaluation results (dataset and metric). Emphesize on important, interesting, or unexpected results, but also explain the expected results, comparing with previously reported results (e.g., the ATHENA paper or other ensemble-based or transformation-based adversarial defense methods).
+* **Broader Impact**: How do you expect the impact of your work to be? What can others learn from it or how can they apply it to solve their problems? What are the limitations of your work? What are areas for future improvements?
 
 <!--
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
@@ -198,18 +208,6 @@ Students should aim to seek insights and/or theoretical explanations of why and 
 <!--
 Cross evaluation of task 1 and task 2 between all groups will be run by us (or we will provide scripts for students to perform the cross-evaluation). Evaluation results will be provided to the whole class. After the cross-evaluation, each team should aim to perform necessary analysis on the evaluation results and investigate why your approaches are effective (or ineffective) against some approach.
 -->
-
-* This is an optional task, each team can refine either ``Task1`` or ``Task2`` according to the feedback. 
-* All the previous data can be re-used if neccessary. 
-* Team members will receive the same credit for this task.
-* Follow the requirements for the corresponding task.
-
-### Report:
-1. Introduce the analysis methods that are used in the task.
-2. Analysis results and insights. Possible enhancements, future works. etc.
-3. Architecture of your machine learning system (for the whole project).
-4. Contribution of individual team members.
-5. Citations to all related works.
 
 # Research Projects (Optional)
 If a team wants to go beyond the mandatory tasks and do some extra tasks (totally optional, but highly encouraged), we have some exciting possibilities. 
@@ -224,14 +222,3 @@ If a team wants to go beyond the mandatory tasks and do some extra tasks (totall
 Deploy the defense on a physical device such as AWS DeepLense or NVIDIA Platforms (TX1, TX2, Xavier). We have these platforms in the [AISys lab](https://pooyanjamshidi.github.io/AISys/) and we can facilitate access to these devices for doing some exciting experiments. As you know, with ATHENA, there is a tradeoff space (adding/removing WDs and changing ensemble strategy) and you can test it with physical environments. This requires some creativity and motivation to come up with some nice experiments and demo. This optional task is highly encouraged for highly motivated students who want to learn more about adversarial ML and do some research in this direction.
 * **Quantized ATHENA**
 * **Distributed ATHENA**
-
-# Project Presentation (video recording)
-We will use video recording as the way for groups to present and share their project. Each group is required to submit a 5-minute presentation video for their final project. Students can be as creative as they like for their video presentations. The easiest option is to create a slide deck together as a team and record yourselves presenting the slide deck as a group using zoom. Each student member should speak during the presentation.
-
-The following is a suggested structure for the video presentation. You don't necessarily have to organize your presentation using these sections in this order, but that would likely be a good starting point for most projects.
-
-* **Problem Statement**: Briefly describe the problem your group is tackling. Describe the overall motivation, as well as the input / output of the problem.
-* **Technical Challenges**: Briefly describe why the problem is technically challenging.
-* **Related Works**: Briefly in what ways previous works have tackled the technical challenges.
-* **Your Approach and Results**: Describe your detailed technical approach and innovations. Describe evaluation results (dataset and metric).
-* **Broader Impact**: How do you expect the impact of your work to be? What can others learn from it or how can they apply it to solve their problems? What are the limitations of your work? What are areas for future improvements?
