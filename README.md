@@ -39,7 +39,7 @@ Each team should submit all materials that enable an independent group to replic
   ```
 * **IMPORTANT**: Please make sure you tag the commit that delivers each task, e.g.: `git tag -a task1 -m "Team XYZ Task 1"`. Once you tag your commit, please make sure you let us know where your repository leaves via the associated turn in issue in the [project-athena](https://github.com/csce585-mlsystems/project-athena/). E.g., [Task1 Turn in](../../issues/23). Please do not create duplicate issues! The first team will create an issue like `Task 2 Turn-in` and the rest will comment on the same issue.
 
-# All about teams
+### Teams
 * You can work in teams of up to 3 or 4 people.
 * One can recruit her/his team members via GitHub issues or via Piazza.
 * Name your team in the associated GitHub issue designated for teams.
@@ -47,16 +47,16 @@ Each team should submit all materials that enable an independent group to replic
 * We will use [this note](https://piazza.com/class/ke221xlfhpq783?cid=25) on piazza to collect the claims for task 2.
 * We also allow for **external teams** or **external individuals** who are not students in the CSCE 585 class.
 
-# What are given
+### Given Materials
 * Source code of the ATHENA framework. 
 * 73 CNN models (1 undefended model + 72 weak defenses) and 66 SVM models (1 undefended model + 65 weak defenses) that were trained on MNIST. The vanilla version of ATHENA, built on the 72 CNN weak defenses, is the ATHENA we attack and enhance in this project. The 65 SVM models are only for the "Hybrid ATHENA" task (an option of Task 2).
 * Adversarial examples that were crafted in the context of zero-knowledge threat model. We will refer to these adversarial examples as the baseline adversarial examples in this probject. 
 * Configurations of all weak defenses. 
 * Configurations of all baseline adversarial examples. 
-* Simple tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.
-* (Maybe) A simple example of reports. 
+* Tutorials regarding (1) how to load a model (a weak defense or an ensemble) and evaluate it, (2) how generate adversarial examples in the context of zero-knowledge and white-box threat models.
+* Simple examples of reports. 
 
-# Task 1. Generate adversarial examples
+# Task 1. Generate Adversarial Examples
 * **Goal**: Generate adversarial examples in the context of the zero-knowledge threat model.
 * **Due**: 11:59:59 PM, Oct. 25
 * **Credits**: 30% + bonus (5%)
