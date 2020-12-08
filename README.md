@@ -202,6 +202,10 @@ The following is a suggested structure for the video presentation. You don't nec
 * **Your Approach and Results**: Describe your detailed technical approach and innovations. Describe evaluation results (dataset and metric). Emphesize on important, interesting, or unexpected results, but also explain the expected results, comparing with previously reported results (e.g., the ATHENA paper or other ensemble-based or transformation-based adversarial defense methods).
 * **Broader Impact**: How do you expect the impact of your work to be? What can others learn from it or how can they apply it to solve their problems? What are the limitations of your work? What are areas for future improvements?
 
+### How to submit:
+1. A link to your slides: You can use a cloud service such as OneDrive/DropBox or you can publish your presentation on SlideShare/SpeakerDeck and share the link with us.
+2. A link to your video recording: You are encouraged to use YouTube to publish your presentation, you can also share the video recording with us via a cloud link (OneDrive or DropBox).
+
 <!--
 Students should aim to seek insights and/or theoretical explanations of why and why not the approach is effective.
 -->
