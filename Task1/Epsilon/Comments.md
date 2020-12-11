@@ -2,7 +2,12 @@
 
 Thank you Team-Epsilon for you work!
 
-Feedback
+------
+## Feedback to the refinement
+The labels in your figures are not reable. Use larger font size.
+
+--------
+### Feedback to the initial submission
 1. Good
     1. Introduction to the attacks used in this task.
     2. Experimental settings are clear.
