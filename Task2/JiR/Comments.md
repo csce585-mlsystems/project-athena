@@ -4,6 +4,8 @@ Thank you Team-JiR for you work!
 
 ---------
 ### Feedback to the refinement
+Great improvement, thanks!
+
 The training data is not clear.
 
 Missing the comparison between the undefended model (UM), the ensemble with a fixed strategy (e.g., AVEP, MV), the ensemble with the learned strategy (your approach), and the PGD-ADT model.
