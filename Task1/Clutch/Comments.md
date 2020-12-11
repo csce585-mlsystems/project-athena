@@ -2,7 +2,12 @@
 
 Thank you Team-Clutch for you work!
 
-Feedback:
+------------
+### Feedback to the refinement
+Comments have been addressed.
+
+------------
+### Feedback to the initial submission
 1. Good
     1. Great report that contains most required sessions.
     2. Experiment settings are clear.
