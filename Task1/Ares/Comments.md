@@ -2,7 +2,13 @@
 
 Thanks Team-Ares for your work!
 
-Feedback:
+---------
+### Feedback to the refinement
+Comments have been address except those regarding ``JSMA`` and ``PGD``.
+
+
+---------
+### Feedback to initial submission
 1. Good
     1. The report for ``BIM`` attack.
     2. Experimental settings are clear.
