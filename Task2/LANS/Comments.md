@@ -2,7 +2,12 @@
 
 Thank you Team-LANS for you work!
 
-Feedback
+-----------
+### Feedback to the refinement
+Great improvement, thanks!
+
+------------
+### Feedback to the initial submission
 1. Good
     1. Experiment steps and settings are clear.
     2. Introduction to attacks ``FGSM`` and ``PGD``.
