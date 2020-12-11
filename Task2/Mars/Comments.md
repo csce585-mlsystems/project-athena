@@ -2,7 +2,12 @@
 
 Thank you Team-Mars for you work!
 
-Feedback
+-----------
+### Feedback to the refinement
+Great improvement, thanks! However, the bar charts could have been plotted in better quality. Check the comments on your Task 1 refinement for detail.
+
+-----------
+### Feedback to the initial submission
 1. Good
     1. Introduce the task.
     2. The breakdown and experiment steps are clear. 
