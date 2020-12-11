@@ -2,7 +2,22 @@
 
 Thank you Team-Ares for you work!
 
-Feedback:
+-------------
+### Feedback to the refinement
+
+The strategy model is correctly built and trained. However, the evaluations were designed and performed incorrectly. 
+
+After you have trained the learning-based strategy model (``code_model.h5`` in your case), you should perform the evaluation and analysis as follows:
+* Decide what AEs you use for the evaluation.
+* Evaluate the undefened model (UM), the ensemble with a fixed strategy (AVEP or/and MV), and PGD-ADT models. You've evaluated these models in your Task 1.
+* Evaluate the ensemble + the learned strategy.
+* Report the evaluation results with respect to the accuracy or the error rate, but please use the same metric. And It is better to plot one figure per attack (e.g., evaluation results of all models against ``BIM``). 
+
+The work on building the PGD adversarial trained model is not clear. Did you build and train a PGD adversarial trained model as an independent defense or did you build and trained a learning-based strategy using PGD adversarial training technique? The first approach does not make sense, which has no connection to this learning-based strategy. The second approach is a great attempt, but the evaluation was poor (check above for the suggestions for the evaluation).
+
+
+-------------
+### Feedback to the initial submission
 1. Good
     1. Great breakdown.
     2. Reasoning the selection of weak defenses and data for the experiment.
