@@ -2,7 +2,12 @@
 
 Thank you Team-Horus for you work!
 
-Feedback
+-------------
+### Feedback to the refinement
+Great improvement, thanks!
+
+------------
+### Feedback to the initial submission
 1. Good
     1. Observations of the results.
     2. Bar charts for results.
