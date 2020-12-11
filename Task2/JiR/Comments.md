@@ -2,7 +2,17 @@
 
 Thank you Team-JiR for you work!
 
-Feedback
+---------
+### Feedback to the refinement
+The training data is not clear.
+
+Missing the comparison between the undefended model (UM), the ensemble with a fixed strategy (e.g., AVEP, MV), the ensemble with the learned strategy (your approach), and the PGD-ADT model.
+
+Although you copied the evaluation results from taks 1, it is hard to compare the evaluations reporting in different metrics (accuracy for the approach in Task and error rate for the rest models --- UM, Vanilla ATHENA, and PGD-ADT model).
+
+
+---------
+### Feedback to the initial submission
 1. Good
     1. The introduction session is great!
     2. Citations.
