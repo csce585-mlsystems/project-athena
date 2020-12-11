@@ -2,7 +2,14 @@
 
 Thank you Team-Epsilon for you work!
 
-Feedback
+----------
+### Feedback to the refinement
+Address most comments.
+
+You should not simply copy and paste from the project requirement. Write the report in your own words concisely.
+
+-----------
+### Feedback to the initial submission
 1. Good
     1. Visualize the results in figures.
     2. Introduction to ``FGSM``, ``PGD``, and ``EOT``.
