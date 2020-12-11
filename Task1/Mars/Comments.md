@@ -2,7 +2,16 @@
 
 Thank you Team-Mars for you work!
 
-Feedback
+------------
+### Feedback to the refinement
+Great improvement from the initial submission. Thanks.
+
+The bar charts are not readable.
+* Use larger font size for title, legend, and labels.
+* It is hard to read the error rate values from the scale used in the y-axis. Try 0.1, 0.2, etc.
+
+------------
+### Feedback to the initial submission
 1. Good
     1. Introduce the task.
 2. Other comments
