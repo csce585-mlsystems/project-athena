@@ -2,7 +2,12 @@
 
 Thank you Team-LANS for you work!
 
-Feedback (to ``Report.jpynb``)
+-----------------
+### Feedback to the refinement
+Great improvement, thanks!
+
+-------
+### Feedback to the initial submission (to ``Report.jpynb``)
 1. Good
     1. Experiment steps are clear.
     2. Introduction to attacks.
