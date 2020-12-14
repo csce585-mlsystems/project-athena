@@ -4,7 +4,8 @@ Thank you Team-Epsilon for you work!
 
 ------
 ## Feedback to the refinement
-The labels in your figures are not reable. Use larger font size.
+1. The labels in your figures are not reable. Use larger font size.
+2. Adversarial setttings sor some AE variants are not proper, the image semantics are changed.
 
 --------
 ### Feedback to the initial submission
