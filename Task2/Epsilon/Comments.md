@@ -6,8 +6,8 @@ Thank you Team-Epsilon for you work!
 ### Feedback to the refinement
 Address most comments.
 
-You should not simply copy and paste from the project requirement. Write the report in your own words concisely.
-
+1. You should not copy and paste from the project requirement. Write the report in your own words concisely.
+2. The weak defenses in the ensembles used in Task 1 and Task 2 are different, and the adversarial settings in the two tasks are different, so related conclusions may not hold.
 -----------
 ### Feedback to the initial submission
 1. Good
