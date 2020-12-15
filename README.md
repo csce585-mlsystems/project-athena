@@ -191,6 +191,7 @@ Greedy search for n weak defenses that gives the maximal/minimal value according
 * **Goal**: We will use video recording as the way for groups to present and share their project.
 * **Due**: 11:59:59 PM, Dec. 8
 * **Bonus**: 10% + bonus (15%)
+* **Grade**: All teammembers will get the same score for this task.
 
 Each group is required to submit a 5-minute presentation video for their final project. Students can be as creative as they like for their video presentations. The easiest option is to create a slide deck together as a team and record yourselves presenting the slide deck as a group using zoom. Each student member should speak during the presentation. Also, we prefer if students use webcam, so we can see you in the video recordings.
 
